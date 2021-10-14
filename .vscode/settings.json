@@ -1,5 +1,13 @@
 {
-    "eslint.workingDirectories": [
-        "client"
-    ]
+  "eslint.workingDirectories": ["client"],
+  "eslint.options": {
+    "extensions": [".ts", ".html"]
+  },
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "html"
+  ]
 }
