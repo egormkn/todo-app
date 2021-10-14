@@ -1,1 +1,4 @@
 /* You can add global styles to this file, and also import other style files */
+
+// Fix for https://github.com/FortAwesome/angular-fontawesome/issues/48
+@import '~@fortawesome/fontawesome-svg-core/styles';
