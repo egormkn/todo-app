@@ -1,5 +1,8 @@
 {
-  "eslint.workingDirectories": ["client"],
+  "eslint.workingDirectories": [
+    "client",
+    "server"
+  ],
   "eslint.options": {
     "extensions": [".ts", ".html"]
   },
