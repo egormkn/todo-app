@@ -5,7 +5,7 @@ import { AppModule } from './app.module';
 import * as compression from 'compression';
 
 async function bootstrap() {
-  const app = await NestFactory.create(AppModule);
+  const app = await NestFactory.create(AppModule, { cors: true });
 
   app.setGlobalPrefix('api');
   app.use(compression());
