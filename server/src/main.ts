@@ -3,12 +3,14 @@ import { ConfigService } from '@nestjs/config';
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 import * as compression from 'compression';
+import * as helmet from 'helmet';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule, { cors: true });
 
   app.setGlobalPrefix('api');
   app.use(compression());
+  app.use(helmet());
 
   app.useGlobalPipes(
     new ValidationPipe({
