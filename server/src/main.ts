@@ -1,12 +1,18 @@
-import { BadRequestException, ValidationPipe } from '@nestjs/common';
+import { BadRequestException, Logger, ValidationPipe } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
-import { NestFactory } from '@nestjs/core';
+import { HttpAdapterHost, NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 import * as compression from 'compression';
 import * as helmet from 'helmet';
+import { join } from 'path';
+import { NestExpressApplication } from '@nestjs/platform-express';
+import { existsSync } from 'fs';
+import { AngularUniversalFilter } from './angular-universal.filter';
 
 async function bootstrap() {
-  const app = await NestFactory.create(AppModule, { cors: true });
+  const app = await NestFactory.create<NestExpressApplication>(AppModule, {
+    cors: true,
+  });
 
   app.setGlobalPrefix('api');
   app.use(compression());
@@ -27,8 +33,35 @@ async function bootstrap() {
   );
 
   const configService = app.get(ConfigService);
+
+  const clientDist = configService.get<string>('CLIENT_DIST');
+
+  if (clientDist) {
+    const browserDist = join(__dirname, '..', clientDist, 'browser');
+    const serverDist = join(__dirname, '..', clientDist, 'server');
+
+    const serverMain = join(serverDist, 'main.js');
+    const { engine, APP_BASE_HREF } = await import(serverMain);
+
+    app.engine('html', engine());
+    app.setViewEngine('html');
+    app.setBaseViewsDir(browserDist);
+    app.useStaticAssets(browserDist, { maxAge: '1y' });
+
+    const indexHtml = existsSync(join(browserDist, 'index.original.html'))
+      ? 'index.original.html'
+      : 'index';
+    const { httpAdapter } = app.get(HttpAdapterHost);
+    app.useGlobalFilters(new AngularUniversalFilter(indexHtml, APP_BASE_HREF, httpAdapter));
+  }
+
+  const host = configService.get<string>('HOST', 'localhost');
   const port = configService.get<number>('PORT', 80);
 
-  await app.listen(port);
+  await app.listen(port, async () => {
+    const url = await app.getUrl();
+    const logger = new Logger('NestApplication');
+    logger.log(`Listening on http://${host}:${port} (${url})`);
+  });
 }
 bootstrap();
