@@ -8,6 +8,7 @@ import { join } from 'path';
 import { NestExpressApplication } from '@nestjs/platform-express';
 import { existsSync } from 'fs';
 import { AngularUniversalFilter } from './angular-universal.filter';
+import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 
 async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule, {
@@ -17,6 +18,14 @@ async function bootstrap() {
   app.setGlobalPrefix('api');
   app.use(compression());
   app.use(helmet());
+
+  const config = new DocumentBuilder()
+    .setTitle('Words App')
+    .setDescription('Words API description')
+    .setVersion('1.0')
+    .build();
+  const document = SwaggerModule.createDocument(app, config);
+  SwaggerModule.setup('api', app, document);
 
   app.useGlobalPipes(
     new ValidationPipe({
