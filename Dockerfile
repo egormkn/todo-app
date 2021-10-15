@@ -17,8 +17,12 @@ USER node
 # Copy app manifest files
 COPY client/package*.json ./
 
+# Set NODE_ENV from build arguments
+ARG NODE_ENV=production
+ENV NODE_ENV=${NODE_ENV}
+
 # Install all dependencies
-RUN npm ci
+RUN npm ci --production=false
 
 # Copy all files
 COPY client ./
@@ -45,8 +49,12 @@ USER node
 # Copy app manifest files
 COPY server/package*.json ./
 
+# Set NODE_ENV from build arguments
+ARG NODE_ENV=production
+ENV NODE_ENV=${NODE_ENV}
+
 # Install all dependencies
-RUN npm ci
+RUN npm ci --production=false
 
 # Copy all files
 COPY server ./
@@ -73,6 +81,10 @@ USER node
 # Copy app manifest files
 COPY server/package*.json ./
 
+# Set NODE_ENV from build arguments
+ARG NODE_ENV=production
+ENV NODE_ENV=${NODE_ENV}
+
 # Install production dependencies
 RUN npm ci --only=production
 
@@ -88,12 +100,8 @@ COPY --from=build-server /app/server/.env.example .
 # Set a path for client dist directory for SSR
 ENV CLIENT_DIST="client/words"
 
-# Set NODE_ENV from build arguments
-ARG NODE_ENV=production
-ENV NODE_ENV=${NODE_ENV}
-
 # Set HOST from build arguments
-ARG HOST="localhost"
+ARG HOST=localhost
 ENV HOST=${HOST}
 
 # Set PORT from build arguments
