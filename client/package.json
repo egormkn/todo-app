@@ -53,6 +53,7 @@
     "@types/node": "^12.11.1",
     "@typescript-eslint/eslint-plugin": "4.28.2",
     "@typescript-eslint/parser": "4.28.2",
+    "angular-in-memory-web-api": "^0.11.0",
     "eslint": "^7.26.0",
     "eslint-plugin-prettier": "^4.0.0",
     "jasmine-core": "~3.8.0",
