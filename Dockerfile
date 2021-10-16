@@ -1,74 +1,51 @@
-###############################
-#           Client            #
-###############################
+########################################
+#             BUILD STAGE              #
+########################################
 
 # Initialize from NodeJS v14
-FROM node:14 as build-client
+FROM node:14 as build
 
 # Set working directory
-WORKDIR /app/client
+WORKDIR /app
 
 # Change permissions for working directory
 RUN chown -R node:node .
 
-# Switch to non-privileged user
+# Switch to non-root user
 USER node
 
-# Copy app manifest files
-COPY client/package*.json ./
+# Copy client manifest files
+COPY --chown=node:node client/package*.json client/
 
-# Set NODE_ENV from build arguments
-ARG NODE_ENV=production
-ENV NODE_ENV=${NODE_ENV}
+# Copy server manifest files
+COPY --chown=node:node server/package*.json server/
 
 # Install all dependencies and clean cache
-RUN npm ci --production=false && \
-    npm cache clean --force && \
-    echo "Installed dependencies"
+RUN npm ci --prefix=client && \
+    npm ci --prefix=server && \
+    npm cache clean --force
 
-# Copy all files
-COPY client ./
+# Change working directory to client
+WORKDIR /app/client/
 
-# Build project
+# Copy client files
+COPY --chown=node:node client ./
+
+# Build client
 RUN npm run build:ssr
 
-###############################
-#           Server            #
-###############################
+# Change working directory to server
+WORKDIR /app/server/
 
-# Initialize from NodeJS v14
-FROM node:14 as build-server
+# Copy server files
+COPY --chown=node:node server ./
 
-# Set working directory
-WORKDIR /app/server
+# Build server and prune dependencies
+RUN npm run build && npm prune --production
 
-# Change permissions for working directory
-RUN chown -R node:node .
-
-# Switch to non-privileged user
-USER node
-
-# Copy app manifest files
-COPY server/package*.json ./
-
-# Set NODE_ENV from build arguments
-ARG NODE_ENV=production
-ENV NODE_ENV=${NODE_ENV}
-
-# Install all dependencies and clean cache
-RUN npm ci --production=false && \
-    npm cache clean --force && \
-    echo "Installed dependencies"
-
-# Copy all files
-COPY server ./
-
-# Build project
-RUN npm run build
-
-###############################
-#         Production          #
-###############################
+########################################
+#           PRODUCTION STAGE           #
+########################################
 
 # Initialize from NodeJS v14 (Alpine Linux)
 FROM node:14-alpine as production
@@ -79,32 +56,27 @@ WORKDIR /app
 # Change permissions for working directory
 RUN chown -R node:node .
 
-# Switch to non-privileged user
+# Switch to non-root user
 USER node
 
-# Copy app manifest files
-COPY server/package*.json ./
+# Copy client dist files from build image
+COPY --chown=node:node --from=build /app/client/dist client/
+
+# Copy server dist files from build image
+COPY --chown=node:node --from=build /app/server/dist server/
+
+# Copy server node_modules from build image
+COPY --chown=node:node --from=build /app/server/node_modules node_modules/
+
+# Copy server env file from build image
+COPY --chown=node:node --from=build /app/server/.env.example ./
+
+# Set a path to the client dist directory for SSR
+ENV CLIENT_DIST="client/words"
 
 # Set NODE_ENV from build arguments
 ARG NODE_ENV=production
 ENV NODE_ENV=${NODE_ENV}
-
-# Install production dependencies and clean cache
-RUN npm ci --only=production && \
-    npm cache clean --force && \
-    echo "Installed dependencies"
-
-# Copy dist files from client image
-COPY --from=build-client /app/client/dist client/
-
-# Copy dist files from server image
-COPY --from=build-server /app/server/dist server/
-
-# Copy env file from server image
-COPY --from=build-server /app/server/.env.example .
-
-# Set a path for client dist directory for SSR
-ENV CLIENT_DIST="client/words"
 
 # Set HOST from build arguments
 ARG HOST=localhost
