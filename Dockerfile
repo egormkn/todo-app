@@ -21,8 +21,10 @@ COPY client/package*.json ./
 ARG NODE_ENV=production
 ENV NODE_ENV=${NODE_ENV}
 
-# Install all dependencies
-RUN npm ci --production=false
+# Install all dependencies and clean cache
+RUN npm ci --production=false && \
+    npm cache clean --force && \
+    echo "Installed dependencies"
 
 # Copy all files
 COPY client ./
@@ -53,8 +55,10 @@ COPY server/package*.json ./
 ARG NODE_ENV=production
 ENV NODE_ENV=${NODE_ENV}
 
-# Install all dependencies
-RUN npm ci --production=false
+# Install all dependencies and clean cache
+RUN npm ci --production=false && \
+    npm cache clean --force && \
+    echo "Installed dependencies"
 
 # Copy all files
 COPY server ./
@@ -85,8 +89,10 @@ COPY server/package*.json ./
 ARG NODE_ENV=production
 ENV NODE_ENV=${NODE_ENV}
 
-# Install production dependencies
-RUN npm ci --only=production
+# Install production dependencies and clean cache
+RUN npm ci --only=production && \
+    npm cache clean --force && \
+    echo "Installed dependencies"
 
 # Copy dist files from client image
 COPY --from=build-client /app/client/dist client/
