@@ -17,12 +17,18 @@ async function bootstrap() {
 
   app.setGlobalPrefix('api');
   app.use(compression());
-  app.use(helmet());
+  app.use(
+    helmet({
+      contentSecurityPolicy: false,
+    }),
+  );
 
   const config = new DocumentBuilder()
     .setTitle('Words App')
+    .setExternalDoc('Download OpenAPI specification', '/api-json')
     .setDescription('Words API description')
     .setVersion('1.0')
+    .addBearerAuth()
     .build();
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('api', app, document);
@@ -34,10 +40,6 @@ async function bootstrap() {
       whitelist: true,
       forbidNonWhitelisted: false,
       forbidUnknownValues: true,
-      exceptionFactory: (validationErrors = []) => {
-        const errors = this.flattenValidationErrors(validationErrors);
-        return new BadRequestException(errors);
-      },
     }),
   );
 
