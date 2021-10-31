@@ -1,4 +1,4 @@
-import { BadRequestException, Injectable, Logger } from '@nestjs/common';
+import { Injectable, Logger } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { JwtService } from '@nestjs/jwt';
 import { UsersService } from '../users/users.service';
@@ -37,13 +37,12 @@ export class AuthService {
     const user = await this.usersService.createUser({ username, password: hash, name, email });
     if (user) {
       return omit(user, 'password') as UserInterface;
-    } else {
-      throw new BadRequestException('Sign up error');
     }
+    return null;
   }
 
   async issueJwt(user: UserInterface): Promise<string> {
-    const payload = { username: user.username, sub: user.id };
+    const payload = { name: user.name, username: user.username, sub: user.id };
     return this.jwtService.sign(payload);
   }
 

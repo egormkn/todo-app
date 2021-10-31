@@ -1,4 +1,4 @@
-import { Body, Controller, Post, UseGuards } from '@nestjs/common';
+import { BadRequestException, Body, Controller, Post, UseGuards } from '@nestjs/common';
 import { ApiBody, ApiTags } from '@nestjs/swagger';
 import { UserInterface } from 'src/common/interfaces/user.interface';
 import { AuthService } from './auth.service';
@@ -26,7 +26,11 @@ export class AuthController {
   @NoAuth()
   async signUp(@Body() signUpDto: SignUpDto) {
     const user = await this.authService.signUp(signUpDto);
-    return { user };
+    if (user) {
+      const token = await this.authService.issueJwt(user);
+      return { access_token: token };
+    }
+    throw new BadRequestException('Failed to sign up');
   }
 
   @Post('logout')
