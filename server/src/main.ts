@@ -1,14 +1,14 @@
-import { BadRequestException, Logger, ValidationPipe } from '@nestjs/common';
+import { Logger, ValidationPipe } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { HttpAdapterHost, NestFactory } from '@nestjs/core';
-import { AppModule } from './app.module';
+import { NestExpressApplication } from '@nestjs/platform-express';
+import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 import * as compression from 'compression';
+import { existsSync, readFile } from 'fs';
 import * as helmet from 'helmet';
 import { join } from 'path';
-import { NestExpressApplication } from '@nestjs/platform-express';
-import { existsSync } from 'fs';
 import { AngularUniversalFilter } from './angular-universal.filter';
-import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
+import { AppModule } from './app.module';
 
 async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule, {
@@ -50,20 +50,34 @@ async function bootstrap() {
   if (clientDist) {
     const browserDist = join(__dirname, '..', clientDist, 'browser');
     const serverDist = join(__dirname, '..', clientDist, 'server');
-
     const serverMain = join(serverDist, 'main.js');
-    const { engine, APP_BASE_HREF } = await import(serverMain);
 
-    app.engine('html', engine());
+    let engine, appBaseHref;
+    try {
+      const { getEngine, APP_BASE_HREF } = await import(serverMain);
+      engine = getEngine();
+      appBaseHref = APP_BASE_HREF;
+    } catch {
+      engine = (filePath: string, _: any, callback: any) => {
+        return readFile(filePath, function (err, data) {
+          if (err) return callback(err);
+          return callback(null, data.toString());
+        });
+      };
+      appBaseHref = 'APP_BASE_HREF';
+      new Logger('SSRLoader').warn('Server-side rendering is disabled');
+    }
+
+    app.engine('html', engine);
     app.setViewEngine('html');
     app.setBaseViewsDir(browserDist);
     app.useStaticAssets(browserDist, { maxAge: '1y' });
 
     const indexHtml = existsSync(join(browserDist, 'index.original.html'))
       ? 'index.original.html'
-      : 'index';
+      : 'index.html';
     const { httpAdapter } = app.get(HttpAdapterHost);
-    app.useGlobalFilters(new AngularUniversalFilter(indexHtml, APP_BASE_HREF, httpAdapter));
+    app.useGlobalFilters(new AngularUniversalFilter(indexHtml, appBaseHref, httpAdapter));
   }
 
   const host = configService.get<string>('HOST', 'localhost');
