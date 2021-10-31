@@ -1,0 +1,25 @@
+<div class="bg-light">
+  <div class="container py-5">
+    <div class="p-5 rounded-3 text-center error-bg-gray">
+      <h1 class="display-1 fw-bold text-muted mb-0 error-code">{{ code || 500 }}</h1>
+      <p class="fs-3">{{ message || 'Internal Server Error' }}</p>
+      <p *ngIf="description">{{ description }}</p>
+      <hr />
+      <nav>
+        <button
+          *ngIf="isBackAvailable"
+          type="button"
+          class="btn btn-primary me-2"
+          (click)="goBack()">
+          <fa-icon icon="arrow-left"></fa-icon> Back
+        </button>
+        <a
+          [class]="'btn btn-' + (isBackAvailable ? 'secondary' : 'primary')"
+          routerLink="/"
+          role="button">
+          <fa-icon icon="home"></fa-icon> Homepage
+        </a>
+      </nav>
+    </div>
+  </div>
+</div>

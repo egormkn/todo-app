@@ -1,0 +1,10 @@
+@import '~bootstrap/scss/functions', '~bootstrap/scss/variables';
+
+.error-bg-gray {
+  background-color: $gray-200;
+}
+
+.error-code {
+  font-size: 10rem;
+  line-height: 0.9;
+}

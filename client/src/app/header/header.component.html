@@ -1,0 +1,66 @@
+<nav class="navbar navbar-expand fixed-top navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand py-0" routerLink="/">
+      <fa-stack class="align-middle">
+        <fa-icon icon="square" stackItemSize="2x" class="text-secondary"></fa-icon>
+        <fa-icon icon="language" [inverse]="true" stackItemSize="1x"></fa-icon>
+      </fa-stack>
+      <span class="align-middle">Words App</span>
+    </a>
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      aria-controls="navbarContent"
+      [attr.aria-expanded]="!collapsed"
+      aria-label="Toggle navigation"
+      (click)="collapsed = !collapsed">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="navbar-collapse" [class.collapse]="collapsed" id="navbarContent">
+      <div class="navbar-nav ms-auto">
+        <ng-template [ngIf]="isAuthorized" [ngIfElse]="authLinks">
+          <div ngbDropdown class="nav-item">
+            <button
+              ngbDropdownToggle
+              class="btn btn-secondary"
+              type="button"
+              id="dropdownMenuButton">
+              <fa-icon icon="user" class="me-sm-2"></fa-icon>
+              <span class="d-none d-sm-inline">{{ name }}</span>
+            </button>
+            <div
+              ngbDropdownMenu
+              aria-labelledby="dropdownMenuButton"
+              class="dropdown-menu dropdown-menu-right">
+              <a class="dropdown-item" href="/users/profile">Profile</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" routerLink="/auth/logout">Log out</a>
+            </div>
+          </div>
+        </ng-template>
+        <ng-template #authLinks>
+          <a
+            routerLink="/auth/signup"
+            class="btn btn-secondary btn-sm ms-1"
+            role="button"
+            aria-pressed="true">
+            <fa-icon icon="user-plus" class="me-sm-2"></fa-icon>
+            <span class="d-none d-sm-inline">Sign Up</span>
+          </a>
+          <a
+            routerLink="/auth/login"
+            class="btn btn-secondary btn-sm ms-1"
+            role="button"
+            aria-pressed="true">
+            <fa-icon icon="sign-in-alt" class="me-sm-2"></fa-icon>
+            <span class="d-none d-sm-inline">Log In</span>
+          </a>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div style="height: 56px"></div>

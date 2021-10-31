@@ -37,7 +37,12 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "node_modules/bootstrap/scss"
+              ]
+            }
           },
           "configurations": {
             "production": {
@@ -59,7 +64,16 @@
                   "with": "src/environments/environment.prod.ts"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "optimization": {
+                "fonts": {
+                  "inline": true
+                },
+                "styles": {
+                  "inlineCritical": true,
+                  "minify": true
+                }
+              }
             },
             "development": {
               "buildOptimizer": false,

@@ -1,0 +1,40 @@
+form {
+  max-width: 350px;
+  min-width: 200px;
+}
+
+.form-floating {
+  &:focus-within {
+    z-index: 1;
+  }
+
+  & > .invalid-tooltip {
+    display: none !important;
+  }
+
+  & > .form-control:focus ~ .invalid-tooltip {
+    display: block !important;
+  }
+
+  & > label {
+    opacity: 0.85;
+  }
+
+  & > .form-control {
+    border-radius: 0;
+    border-left-width: 2px;
+    border-right-width: 2px;
+  }
+
+  &:first-of-type > .form-control {
+    border-top-width: 2px;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+  }
+
+  &:last-of-type > .form-control {
+    border-bottom-width: 2px;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+  }
+}

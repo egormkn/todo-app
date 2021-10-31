@@ -1,0 +1,9 @@
+<a
+  *ngFor="let service of services"
+  class="btn btn-primary btn-sm mx-1 text-nowrap {{ service.slug }}"
+  [class.disabled]="!service.isEnabled"
+  routerLink="/auth/{{ service.slug }}"
+  role="button">
+  <fa-icon [icon]="service.icon" class="me-2"></fa-icon>
+  {{ service.title }}
+</a>
