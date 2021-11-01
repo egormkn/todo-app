@@ -1,0 +1,28 @@
+<form [formGroup]="taskListForm" (ngSubmit)="onSubmit()">
+  <fieldset [disabled]="!isReady">
+    <div class="mb-3">
+      <label for="taskListTitle" class="form-label">Title</label>
+      <input
+        type="text"
+        formControlName="title"
+        id="taskListTitle"
+        class="form-control"
+        aria-describedby="taskListTitleHelp"
+        maxlength="256"
+        required />
+      <div id="taskListTitleHelp" class="form-text">
+        Please fill in the title of a new task list.
+      </div>
+    </div>
+    <div class="text-center">
+      <button type="submit" class="btn btn-primary" [disabled]="!taskListForm.valid">
+        <ng-template [ngIf]="isReady" [ngIfElse]="isProcessing">
+          <fa-icon icon="save" class="me-1"></fa-icon> Save
+        </ng-template>
+        <ng-template #isProcessing>
+          <fa-icon icon="spinner" [spin]="true" class="me-1"></fa-icon> Loading
+        </ng-template>
+      </button>
+    </div>
+  </fieldset>
+</form>

@@ -1,5 +1,5 @@
 {
-  "name": "words",
+  "name": "client",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -9,10 +9,10 @@
     "test": "ng test",
     "lint": "ng lint",
     "lint:debug": "DEBUG=typescript-eslint:* ng lint",
-    "dev:ssr": "ng run words:serve-ssr",
-    "serve:ssr": "node dist/words/server/main.js",
-    "build:ssr": "ng build && ng run words:server",
-    "prerender": "ng run words:prerender"
+    "dev:ssr": "ng run app:serve-ssr",
+    "serve:ssr": "node dist/app/server/main.js",
+    "build:ssr": "ng build && ng run app:server",
+    "prerender": "ng run app:prerender"
   },
   "private": true,
   "dependencies": {

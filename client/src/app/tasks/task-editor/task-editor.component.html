@@ -1,0 +1,17 @@
+<form>
+  <div class="mb-3">
+    <label for="taskTitle" class="form-label">Title</label>
+    <input
+      type="text"
+      [value]="task.title"
+      id="taskTitle"
+      class="form-control"
+      aria-describedby="taskTitleHelp" />
+    <div id="taskTitleHelp" class="form-text">Please use up to 255 characters.</div>
+  </div>
+  <div class="mb-3">
+    <label for="taskDescription" class="form-label">Description</label>
+    <textarea id="taskDescription" class="form-control" rows="3">{{ task.description }}</textarea>
+  </div>
+  <button type="submit" class="btn btn-primary">Save</button>
+</form>

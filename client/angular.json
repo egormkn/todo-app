@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "words": {
+    "app": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/words/browser",
+            "outputPath": "dist/app/browser",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -90,10 +90,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "words:build:production"
+              "browserTarget": "app:build:production"
             },
             "development": {
-              "browserTarget": "words:build:development"
+              "browserTarget": "app:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -101,7 +101,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "words:build"
+            "browserTarget": "app:build"
           }
         },
         "test": {
@@ -134,7 +134,7 @@
         "server": {
           "builder": "@angular-devkit/build-angular:server",
           "options": {
-            "outputPath": "dist/words/server",
+            "outputPath": "dist/app/server",
             "main": "server.ts",
             "tsConfig": "tsconfig.server.json",
             "inlineStyleLanguage": "scss"
@@ -161,12 +161,12 @@
           "builder": "@nguniversal/builders:ssr-dev-server",
           "configurations": {
             "development": {
-              "browserTarget": "words:build:development",
-              "serverTarget": "words:server:development"
+              "browserTarget": "app:build:development",
+              "serverTarget": "app:server:development"
             },
             "production": {
-              "browserTarget": "words:build:production",
-              "serverTarget": "words:server:production"
+              "browserTarget": "app:build:production",
+              "serverTarget": "app:server:production"
             }
           },
           "defaultConfiguration": "development"
@@ -180,12 +180,12 @@
           },
           "configurations": {
             "production": {
-              "browserTarget": "words:build:production",
-              "serverTarget": "words:server:production"
+              "browserTarget": "app:build:production",
+              "serverTarget": "app:server:production"
             },
             "development": {
-              "browserTarget": "words:build:development",
-              "serverTarget": "words:server:development"
+              "browserTarget": "app:build:development",
+              "serverTarget": "app:server:development"
             }
           },
           "defaultConfiguration": "production"
@@ -193,7 +193,7 @@
       }
     }
   },
-  "defaultProject": "words",
+  "defaultProject": "app",
   "cli": {
     "defaultCollection": "@angular-eslint/schematics"
   }

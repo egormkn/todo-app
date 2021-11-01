@@ -14,7 +14,7 @@ import { existsSync } from 'fs';
 
 export { APP_BASE_HREF } from '@angular/common';
 
-export function engine() {
+export function getEngine() {
   return ngExpressEngine({
     bootstrap: AppServerModule,
   });
@@ -23,11 +23,13 @@ export function engine() {
 // The Express app is exported so that it can be used by serverless Functions.
 export function app(): express.Express {
   const server = express();
-  const distFolder = join(process.cwd(), 'dist/words/browser');
-  const indexHtml = existsSync(join(distFolder, 'index.original.html')) ? 'index.original.html' : 'index';
+  const distFolder = join(process.cwd(), 'dist/app/browser');
+  const indexHtml = existsSync(join(distFolder, 'index.original.html'))
+    ? 'index.original.html'
+    : 'index.html';
 
   // Our Universal express-engine (found @ https://github.com/angular/universal/tree/master/modules/express-engine)
-  server.engine('html', engine());
+  server.engine('html', getEngine());
 
   server.set('view engine', 'html');
   server.set('views', distFolder);

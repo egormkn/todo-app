@@ -6,4 +6,5 @@
 
 .dockerignore
 Dockerfile
+heroku.yml
 README.md

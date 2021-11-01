@@ -1,0 +1,18 @@
+<div class="task d-flex align-items-center">
+  <div class="flex-grow-1">
+    <input class="form-check-input me-1" type="checkbox" [checked]="task.isDone" />
+    {{ task.title }}
+  </div>
+  <button
+    type="button"
+    (click)="editTask(task)"
+    class="btn btn-outline-primary btn-sm align-self-start me-1">
+    <fa-icon icon="pencil-alt"></fa-icon>
+  </button>
+  <button
+    type="button"
+    (click)="deleteTask(task)"
+    class="btn btn-outline-danger btn-sm align-self-start">
+    <fa-icon icon="trash"></fa-icon>
+  </button>
+</div>

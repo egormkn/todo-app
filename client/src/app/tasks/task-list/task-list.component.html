@@ -1,0 +1,33 @@
+<div class="card">
+  <div class="card-header d-flex align-items-center">
+    <div class="flex-grow-1">{{ taskList.title }}</div>
+    <button
+      type="button"
+      class="btn btn-outline-primary btn-sm align-self-start me-1"
+      (click)="editTaskList(taskList)">
+      <fa-icon icon="pencil-alt"></fa-icon>
+    </button>
+    <button
+      type="button"
+      class="btn btn-outline-danger btn-sm align-self-start"
+      (click)="deleteTaskList(taskList)">
+      <fa-icon icon="trash"></fa-icon>
+    </button>
+  </div>
+  <ul class="list-group list-group-flush">
+    <ng-template [ngIf]="taskList.tasks.length > 0" [ngIfElse]="noTasks">
+      <li *ngFor="let task of taskList.tasks" class="list-group-item">
+        <app-task [task]="task"></app-task>
+      </li>
+    </ng-template>
+
+    <ng-template #noTasks>
+      <li class="list-group-item disabled text-center">No tasks</li>
+    </ng-template>
+  </ul>
+  <div class="card-footer d-flex justify-content-end">
+    <button type="button" class="btn btn-primary btn-sm" (click)="addTask(taskList)">
+      <fa-icon icon="plus"></fa-icon> Add task
+    </button>
+  </div>
+</div>

@@ -72,7 +72,7 @@ COPY --chown=node:node --from=build /app/server/node_modules node_modules/
 COPY --chown=node:node --from=build /app/server/.env.example ./
 
 # Set a path to the client dist directory for SSR
-ENV CLIENT_DIST="client/words"
+ENV CLIENT_DIST="client/app"
 
 # Set NODE_ENV from build arguments
 ARG NODE_ENV=production

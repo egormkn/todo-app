@@ -24,9 +24,9 @@ async function bootstrap() {
   );
 
   const config = new DocumentBuilder()
-    .setTitle('Words App')
+    .setTitle('ToDo App')
     .setExternalDoc('Download OpenAPI specification', '/api-json')
-    .setDescription('Words API description')
+    .setDescription('ToDo API description')
     .setVersion('1.0')
     .addBearerAuth()
     .build();
