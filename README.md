@@ -2,6 +2,12 @@
 
 A fullstack (Angular + NestJS) web application for software testing course at ITMO University
 
+| **[:mortar_board: Homework][homework]** | **[:globe_with_meridians: Live Example][live]** |
+| :--------------------: | :-------------------: |
+
+[homework]: https://egormkn.github.io/todo-app "Homework"
+[live]: https://egormkn-todo-app.herokuapp.com "View live on Heroku"
+
 ## Deployment
 
 ```bash
