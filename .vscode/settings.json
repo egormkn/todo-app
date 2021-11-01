@@ -1,8 +1,5 @@
 {
-  "eslint.workingDirectories": [
-    "client",
-    "server"
-  ],
+  "eslint.workingDirectories": ["client", "server"],
   "eslint.options": {
     "extensions": [".ts", ".html"]
   },
@@ -12,5 +9,14 @@
     "typescript",
     "typescriptreact",
     "html"
-  ]
+  ],
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
