@@ -1,11 +1,13 @@
-import { Body, Controller, Delete, Get, Param, Post, Put } from '@nestjs/common';
-import { UpdateTaskListDto } from './dto/update-task-list.dto';
+import { Body, Controller, Delete, Get, Param, Patch, Post } from '@nestjs/common';
+import { ApiTags } from '@nestjs/swagger';
+import { CreateTaskListDto } from './dto/create-task-list.dto';
 import { CreateTaskDto } from './dto/create-task.dto';
+import { UpdateTaskListDto } from './dto/update-task-list.dto';
 import { UpdateTaskDto } from './dto/update-task.dto';
 import { TasksService } from './tasks.service';
-import { CreateTaskListDto } from './dto/create-task-list.dto';
 
 @Controller('tasks')
+@ApiTags('tasks')
 export class TasksController {
   constructor(private readonly tasksService: TasksService) {}
 
@@ -20,18 +22,18 @@ export class TasksController {
   }
 
   @Get('task/:id')
-  findOneTask(@Param('id') id: string) {
-    return this.tasksService.findOneTask(+id);
+  findOneTask(@Param('id') id: number) {
+    return this.tasksService.findOneTask(id);
   }
 
-  @Put('task/:id')
-  updateTask(@Param('id') id: string, @Body() updateTaskDto: UpdateTaskDto) {
-    return this.tasksService.updateTask(+id, updateTaskDto);
+  @Patch('task/:id')
+  updateTask(@Param('id') id: number, @Body() updateTaskDto: UpdateTaskDto) {
+    return this.tasksService.updateTask(id, updateTaskDto);
   }
 
   @Delete('task/:id')
-  removeTask(@Param('id') id: string) {
-    return this.tasksService.removeTask(+id);
+  removeTask(@Param('id') id: number) {
+    return this.tasksService.removeTask(id);
   }
 
   @Post('list')
@@ -45,17 +47,17 @@ export class TasksController {
   }
 
   @Get('list/:id')
-  findOneList(@Param('id') id: string) {
-    return this.tasksService.findOneList(+id);
+  findOneList(@Param('id') id: number) {
+    return this.tasksService.findOneList(id);
   }
 
-  @Put('list/:id')
-  updateList(@Param('id') id: string, @Body() updateTaskListDto: UpdateTaskListDto) {
-    return this.tasksService.updateList(+id, updateTaskListDto);
+  @Patch('list/:id')
+  updateList(@Param('id') id: number, @Body() updateTaskListDto: UpdateTaskListDto) {
+    return this.tasksService.updateList(id, updateTaskListDto);
   }
 
   @Delete('list/:id')
-  removeList(@Param('id') id: string) {
-    return this.tasksService.removeList(+id);
+  removeList(@Param('id') id: number) {
+    return this.tasksService.removeList(id);
   }
 }
