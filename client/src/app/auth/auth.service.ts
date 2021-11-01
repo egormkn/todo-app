@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { JwtHelperService } from '@auth0/angular-jwt';
-import { Subject } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { tap } from 'rxjs/operators';
 
 export interface LogInDto {
@@ -18,18 +18,26 @@ export interface AuthResponse {
   access_token: string;
 }
 
-export const authApiPrefix = '/api';
+export interface JwtPayload {
+  name: string;
+  username: string;
+}
+
+export const apiPrefix = '/api';
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {
-  private authStatusSource = new Subject<boolean>();
+  private authStatusSource = new BehaviorSubject<boolean>(false);
 
   authStatus$ = this.authStatusSource.asObservable();
 
-  constructor(private jwtService: JwtHelperService, private http: HttpClient) {}
+  constructor(private jwtService: JwtHelperService, private http: HttpClient) {
+    const isLoggedIn = this.isLoggedIn();
+    this.authStatusSource.next(isLoggedIn);
+  }
 
-  logIn(data: LogInDto) {
-    const url = `${authApiPrefix}/auth/login`;
+  logIn(data: LogInDto): Observable<AuthResponse> {
+    const url = `${apiPrefix}/auth/login`;
     return this.http.post<AuthResponse>(url, data).pipe(
       // retry(2), // FIXME: Do not retry on response
       tap((value) => {
@@ -41,8 +49,8 @@ export class AuthService {
     );
   }
 
-  signUp(data: SignUpDto) {
-    const url = `${authApiPrefix}/auth/signup`;
+  signUp(data: SignUpDto): Observable<AuthResponse> {
+    const url = `${apiPrefix}/auth/signup`;
     return this.http.post<AuthResponse>(url, data).pipe(
       // retry(2),
       tap((value) => {
@@ -54,26 +62,28 @@ export class AuthService {
     );
   }
 
-  logOut() {
+  logOut(): void {
     localStorage.removeItem('access_token');
     this.authStatusSource.next(false);
   }
 
-  isLoggedIn() {
+  isLoggedIn(): boolean {
     return !this.jwtService.isTokenExpired();
   }
 
-  isLoggedOut() {
+  isLoggedOut(): boolean {
     return !this.isLoggedIn();
   }
 
   getUsername() {
-    return this.jwtService.decodeToken<{ username: string }>().username;
+    const payload = this.jwtService.decodeToken<JwtPayload>();
+    console.log('Payload: ', payload);
+    return payload.username;
   }
 
   getName() {
-    const payload = this.jwtService.decodeToken<{ name: string }>();
-    console.log(payload);
+    const payload = this.jwtService.decodeToken<JwtPayload>();
+    console.log('Payload: ', payload);
     return payload.name;
   }
 }

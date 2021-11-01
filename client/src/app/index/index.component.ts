@@ -1,7 +1,8 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { AuthService } from '@app/auth/auth.service';
 import { FaIconLibrary } from '@fortawesome/angular-fontawesome';
-import { faBell } from '@fortawesome/free-solid-svg-icons';
+import { faCodeBranch, faCubes, faTerminal } from '@fortawesome/free-solid-svg-icons';
 import { Subscription } from 'rxjs';
 
 @Component({
@@ -10,20 +11,23 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./index.component.scss'],
 })
 export class IndexComponent implements OnInit, OnDestroy {
-  authSubscription: Subscription;
+  authSubscription?: Subscription;
 
   isAuthorized = false;
 
-  constructor(private authService: AuthService, library: FaIconLibrary) {
-    this.authSubscription = authService.authStatus$.subscribe((isAuthorized) => {
-      this.updateAuthStatus(isAuthorized);
-    });
-    library.addIcons(faBell);
+  constructor(
+    private authService: AuthService,
+    private titleService: Title,
+    library: FaIconLibrary,
+  ) {
+    library.addIcons(faCubes, faCodeBranch, faTerminal);
   }
 
   ngOnInit(): void {
-    const isAuthorized = this.authService.isLoggedIn();
-    this.updateAuthStatus(isAuthorized);
+    this.authSubscription = this.authService.authStatus$.subscribe((isAuthorized) => {
+      this.updateAuthStatus(isAuthorized);
+    });
+    this.titleService.setTitle('ToDo');
   }
 
   updateAuthStatus(isAuthorized: boolean) {
@@ -31,6 +35,6 @@ export class IndexComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    this.authSubscription.unsubscribe();
+    this.authSubscription?.unsubscribe();
   }
 }

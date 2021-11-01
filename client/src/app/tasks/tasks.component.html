@@ -1,36 +1,34 @@
-<div class="bg-light">
-  <div class="container py-5">
-    <div class="d-flex justify-content-between">
-      <a role="button" class="btn btn-secondary mb-3" routerLink="/">
-        <fa-icon icon="arrow-left" class="me-1"></fa-icon>
-        Back
-      </a>
-      <button type="button" class="btn btn-primary mb-3" (click)="addTaskList()">
-        <fa-icon icon="plus" class="me-1"></fa-icon>
-        Add list
-      </button>
-    </div>
+<div class="container py-5">
+  <div class="d-flex justify-content-between">
+    <a role="button" class="btn btn-secondary mb-3" routerLink="/">
+      <fa-icon icon="arrow-left" class="me-1"></fa-icon>
+      Back
+    </a>
+    <button type="button" class="btn btn-primary mb-3" (click)="addTaskList()">
+      <fa-icon icon="plus" class="me-1"></fa-icon>
+      Add list
+    </button>
+  </div>
 
-    <div *ngIf="isReady; else isProcessing" class="row">
-      <ng-template [ngIf]="taskLists.length > 0" [ngIfElse]="noLists">
-        <div *ngFor="let taskList of taskLists" class="col-sm-6 col-lg-4 mb-4">
-          <app-task-list
-            [taskList]="taskList"
-            (onDelete)="onDeleteTaskList(taskList)"></app-task-list>
-        </div>
-      </ng-template>
+  <div *ngIf="isReady; else isProcessing" class="row">
+    <ng-template [ngIf]="taskLists.length > 0" [ngIfElse]="noLists">
+      <div *ngFor="let taskList of taskLists" class="col-sm-6 col-lg-4 mb-4">
+        <app-task-list
+          [taskList]="taskList"
+          (onDelete)="onDeleteTaskList(taskList)"></app-task-list>
+      </div>
+    </ng-template>
 
-      <ng-template #noLists>
-        <div class="col">
-          <div class="card p-4 text-center">No task lists</div>
-        </div>
-      </ng-template>
-    </div>
-
-    <ng-template #isProcessing>
-      <div class="text-center">
-        <fa-icon icon="spinner" size="3x" [spin]="true"></fa-icon>
+    <ng-template #noLists>
+      <div class="col">
+        <div class="card p-4 text-center">No task lists</div>
       </div>
     </ng-template>
   </div>
+
+  <ng-template #isProcessing>
+    <div class="text-center">
+      <fa-icon icon="spinner" size="3x" [spin]="true"></fa-icon>
+    </div>
+  </ng-template>
 </div>

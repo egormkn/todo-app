@@ -1,5 +1,5 @@
-import { Component, EventEmitter, Input, OnInit, Output, SimpleChanges } from '@angular/core';
-import { AbstractControl, FormControl, FormGroup, ValidationErrors } from '@angular/forms';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { AbstractControl, FormBuilder, Validators } from '@angular/forms';
 import { FaIconLibrary } from '@fortawesome/angular-fontawesome';
 import { faSave, faSpinner } from '@fortawesome/free-solid-svg-icons';
 import { TaskList } from '../shared/task-list.model';
@@ -17,13 +17,15 @@ export class TaskListEditorComponent implements OnInit {
   @Output()
   onSave = new EventEmitter<TaskList>();
 
-  taskListForm: FormGroup = new FormGroup({
-    title: new FormControl(''),
+  taskListForm = this.fb.group({
+    title: ['', Validators.required],
   });
 
-  isReady = true;
+  errors?: string[];
 
-  constructor(private tasksService: TasksService, library: FaIconLibrary) {
+  isReady = false;
+
+  constructor(private fb: FormBuilder, private tasksService: TasksService, library: FaIconLibrary) {
     library.addIcons(faSave, faSpinner);
   }
 
@@ -35,48 +37,37 @@ export class TaskListEditorComponent implements OnInit {
         return title == control.value ? { sameValue: { value: control.value } } : null;
       });
     }
+    this.isReady = true;
   }
 
-  ngOnChanges(changes: SimpleChanges): void {
-    console.log('ngOnChanges', changes);
+  get f(): { [key: string]: AbstractControl } {
+    return this.taskListForm.controls;
   }
 
   onSubmit(): void {
-    this.isReady = false;
-    const title = this.taskListForm.controls.title.value;
-    if (this.taskList) {
-      this.tasksService.updateTaskList({ ...this.taskList, title }).subscribe(
-        (list) => {
-          this.onSuccess(list);
+    if (this.taskListForm.valid) {
+      this.isReady = false;
+      const title = this.taskListForm.controls.title.value;
+      const observer = {
+        next: (list: TaskList | null) => {
+          this.isReady = true;
+          if (list) {
+            console.log('Saved task list: ', list);
+            this.onSave.emit(list);
+          } else {
+            console.error('Saved null task list');
+          }
         },
-        (error) => {
-          this.onError(error);
+        error: (error: any) => {
+          this.isReady = true;
+          console.error('Failed to save list: ', error);
         },
-      );
-    } else {
-      this.tasksService.addTaskList(title).subscribe(
-        (list) => {
-          this.onSuccess(list);
-        },
-        (error) => {
-          this.onError(error);
-        },
-      );
+      };
+      if (this.taskList) {
+        this.tasksService.updateTaskList({ ...this.taskList, title }).subscribe(observer);
+      } else {
+        this.tasksService.addTaskList(title).subscribe(observer);
+      }
     }
-  }
-
-  onSuccess(list: TaskList | null): void {
-    this.isReady = true;
-    if (list) {
-      console.log('Saved task list: ', list);
-      this.onSave.emit(list);
-    } else {
-      console.error('Saved null task list');
-    }
-  }
-
-  onError(error: any): void {
-    console.error('Failed to save list: ', error);
-    this.isReady = true;
   }
 }

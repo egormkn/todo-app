@@ -44,7 +44,7 @@ export class TaskListComponent implements OnInit {
       TaskListEditorComponent,
       { taskList },
       {
-        onSave: (taskList) => {
+        onSave: (taskList: any) => {
           this.onEditTaskList(taskList);
         },
       },

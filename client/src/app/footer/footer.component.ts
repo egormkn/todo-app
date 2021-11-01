@@ -9,6 +9,7 @@ import { faNestJs } from './fontawesome-svg-nestjs';
   styleUrls: ['./footer.component.scss'],
 })
 export class FooterComponent {
+  faAngular = faAngular;
   faNestJs = faNestJs;
 
   constructor(library: FaIconLibrary) {

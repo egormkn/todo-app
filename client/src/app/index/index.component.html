@@ -1,76 +1,77 @@
-<div class="bg-light">
-  <div class="container py-5">
-    <div class="px-4 my-5 text-center border-bottom">
-      <h1 class="display-4 fw-bold">Learn the words</h1>
-      <div class="col-lg-6 mx-auto">
-        <p class="lead mb-4">
-          Free up your mental space. Regain clarity and calmness by getting all those tasks out of
-          your head and onto your to-do list (no matter where you are or what device you use).
-        </p>
-        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
+<div class="container py-5">
+  <div class="px-4 my-5 text-center border-bottom">
+    <h1 class="display-4 fw-bold">Organize it all</h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4">
+        Free up your mental space. Regain clarity and calmness by getting all those tasks out of
+        your head and onto your to-do list no matter where you are or what device you use.
+      </p>
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
+        <ng-template [ngIf]="isAuthorized" [ngIfElse]="notAuthorized">
+          <a role="button" class="btn btn-primary btn-lg px-4 me-sm-3" routerLink="/tasks">
+            Launch
+          </a>
+        </ng-template>
+        <ng-template #notAuthorized>
           <a
-            *ngIf="isAuthorized"
             role="button"
             class="btn btn-primary btn-lg px-4 me-sm-3"
-            routerLink="/words"
-            >Open</a
-          >
-          <!-- <button type="button" class="btn btn-outline-secondary btn-lg px-4">Secondary</button> -->
-        </div>
-      </div>
-      <div class="overflow-hidden" style="max-height: 30vh">
-        <div class="container px-5">
-          <img
-            src="https://via.placeholder.com/854x480?text=TODO+Add+screenshot"
-            class="img-fluid border rounded-3 shadow-lg mb-4"
-            alt="Screenshot"
-            loading="lazy"
-            width="854"
-            height="480" />
-        </div>
+            routerLink="/auth/signup"
+            [queryParams]="{ to: '/tasks' }">
+            Sign Up
+          </a>
+          <a
+            role="button"
+            class="btn btn-secondary btn-lg px-4 me-sm-3"
+            routerLink="/auth/login"
+            [queryParams]="{ to: '/tasks' }">
+            Log In
+          </a>
+        </ng-template>
       </div>
     </div>
+    <div class="overflow-hidden" style="max-height: 30vh">
+      <div class="container px-5">
+        <img
+          src="assets/screenshot.png"
+          class="img-fluid border rounded-3 shadow-lg mb-4"
+          alt="Screenshot"
+          loading="lazy"
+          width="854"
+          height="480" />
+      </div>
+    </div>
+  </div>
 
-    <div class="px-4 my-5">
-      <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
-        <div class="col d-flex align-items-start">
-          <div class="icon-square bg-light text-primary flex-shrink-0 me-3">
-            <fa-icon icon="bell" size="2x"></fa-icon>
-          </div>
-          <div>
-            <h2>Featured title</h2>
-            <p>
-              Paragraph of text beneath the heading to explain the heading. We'll add onto it with
-              another sentence and probably just keep going until we run out of words.
-            </p>
-            <a href="#" class="btn btn-primary"> Great! </a>
-          </div>
+  <div class="px-4">
+    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+      <div class="col d-flex align-items-start">
+        <div class="icon-square bg-light text-primary flex-shrink-0 me-3">
+          <fa-icon icon="cubes" [fixedWidth]="true" size="2x"></fa-icon>
         </div>
-        <div class="col d-flex align-items-start">
-          <div class="icon-square bg-light text-primary flex-shrink-0 me-3">
-            <fa-icon icon="bell" size="2x"></fa-icon>
-          </div>
-          <div>
-            <h2>Featured title</h2>
-            <p>
-              Paragraph of text beneath the heading to explain the heading. We'll add onto it with
-              another sentence and probably just keep going until we run out of words.
-            </p>
-            <a href="#" class="btn btn-primary"> Cool! </a>
-          </div>
+        <div>
+          <h2>Modern Technologies</h2>
+          <p>This application is developed using Angular 12 and NestJS 8.</p>
         </div>
-        <div class="col d-flex align-items-start">
-          <div class="icon-square bg-light text-primary flex-shrink-0 me-3">
-            <fa-icon icon="bell" size="2x"></fa-icon>
-          </div>
-          <div>
-            <h2>Featured title</h2>
-            <p>
-              Paragraph of text beneath the heading to explain the heading. We'll add onto it with
-              another sentence and probably just keep going until we run out of words.
-            </p>
-            <a href="#" class="btn btn-primary"> Awesome! </a>
-          </div>
+      </div>
+      <div class="col d-flex align-items-start">
+        <div class="icon-square bg-light text-primary flex-shrink-0 me-3">
+          <fa-icon icon="code-branch" [fixedWidth]="true" size="2x"></fa-icon>
+        </div>
+        <div>
+          <h2>Open Source</h2>
+          <p>This application is free software hosted on GitHub.</p>
+          <a href="https://github.com/egormkn/todo-app" class="btn btn-primary">Source</a>
+        </div>
+      </div>
+      <div class="col d-flex align-items-start">
+        <div class="icon-square bg-light text-primary flex-shrink-0 me-3">
+          <fa-icon icon="terminal" [fixedWidth]="true" size="2x"></fa-icon>
+        </div>
+        <div>
+          <h2>REST API</h2>
+          <p>Develop awesome applications and services with our REST API.</p>
+          <a href="/api" class="btn btn-primary">Documentation</a>
         </div>
       </div>
     </div>

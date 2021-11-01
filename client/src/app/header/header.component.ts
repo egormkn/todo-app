@@ -2,7 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { AuthService } from '@app/auth/auth.service';
 import { FaIconLibrary } from '@fortawesome/angular-fontawesome';
 import {
-  faLanguage,
+  faCheck,
   faSignInAlt,
   faSquare,
   faUser,
@@ -16,7 +16,7 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit, OnDestroy {
-  authSubscription: Subscription;
+  authSubscription?: Subscription;
 
   collapsed = true;
 
@@ -25,15 +25,15 @@ export class HeaderComponent implements OnInit, OnDestroy {
   name?: string;
 
   constructor(private authService: AuthService, library: FaIconLibrary) {
-    this.authSubscription = authService.authStatus$.subscribe((isAuthorized) => {
-      this.updateAuthStatus(isAuthorized);
-    });
-    library.addIcons(faSquare, faLanguage, faUser, faUserPlus, faSignInAlt);
+    library.addIcons(faSquare, faCheck, faUser, faUserPlus, faSignInAlt);
   }
 
   ngOnInit(): void {
-    const isAuthorized = this.authService.isLoggedIn();
-    this.updateAuthStatus(isAuthorized);
+    console.log('Add header subscription');
+    this.authSubscription = this.authService.authStatus$.subscribe((isAuthorized) => {
+      console.log('Update header subscription: ', isAuthorized);
+      this.updateAuthStatus(isAuthorized);
+    });
   }
 
   updateAuthStatus(isAuthorized: boolean) {
@@ -46,6 +46,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    this.authSubscription.unsubscribe();
+    console.log('Remove header subscription');
+    this.authSubscription?.unsubscribe();
   }
 }
