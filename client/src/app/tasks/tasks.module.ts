@@ -29,7 +29,6 @@ import { ModalService } from './modal/modal.service';
     NgbModule,
     FontAwesomeModule,
     TasksRoutingModule,
-    HttpClientModule,
     // HttpClientInMemoryWebApiModule.forFeature(
     //   FakeTasksService, {
     //     apiBase: tasksApiUrl,

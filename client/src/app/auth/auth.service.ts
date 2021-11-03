@@ -41,7 +41,7 @@ export class AuthService {
     return this.http.post<AuthResponse>(url, data).pipe(
       // retry(2), // FIXME: Do not retry on response
       tap((value) => {
-        console.log(`Logging in: ${value}`);
+        console.log(`Logging in: `, value);
         localStorage.setItem('access_token', value['access_token']);
         this.authStatusSource.next(true);
       }),
@@ -54,7 +54,25 @@ export class AuthService {
     return this.http.post<AuthResponse>(url, data).pipe(
       // retry(2),
       tap((value) => {
-        console.log(`Signed up: ${value}`);
+        console.log(`Signed up: `, value);
+        localStorage.setItem('access_token', value['access_token']);
+        this.authStatusSource.next(true);
+      }),
+      // shareReplay(),
+    );
+  }
+
+  getAuthUrl(type: string) {
+    const url = `${apiPrefix}/auth/${type}`;
+    return this.http.head(url, { observe: 'events' });
+  }
+
+  connect(type: string, params: Record<string, any>) {
+    const url = `${apiPrefix}/auth/${type}`;
+    return this.http.get<AuthResponse>(url, { params }).pipe(
+      // retry(2),
+      tap((value) => {
+        console.log(`Connected: `, value);
         localStorage.setItem('access_token', value['access_token']);
         this.authStatusSource.next(true);
       }),
@@ -77,13 +95,11 @@ export class AuthService {
 
   getUsername() {
     const payload = this.jwtService.decodeToken<JwtPayload>();
-    console.log('Payload: ', payload);
     return payload.username;
   }
 
   getName() {
     const payload = this.jwtService.decodeToken<JwtPayload>();
-    console.log('Payload: ', payload);
     return payload.name;
   }
 }

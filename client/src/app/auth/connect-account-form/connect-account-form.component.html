@@ -1,0 +1,7 @@
+<div class="text-center">
+  <fa-icon *ngIf="!isReady; else isFailed" icon="spinner" [spin]="true" size="2x"></fa-icon>
+
+  <ng-template #isFailed>
+    {{ error }}
+  </ng-template>
+</div>

@@ -1,0 +1,13 @@
+<div class="text-center">
+  <ng-template [ngIf]="user" [ngIfElse]="loading">
+    <fa-stack size="3x">
+      <fa-icon icon="square" stackItemSize="2x" class="text-secondary"></fa-icon>
+      <fa-icon icon="user" stackItemSize="1x" [inverse]="true"></fa-icon>
+    </fa-stack>
+
+    <h2>User #{{ user.id }}: {{ user.name }}</h2>
+  </ng-template>
+  <ng-template #loading>
+    <fa-icon icon="spinner" [spin]="true" size="2x"></fa-icon>
+  </ng-template>
+</div>

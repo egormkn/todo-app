@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { socialServices } from './social.model';
+import { Router } from '@angular/router';
+import { AuthService } from '../auth.service';
+import { SocialServiceType, services } from './social.model';
 
 @Component({
   selector: 'app-social',
@@ -7,5 +9,11 @@ import { socialServices } from './social.model';
   styleUrls: ['./social.component.scss'],
 })
 export class SocialComponent {
-  services = socialServices;
+  services = services;
+
+  constructor(private authService: AuthService, private router: Router) {}
+
+  logIn(type: SocialServiceType) {
+    window.location.href = `/api/auth/${type}`;
+  }
 }

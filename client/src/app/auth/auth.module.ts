@@ -10,6 +10,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AuthComponent } from './auth.component';
 import { LogoutFormComponent } from './logout-form/logout-form.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ConnectAccountFormComponent } from './connect-account-form/connect-account-form.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     SocialComponent,
     AuthComponent,
     LogoutFormComponent,
+    ConnectAccountFormComponent,
   ],
   imports: [
     CommonModule,

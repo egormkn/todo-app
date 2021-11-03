@@ -1,29 +1,31 @@
 import { IconDefinition, faFacebookF, faGoogle, faVk } from '@fortawesome/free-brands-svg-icons';
 
+export type SocialServiceType = 'facebook' | 'vkontakte' | 'google';
+
 export interface SocialService {
-  slug: string;
+  type: SocialServiceType;
   title: string;
   icon: IconDefinition;
   isEnabled: boolean;
 }
 
-export const socialServices: SocialService[] = [
+export const services: SocialService[] = [
   {
-    slug: 'facebook',
+    type: 'facebook',
     title: 'Facebook',
     icon: faFacebookF,
     isEnabled: false,
   },
   {
-    slug: 'vk',
+    type: 'vkontakte',
     title: 'Vkontakte',
     icon: faVk,
     isEnabled: false,
   },
   {
-    slug: 'google',
+    type: 'google',
     title: 'Google',
     icon: faGoogle,
-    isEnabled: false,
+    isEnabled: true,
   },
 ];

@@ -22,7 +22,7 @@ export class UsersController {
   @Get('@me')
   @Auth()
   async getMyProfile(@User() user: UserInterface) {
-    return { user };
+    return user;
   }
 
   @Get(':username')

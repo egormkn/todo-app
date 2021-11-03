@@ -23,10 +23,8 @@ import { IndexComponent } from './index/index.component';
     HttpClientModule,
     JwtModule.forRoot({
       config: {
-        tokenGetter: (_request) => {
-          return localStorage.getItem('access_token');
-        },
-        skipWhenExpired: true,
+        tokenGetter: (req) => localStorage?.getItem('access_token'),
+        skipWhenExpired: false,
       },
     }),
     FontAwesomeModule,
