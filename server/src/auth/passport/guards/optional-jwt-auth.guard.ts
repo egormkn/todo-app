@@ -1,11 +1,11 @@
-import { BadRequestException, ExecutionContext, Injectable, Logger } from '@nestjs/common';
+import { ExecutionContext, Injectable, Logger } from '@nestjs/common';
 import { Reflector } from '@nestjs/core';
 import { AuthGuard } from '@nestjs/passport';
 import { PUBLIC_KEY } from '../../decorators/allow-no-auth.decorator';
 
 @Injectable()
-export class JwtAuthGuard extends AuthGuard('jwt') {
-  private readonly logger = new Logger(JwtAuthGuard.name);
+export class OptionalJwtAuthGuard extends AuthGuard('jwt') {
+  private readonly logger = new Logger(OptionalJwtAuthGuard.name);
 
   constructor(private readonly reflector: Reflector) {
     super();
@@ -21,10 +21,7 @@ export class JwtAuthGuard extends AuthGuard('jwt') {
 
   handleRequest(err: any, user: any, info: any, context: any, status?: any) {
     const isValidJwt = !err && user;
-    this.logger.verbose(isValidJwt ? '✔ Valid JWT' : '✖ Invalid JWT');
-    if (!isValidJwt) {
-      throw err || new BadRequestException(info?.message);
-    }
-    return user;
+    this.logger.verbose(isValidJwt ? '✔ Valid JWT' : '✔ Skipping JWT');
+    return isValidJwt ? user : undefined;
   }
 }

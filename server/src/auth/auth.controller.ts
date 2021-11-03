@@ -1,13 +1,16 @@
-import { BadRequestException, Body, Controller, Post, UseGuards } from '@nestjs/common';
+import { BadRequestException, Body, Controller, Get, Post } from '@nestjs/common';
 import { ApiBody, ApiTags } from '@nestjs/swagger';
-import { UserInterface } from 'src/common/interfaces/user.interface';
+import { UserInterface } from '../common/interfaces/user.interface';
 import { AuthService } from './auth.service';
 import { Auth } from './decorators/auth.decorator';
 import { NoAuth } from './decorators/no-auth.decorator';
+import { OptionalAuth } from './decorators/optional-auth.decorator';
 import { User } from './decorators/user.decorator';
 import { LogInDto } from './dto/log-in.dto';
 import { SignUpDto } from './dto/sign-up.dto';
+import { GoogleAuthGuard } from './passport/guards/google-auth.guard';
 import { LocalAuthGuard } from './passport/guards/local-auth.guard';
+import { VkontakteAuthGuard } from './passport/guards/vkontakte-auth.guard';
 
 @Controller('auth')
 @ApiTags('auth')
@@ -15,7 +18,7 @@ export class AuthController {
   constructor(private readonly authService: AuthService) {}
 
   @Post('login')
-  @UseGuards(LocalAuthGuard)
+  @NoAuth(LocalAuthGuard)
   @ApiBody({ type: LogInDto })
   async logIn(@User() user: UserInterface) {
     const token = await this.authService.issueJwt(user);
@@ -39,35 +42,30 @@ export class AuthController {
     return this.authService.logOut(user);
   }
 
-  // @Get('google')
-  // @UseGuards(GoogleAuthGuard)
-  // @Redirect('/')
-  // getGoogle() {
-  //   // Handle Google OAuth
+  @Get('google')
+  @OptionalAuth(GoogleAuthGuard)
+  async logInWithGoogle(@User() user: UserInterface) {
+    console.log(user);
+    const token = await this.authService.issueJwt(user);
+    return { access_token: token };
+  }
+
+  @Get('vkontakte')
+  @OptionalAuth(VkontakteAuthGuard)
+  async logInWithVkontakte(@User() user: UserInterface) {
+    const token = await this.authService.issueJwt(user);
+    return { access_token: token };
+  }
+
+  // @Get('test')
+  // @OptionalAuth()
+  // async test(@User() user?: UserInterface) {
+  //   return { user };
   // }
 
-  // @Get('google/callback')
-  // @UseGuards(GoogleAuthGuard)
-  // @Redirect()
-  // getGoogleCallback(@Session() session: Record<string, any>) {
-  //   const url = session.intent ?? '/';
-  //   delete session.intent;
-  //   return { url };
-  // }
-
-  // @Get('vkontakte')
-  // @UseGuards(VkontakteAuthGuard)
-  // @Redirect('/')
-  // getVkontakte() {
-  //   // Handle Vkontakte OAuth
-  // }
-
-  // @Get('vkontakte/callback')
-  // @UseGuards(VkontakteAuthGuard)
-  // @Redirect()
-  // vkontakteCallback(@Session() session: Record<string, any>) {
-  //   const url = session.intent ?? '/';
-  //   delete session.intent;
-  //   return { url };
+  // @Get('test2')
+  // @Auth()
+  // async test2(@User() user?: UserInterface) {
+  //   return { user };
   // }
 }

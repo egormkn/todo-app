@@ -1,7 +1,7 @@
 import { BadRequestException, Injectable, Logger } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { UserPasswordInterface } from 'src/common/interfaces/user-password.interface';
 import { Repository } from 'typeorm';
+import { UserPasswordInterface } from '../common/interfaces/user-password.interface';
 import { CreateAccountDto } from './dto/create-account.dto';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateAccountDto } from './dto/update-account.dto';
@@ -54,8 +54,12 @@ export class UsersService {
     });
   }
 
-  async createAccount(createAccountDto: CreateAccountDto): Promise<AccountEntity> {
-    const account = this.accountsRepository.create(createAccountDto);
+  async createAccount(id: number, createAccountDto: CreateAccountDto): Promise<AccountEntity> {
+    const user = await this.findById(id);
+    if (!user) {
+      throw new BadRequestException(`User does not exist`);
+    }
+    const account = this.accountsRepository.create({ ...createAccountDto, user });
     this.logger.debug(`Create account: ${JSON.stringify(account)}`);
     return this.accountsRepository.save(account).catch((error) => {
       const { message } = error;

@@ -1,4 +1,5 @@
 import { IsIn, IsNotEmpty, IsOptional } from 'class-validator';
+import { accountTypes } from '../../common/account-types';
 import { AccountInterface } from '../../common/interfaces/account.interface';
 import { UserInterface } from '../../common/interfaces/user.interface';
 
@@ -7,8 +8,8 @@ export class ConnectAccountDto implements Omit<AccountInterface, 'user'> {
    * A type of the account to connect
    * @example vkontakte
    */
-  @IsIn(['google', 'vkontakte'])
-  type: string;
+  @IsIn(accountTypes)
+  type: 'facebook' | 'google' | 'vkontakte';
 
   /**
    * An id of the account to connect

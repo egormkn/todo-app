@@ -1,36 +1,32 @@
-import { Injectable, Logger } from '@nestjs/common';
-import { ConfigService } from '@nestjs/config';
+import { ExecutionContext, Injectable, Logger, UnauthorizedException } from '@nestjs/common';
+import { Reflector } from '@nestjs/core';
 import { AuthGuard } from '@nestjs/passport';
+import { PUBLIC_KEY } from '../../decorators/allow-no-auth.decorator';
 
 @Injectable()
 export class GoogleAuthGuard extends AuthGuard('google') {
   private readonly logger = new Logger(GoogleAuthGuard.name);
 
-  constructor(private readonly configService: ConfigService) {
+  constructor(private readonly reflector: Reflector) {
     super();
   }
 
-  // async canActivate(context: ExecutionContext) {
-  //   const req = context.switchToHttp().getRequest<Request>();
-  //   const user = req.user as UserInterface;
-  //   const account = user?.accounts.find((account) => account.type === 'google');
-  //   if (account) {
-  //     this.logger.verbose('Authenticated with google strategy before');
-  //     return true;
-  //   }
-  //   if (!req.url.startsWith('/auth/google/callback')) {
-  //     const session = req.session as Record<string, any>;
-  //     session.intent = req.url;
-  //   }
-  //   const result = (await super.canActivate(context)) as boolean;
-  //   if (result) {
-  //     this.logger.verbose('Authenticated with google strategy');
-  //     this.logger.verbose(user);
-  //     await super.logIn(req);
-  //     return true;
-  //   } else {
-  //     this.logger.verbose('Not authenticated with google strategy');
-  //     throw new UnauthorizedException('Failed to authenticate with Google');
-  //   }
-  // }
+  canActivate(context: ExecutionContext) {
+    const isPublic = this.reflector.getAllAndOverride<boolean>(PUBLIC_KEY, [
+      context.getHandler(),
+      context.getClass(),
+    ]);
+    return isPublic || super.canActivate(context);
+  }
+
+  handleRequest(err: any, user: any, info: any, context: any, status?: any) {
+    const isAuthenticated = !err && user;
+    this.logger.verbose(
+      isAuthenticated ? '✔ Authenticated with Google' : '✖ Not authenticated with Google',
+    );
+    if (!isAuthenticated) {
+      throw err || new UnauthorizedException(info?.message);
+    }
+    return user;
+  }
 }

@@ -1,10 +1,10 @@
 import { Controller, Get, Param } from '@nestjs/common';
-import { User } from '../auth/decorators/user.decorator';
-import { UserInterface } from 'src/common/interfaces/user.interface';
+import { ApiTags } from '@nestjs/swagger';
 import { Auth } from '../auth/decorators/auth.decorator';
 import { Roles } from '../auth/decorators/roles.decorator';
+import { User } from '../auth/decorators/user.decorator';
+import { UserInterface } from '../common/interfaces/user.interface';
 import { UsersService } from './users.service';
-import { ApiTags } from '@nestjs/swagger';
 
 @Controller('users')
 @ApiTags('users')

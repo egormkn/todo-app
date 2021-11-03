@@ -1,5 +1,5 @@
-import { AccountInterface } from 'src/common/interfaces/account.interface';
 import { Column, Entity, ManyToOne, PrimaryColumn, Unique } from 'typeorm';
+import { AccountInterface } from '../../common/interfaces/account.interface';
 import { UserEntity } from './user.entity';
 
 @Entity('account')
