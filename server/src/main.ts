@@ -15,7 +15,8 @@ async function bootstrap() {
     cors: true,
   });
 
-  app.setGlobalPrefix('api');
+  const configService = app.get(ConfigService);
+
   app.use(compression());
   app.use(
     helmet({
@@ -23,15 +24,24 @@ async function bootstrap() {
     }),
   );
 
+  const api = {
+    title: configService.get<string>('API_TITLE', 'Application'),
+    description: configService.get<string>('API_DESCRIPTION', 'API description'),
+    version: configService.get<string>('API_VERSION', '1.0'),
+    prefix: configService.get<string>('API_PREFIX', '/api'),
+  };
+
+  app.setGlobalPrefix(api.prefix);
+
   const config = new DocumentBuilder()
-    .setTitle('ToDo App')
-    .setExternalDoc('Download OpenAPI specification', '/api-json')
-    .setDescription('ToDo API description')
-    .setVersion('1.0')
+    .setTitle(api.title)
+    .setExternalDoc('Download OpenAPI specification', `${api.prefix}-json`)
+    .setDescription(api.description)
+    .setVersion(api.version)
     .addBearerAuth()
     .build();
   const document = SwaggerModule.createDocument(app, config);
-  SwaggerModule.setup('api', app, document);
+  SwaggerModule.setup(api.prefix, app, document);
 
   app.useGlobalPipes(
     new ValidationPipe({
@@ -42,8 +52,6 @@ async function bootstrap() {
       forbidUnknownValues: true,
     }),
   );
-
-  const configService = app.get(ConfigService);
 
   const clientDist = configService.get<string>('CLIENT_DIST');
 
