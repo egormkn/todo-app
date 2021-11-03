@@ -1,4 +1,5 @@
 {
+  "explorer.autoReveal": false,
   "eslint.workingDirectories": ["client", "server"],
   "eslint.options": {
     "extensions": [".ts", ".html"]
