@@ -26,14 +26,17 @@
           "warn",
           {
             "allowSeparatedGroups": true,
-            "ignoreDeclarationSort": true
+            "ignoreDeclarationSort": true,
+            "ignoreCase": true
           }
         ],
         "no-unused-vars": "off",
         "@typescript-eslint/no-unused-vars": [
           "warn",
           {
+            "vars": "local",
             "varsIgnorePattern": "^_",
+            "args": "none",
             "argsIgnorePattern": "^_"
           }
         ],
