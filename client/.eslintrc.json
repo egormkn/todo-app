@@ -1,6 +1,5 @@
 {
   "root": true,
-  "ignorePatterns": ["projects/**/*"],
   "overrides": [
     {
       "files": ["*.ts"],
@@ -27,7 +26,9 @@
         "@typescript-eslint/no-unused-vars": [
           "warn",
           {
+            "vars": "local",
             "varsIgnorePattern": "^_",
+            "args": "none",
             "argsIgnorePattern": "^_"
           }
         ],
