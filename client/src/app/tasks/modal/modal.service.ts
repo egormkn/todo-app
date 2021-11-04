@@ -3,16 +3,16 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ModalComponent } from './modal.component';
 
 export type UserInputs<T> = {
-  [P in keyof T as string]?: T[P] extends EventEmitter<infer E> ? never : T[P];
+  [P in keyof T as string]?: T[P] extends EventEmitter<unknown> ? never : T[P];
 };
 
 export type UserOutputs<T> = {
-  [P in keyof T as string]?: T[P] extends EventEmitter<infer E> ? (event: E) => void : never;
+  [P in keyof T as string]?: T[P] extends EventEmitter<infer E> ? (event: E) => any : never;
 };
 
 @Injectable()
 export class ModalService {
-  constructor(private modalService: NgbModal) {}
+  constructor(private ngbModalService: NgbModal) {}
 
   open<T>(
     title: string,
@@ -20,7 +20,7 @@ export class ModalService {
     inputs: UserInputs<T> = {},
     outputs: UserOutputs<T> = {},
   ) {
-    const modalRef = this.modalService.open(ModalComponent, {
+    const modalRef = this.ngbModalService.open(ModalComponent, {
       centered: true,
       scrollable: true,
     });
@@ -34,6 +34,6 @@ export class ModalService {
   }
 
   closeAll() {
-    this.modalService.dismissAll();
+    this.ngbModalService.dismissAll();
   }
 }

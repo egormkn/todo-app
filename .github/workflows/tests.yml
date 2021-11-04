@@ -26,4 +26,4 @@ jobs:
         cache: 'npm'
         cache-dependency-path: client/package-lock.json
     - run: npm ci
-    - run: npm test -- --no-watch --no-progress --browsers=ChromeHeadlessCI
+    - run: npm test -- --no-watch --no-progress --code-coverage --browsers=ChromeHeadlessCI

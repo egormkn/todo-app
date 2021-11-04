@@ -4,14 +4,12 @@ import {
   ComponentFactoryResolver,
   EventEmitter,
   Input,
+  OnDestroy,
   OnInit,
-  SimpleChanges,
   Type,
   ViewChild,
 } from '@angular/core';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
-import { Subject } from 'rxjs';
-import { takeUntil } from 'rxjs/operators';
 import { ModalDirective } from './modal.directive';
 import { UserInputs, UserOutputs } from './modal.service';
 
@@ -23,7 +21,7 @@ type ComponentOutputs<T> = ComponentFactory<T>['outputs'];
   templateUrl: './modal.component.html',
   styleUrls: ['./modal.component.scss'],
 })
-export class ModalComponent<T> implements OnInit {
+export class ModalComponent<T> implements OnInit, OnDestroy {
   @Input() title = '';
   @Input() componentType?: Type<T>;
   @Input() inputs: UserInputs<T> = {};

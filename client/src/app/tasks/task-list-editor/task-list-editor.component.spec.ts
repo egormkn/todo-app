@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TaskListEditorComponent } from './task-list-editor.component';
 
-describe('TaskListEditorComponent', () => {
+xdescribe('TaskListEditorComponent', () => {
   let component: TaskListEditorComponent;
   let fixture: ComponentFixture<TaskListEditorComponent>;
 

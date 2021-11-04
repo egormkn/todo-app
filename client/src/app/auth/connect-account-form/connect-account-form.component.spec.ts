@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ConnectAccountFormComponent } from './connect-account-form.component';
 
-describe('ConnectAccountFormComponent', () => {
+xdescribe('ConnectAccountFormComponent', () => {
   let component: ConnectAccountFormComponent;
   let fixture: ComponentFixture<ConnectAccountFormComponent>;
 
