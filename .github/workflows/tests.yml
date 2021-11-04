@@ -8,6 +8,7 @@ on:
 
 jobs:
   test-client:
+    name: Test client
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -18,12 +19,15 @@ jobs:
         node-version: [12.x, 14.x, 16.x]
 
     steps:
-    - uses: actions/checkout@v2
+    - name: Checkout ${{ github.repository }}
+      uses: actions/checkout@v2
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v2
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
         cache-dependency-path: client/package-lock.json
-    - run: npm ci
-    - run: npm test -- --no-watch --no-progress --code-coverage --browsers=ChromeHeadlessCI
+    - name: Install dependencies
+      run: npm ci
+    - name: Run tests
+      run: npm test -- --no-watch --no-progress --code-coverage --browsers=ChromeHeadlessCI

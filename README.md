@@ -1,5 +1,7 @@
 # ToDo App
 
+[![Tests](https://github.com/egormkn/todo-app/actions/workflows/tests.yml/badge.svg)](https://github.com/egormkn/todo-app/actions/workflows/tests.yml)
+
 A fullstack (Angular + NestJS) web application for software testing course at ITMO University
 
 | **[:mortar_board: Homework][homework]** | **[:globe_with_meridians: Live Example][live]** |
