@@ -3,14 +3,14 @@ import { TaskList } from './shared/task-list.model';
 import { Observable } from 'rxjs';
 import { tap } from 'rxjs/operators';
 import { HttpClient } from '@angular/common/http';
-import { LoggerService } from '../logger/logger.service';
+import { Logger } from '../logger/logger';
 import { Task } from './shared/task.model';
 
 export const apiPrefix = '/api';
 
 @Injectable()
 export class TasksService {
-  constructor(private http: HttpClient, private logger: LoggerService) {}
+  constructor(private http: HttpClient, private logger: Logger) {}
 
   addTaskList(title: string): Observable<TaskList | null> {
     const url = `${apiPrefix}/tasks/list`;

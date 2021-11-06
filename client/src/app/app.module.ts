@@ -11,9 +11,9 @@ import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { IndexComponent } from './index/index.component';
 
-export function jwtOptionsFactory(localStorage: Storage) {
+export function jwtOptionsFactory(storage: Storage) {
   return {
-    tokenGetter: () => localStorage.getItem('access_token'),
+    tokenGetter: () => storage.getItem('access_token'),
     skipWhenExpired: false,
   };
 }
@@ -41,5 +41,6 @@ const jwtOptionsProvider = {
     AppRoutingModule,
   ],
   bootstrap: [AppComponent],
+  providers: [],
 })
 export class AppModule {}

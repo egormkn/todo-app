@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { InMemoryDbService, RequestInfo } from 'angular-in-memory-web-api';
 import { Observable } from 'rxjs';
-import { LoggerService } from '../logger/logger.service';
+import { Logger } from '../logger/logger';
 import { TaskList } from './shared/task-list.model';
 import { Task } from './shared/task.model';
 
@@ -104,7 +104,7 @@ export class FakeTasksService implements InMemoryDbService {
     },
   ];
 
-  constructor(private logger: LoggerService) {}
+  constructor(private logger: Logger) {}
 
   createDb() {
     return { task: this.tasks, list: this.lists };

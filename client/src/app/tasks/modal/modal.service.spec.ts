@@ -14,12 +14,9 @@ describe('ModalService', () => {
   let ngbModalSpy: jasmine.SpyObj<NgbModal>;
 
   beforeEach(() => {
+    const spyNgbModal = jasmine.createSpyObj('NgbModal', ['open', 'dismissAll']);
     TestBed.configureTestingModule({
-      providers: [
-        ModalService,
-        DummyComponent,
-        { provide: NgbModal, useValue: jasmine.createSpyObj('NgbModal', ['open', 'dismissAll']) },
-      ],
+      providers: [ModalService, { provide: NgbModal, useValue: spyNgbModal }],
     });
     modalService = TestBed.inject(ModalService);
     ngbModalSpy = TestBed.inject(NgbModal) as jasmine.SpyObj<NgbModal>;
