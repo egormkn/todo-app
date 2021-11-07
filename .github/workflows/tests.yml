@@ -88,4 +88,4 @@ jobs:
       run: npm run test:cypress
     - name: Run tests with Playwright
       if: always()
-      run: npm run test:playwright
+      run: npx playwright install-deps && npm run test:playwright
