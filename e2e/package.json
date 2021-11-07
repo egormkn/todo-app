@@ -7,6 +7,7 @@
     "node": ">=12.0.0"
   },
   "scripts": {
+    "postinstall": "npm install --prefix=../client && npm install --prefix=../server",
     "start:client": "npm run start --prefix=../client",
     "start:server": "CLIENT_DIST= npm run start --prefix=../server",
     "test:cypress": "start-server-and-test start:server 3000/api  start:client 4200 cypress:run",
