@@ -1,4 +1,4 @@
-import { PlaywrightTestConfig, devices } from '@playwright/test';
+import { PlaywrightTestConfig } from '@playwright/test';
 import * as path from 'path';
 
 // Reference: https://playwright.dev/docs/test-configuration
@@ -14,13 +14,13 @@ const config: PlaywrightTestConfig = {
 
   // Run your local dev server before starting the tests:
   // https://playwright.dev/docs/test-advanced#launching-a-development-web-server-during-the-tests
-  webServer: {
-    command: 'npm run start',
-    cwd: path.join(__dirname, '..'),
-    port: 4200,
-    timeout: 120 * 1000,
-    reuseExistingServer: !process.env.CI,
-  },
+  // webServer: {
+  //   command: 'npm run start',
+  //   cwd: path.join(__dirname, '..'),
+  //   port: 4200,
+  //   timeout: 120 * 1000,
+  //   reuseExistingServer: true,
+  // },
 
   use: {
     // Retry a test if its failing with enabled tracing. This allows you to analyse the DOM, console logs, network traffic etc.
