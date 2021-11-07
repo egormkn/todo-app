@@ -36,7 +36,7 @@ export class AuthService {
   async signUp(signUpDto: SignUpDto): Promise<UserInterface | null> {
     const { username, password, name, email } = signUpDto;
     const saltRounds = this.configService.get<number>('PASSWORD_SALT_ROUNDS', 10);
-    const hash = await bcrypt.hash(password, saltRounds);
+    const hash = await bcrypt.hash(password, +saltRounds);
     const user = await this.usersService.createUser({ username, password: hash, name, email });
     if (user) {
       return omit(user, 'password') as UserInterface;
