@@ -11,6 +11,9 @@ import { AngularUniversalFilter } from './angular-universal.filter';
 import { AppModule } from './app.module';
 
 async function bootstrap() {
+  const logger = new Logger('NestApplication');
+  logger.log(`Working directory: ${process.cwd()}`);
+
   const app = await NestFactory.create<NestExpressApplication>(AppModule, {
     cors: true,
   });
@@ -93,7 +96,6 @@ async function bootstrap() {
 
   await app.listen(port, async () => {
     const url = await app.getUrl();
-    const logger = new Logger('NestApplication');
     logger.log(`Listening on http://${host}:${port} (${url})`);
   });
 }
