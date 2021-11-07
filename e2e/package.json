@@ -1,0 +1,33 @@
+{
+  "name": "e2e",
+  "version": "1.0.0",
+  "author": "Egor Makarenko",
+  "license": "MIT",
+  "scripts": {
+    "start:client": "npm run start --prefix=../client",
+    "start:server": "CLIENT_DIST= npm run start --prefix=../server",
+    "test:cypress": "start-server-and-test start:client ':4200' start:server ':3000/api' cypress:run",
+    "test:cypress:headed": "start-server-and-test start:client ':4200' start:server ':3000/api' cypress:run --headed",
+    "test:playwright": "start-server-and-test start:client ':4200' start:server ':3000/api' playwright:run",
+    "test:playwright:headed": "start-server-and-test start:client ':4200' start:server ':3000/api' playwright:run",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run",
+    "playwright:run": "playwright test --config ./playwright"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.16.3",
+    "@types/jsonwebtoken": "^8.5.5",
+    "@typescript-eslint/eslint-plugin": "^5.3.0",
+    "@typescript-eslint/parser": "^5.3.0",
+    "cypress": "^8.7.0",
+    "cypress-localstorage-commands": "^1.6.0",
+    "dotenv": "^10.0.0",
+    "eslint": "^8.2.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-cypress": "^2.12.1",
+    "eslint-plugin-node": "^11.1.0",
+    "jsonwebtoken": "^8.5.1",
+    "start-server-and-test": "^1.14.0",
+    "typescript": "^4.4.4"
+  }
+}
