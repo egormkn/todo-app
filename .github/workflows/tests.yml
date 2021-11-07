@@ -13,11 +13,9 @@ jobs:
     defaults:
       run:
         working-directory: client
-
     strategy:
       matrix:
         node-version: [12.x, 14.x, 16.x]
-
     steps:
     - name: Checkout ${{ github.repository }}
       uses: actions/checkout@v2
@@ -31,3 +29,63 @@ jobs:
       run: npm ci
     - name: Run tests
       run: npm test -- --no-watch --no-progress --code-coverage --browsers=ChromeHeadlessCI
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: client-coverage
+        path: client/coverage/
+
+  test-server:
+    name: Test server
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: server
+    strategy:
+      matrix:
+        node-version: [12.x, 14.x, 16.x]
+    steps:
+    - name: Checkout ${{ github.repository }}
+      uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v2
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+        cache-dependency-path: server/package-lock.json
+    - name: Install dependencies
+      run: npm ci
+    - name: Run tests
+      run: npm test -- --coverage
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: server-coverage
+        path: server/coverage/
+
+  test-e2e:
+    name: End-to-end tests
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: e2e
+    strategy:
+      matrix:
+        node-version: [12.x, 14.x, 16.x]
+    steps:
+    - name: Checkout ${{ github.repository }}
+      uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v2
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+        cache-dependency-path: e2e/package-lock.json
+    - name: Install dependencies
+      run: npm ci
+    - name: Run tests with Cypress
+      if: always()
+      run: npm run test:cypress
+    - name: Run tests with Playwright
+      if: always()
+      run: npm run test:playwright

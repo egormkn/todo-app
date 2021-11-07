@@ -1,8 +1,8 @@
 {
   "explorer.autoReveal": false,
-  "eslint.workingDirectories": ["client", "server"],
+  "eslint.workingDirectories": ["client", "e2e", "server"],
   "eslint.options": {
-    "extensions": [".ts", ".html"]
+    "extensions": [".ts", ".html", ".json"]
   },
   "eslint.validate": [
     "javascript",

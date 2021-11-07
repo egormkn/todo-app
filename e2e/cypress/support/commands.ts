@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-namespace */
 // ***********************************************
 // This example namespace declaration will help
 // with Intellisense and code completion in your
@@ -5,7 +6,6 @@
 // ***********************************************
 
 import 'cypress-localstorage-commands';
-import * as jwt from 'jsonwebtoken';
 
 // declare namespace Cypress {
 //   interface Chainable<Subject = any> {
@@ -46,52 +46,56 @@ import * as jwt from 'jsonwebtoken';
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
 
-Cypress.Commands.add('logIn', (username: string, password: string) => {
-  cy.log(`Logging in as ${username}`);
-  const client_id = Cypress.env('auth0_client_id');
-  const client_secret = Cypress.env('auth0_client_secret');
-  const audience = Cypress.env('auth0_audience');
-  const scope = Cypress.env('auth0_scope');
+Cypress.Commands.add('getLocalStorage', (key) => {
+  cy.window().then((window) => window.localStorage.getItem(key));
+});
 
-  cy.request({
-    method: 'POST',
-    url: `https://${Cypress.env('auth0_domain')}/oauth/token`,
-    body: {
-      grant_type: 'password',
-      username,
-      password,
-      audience,
-      scope,
-      client_id,
-      client_secret,
-    },
-  }).then(({ body }) => {
-    const claims = jwt.decode(body.id_token) as any;
-    const { nickname, name, picture, updated_at, email, email_verified, sub, exp } = claims;
+Cypress.Commands.add('setSessionStorage', (key, value) => {
+  cy.window().then((window) => window.sessionStorage.setItem(key, value));
+});
 
-    const item = {
-      body: {
-        ...body,
-        decodedToken: {
-          claims,
-          user: {
-            nickname,
-            name,
-            picture,
-            updated_at,
-            email,
-            email_verified,
-            sub,
-          },
-          audience,
-          client_id,
-        },
-      },
-      expiresAt: exp,
-    };
+Cypress.Commands.add('signUp', (signUpDto: SignUpDto, failOnStatusCode = true) => {
+  return cy
+    .request({
+      method: 'POST',
+      url: `/api/auth/signup`,
+      body: { ...signUpDto },
+      failOnStatusCode,
+    })
+    .its('body');
+});
 
-    window.localStorage.setItem('auth0Cypress', JSON.stringify(item));
+Cypress.Commands.add('logIn', (logInDto: LogInDto, failOnStatusCode = true) => {
+  return cy
+    .request({
+      method: 'POST',
+      url: `/api/auth/login`,
+      body: { ...logInDto },
+      failOnStatusCode,
+    })
+    .its('body');
+});
 
-    cy.visit('/');
+type ErrorResponse = {
+  error: string;
+};
+
+type TokenResponse = {
+  access_token: string;
+};
+
+Cypress.Commands.add('authenticate', (signUpDto: SignUpDto) => {
+  const { username, password } = signUpDto;
+  return cy.logIn({ username, password }, false).then((body: TokenResponse | ErrorResponse) => {
+    return 'access_token' in body
+      ? body
+      : cy
+          .request({
+            method: 'POST',
+            url: `/api/auth/signup`,
+            body: { ...signUpDto },
+            failOnStatusCode: true,
+          })
+          .its('body');
   });
 });

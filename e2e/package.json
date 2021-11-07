@@ -3,15 +3,19 @@
   "version": "1.0.0",
   "author": "Egor Makarenko",
   "license": "MIT",
+  "engines": {
+    "node": ">=12.0.0"
+  },
   "scripts": {
     "start:client": "npm run start --prefix=../client",
     "start:server": "CLIENT_DIST= npm run start --prefix=../server",
-    "test:cypress": "start-server-and-test start:client ':4200' start:server ':3000/api' cypress:run",
-    "test:cypress:headed": "start-server-and-test start:client ':4200' start:server ':3000/api' cypress:run --headed",
-    "test:playwright": "start-server-and-test start:client ':4200' start:server ':3000/api' playwright:run",
-    "test:playwright:headed": "start-server-and-test start:client ':4200' start:server ':3000/api' playwright:run",
+    "test:cypress": "start-server-and-test start:server 3000/api  start:client 4200 cypress:run",
+    "test:cypress:dev": "start-server-and-test start:server 3000/api  start:client 4200 cypress:open",
+    "test:playwright": "start-server-and-test start:server 3000/api  start:client 4200 playwright:run",
+    "test:playwright:dev": "start-server-and-test start:server 3000/api  start:client 4200 playwright:open",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
+    "playwright:open": "playwright test --config ./playwright",
     "playwright:run": "playwright test --config ./playwright"
   },
   "devDependencies": {
@@ -26,7 +30,7 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-cypress": "^2.12.1",
     "eslint-plugin-node": "^11.1.0",
-    "jsonwebtoken": "^8.5.1",
+    "eslint-plugin-prettier": "^4.0.0",
     "start-server-and-test": "^1.14.0",
     "typescript": "^4.4.4"
   }

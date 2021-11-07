@@ -35,23 +35,47 @@ describe('Index page', () => {
   });
 
   describe('when authenticated', () => {
-    let name: string;
+    let user: SignUpDto;
 
     before(() => {
-      console.log('BEFORE');
-      name = 'Test';
+      cy.clearLocalStorageSnapshot();
+      cy.fixture('user').then((data) => {
+        user = data;
+        cy.authenticate(user)
+          .its('access_token')
+          .then((token: string) => {
+            cy.setLocalStorage('access_token', token);
+            cy.saveLocalStorage();
+          });
+      });
+    });
+
+    beforeEach(() => {
+      cy.restoreLocalStorage();
+    });
+
+    afterEach(() => {
+      cy.saveLocalStorage();
+    });
+
+    after(() => {
+      cy.clearLocalStorageSnapshot();
     });
 
     it('header contains profile button', () => {
       cy.visit('/');
       cy.get('header').within(() => {
         cy.root().should('be.visible');
-        cy.contains('a', name);
+        cy.contains('button', user.name);
       });
     });
 
-    after(() => {
-      console.log('AFTER');
+    it('hero block contains Launch button', () => {
+      cy.visit('/');
+      cy.get('main').within(() => {
+        cy.root().should('be.visible');
+        cy.contains('a', 'Launch');
+      });
     });
   });
 });
