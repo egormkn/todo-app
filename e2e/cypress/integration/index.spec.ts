@@ -10,8 +10,10 @@ describe('Index page', () => {
 
   it('contains a hero block with screenshot', () => {
     cy.visit('/');
-    cy.contains('Organize it all');
-    cy.get('main').find('img').should('have.attr', 'src').should('include', 'screenshot.png');
+    cy.get('main').within(() => {
+      cy.contains('Organize it all');
+      cy.root().find('img').should('have.attr', 'src').should('include', 'screenshot.png');
+    });
   });
 
   describe('when not authenticated', () => {

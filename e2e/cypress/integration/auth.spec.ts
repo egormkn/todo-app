@@ -5,10 +5,12 @@ describe('Login page', () => {
 
   it('shows error message when user does not exist', () => {
     cy.visit('/auth/login');
-    cy.get('input[name=username]').type('doesnotexist');
-    cy.get('input[name=password]').type('doesnotexist');
-    cy.get('form button[type=submit]').click();
-    cy.get('form').contains('The user does not exist');
+    cy.get('form').within(() => {
+      cy.get('input[name=username]').type('doesnotexist');
+      cy.get('input[name=password]').type('doesnotexist');
+      cy.get('button[type=submit]').click();
+      cy.root().contains('The user does not exist');
+    });
   });
 
   describe('when user exists', () => {
@@ -23,10 +25,12 @@ describe('Login page', () => {
 
     it('allows user to log in', () => {
       cy.visit('/auth/login');
-      cy.get('input[name=username]').type(user.username);
-      cy.get('input[name=password]').type(user.password);
-      cy.get('form button[type=submit]').click();
-      cy.location('pathname').should('eq', '/');
+      cy.get('form').within(() => {
+        cy.get('input[name=username]').type(user.username);
+        cy.get('input[name=password]').type(user.password);
+        cy.get('button[type=submit]').click();
+        cy.location('pathname').should('eq', '/');
+      });
     });
   });
 });
