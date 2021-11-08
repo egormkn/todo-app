@@ -22,6 +22,9 @@ const config: PlaywrightTestConfig = {
   //   reuseExistingServer: true,
   // },
 
+  globalSetup: './global-setup.ts',
+  globalTeardown: './global-teardown.ts',
+
   use: {
     // Retry a test if its failing with enabled tracing. This allows you to analyse the DOM, console logs, network traffic etc.
     // More information: https://playwright.dev/docs/trace-viewer
@@ -32,7 +35,6 @@ const config: PlaywrightTestConfig = {
       ignoreHTTPSErrors: true,
     },
 
-    storageState: path.join(__dirname, 'storage.json'),
     baseURL: 'http://localhost:4200',
   },
 
