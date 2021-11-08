@@ -33,6 +33,7 @@ const config: PlaywrightTestConfig = {
     },
 
     storageState: path.join(__dirname, 'storage.json'),
+    baseURL: 'http://localhost:4200',
   },
 
   // projects: [
