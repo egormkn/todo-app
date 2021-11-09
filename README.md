@@ -8,7 +8,32 @@ A fullstack (Angular + NestJS) web application for software testing course at IT
 | :--------------------: | :-------------------: |
 
 [homework]: https://egormkn.github.io/todo-app "Homework"
-[live]: https://egormkn-todo-app.herokuapp.com "View live on Heroku"
+[live]: https://egormkn-todo-app.herokuapp.com "Live example"
+
+## Development
+
+##### Client
+```bash
+cd client
+npm install
+npm test
+npm start
+```
+
+##### Server
+```bash
+cd server
+npm install
+npm test
+npm start
+```
+
+##### E2E tests
+```bash
+cd e2e
+npm install
+npm test
+```
 
 ## Deployment
 

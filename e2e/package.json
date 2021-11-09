@@ -9,7 +9,8 @@
   "scripts": {
     "postinstall": "npm install --prefix=../client && npm install --prefix=../server",
     "start:client": "npm run start --prefix=../client",
-    "start:server": "CLIENT_DIST= npm run start --prefix=../server",
+    "start:server": "npm run start --prefix=../server",
+    "test": "echo \"Run either 'npm run test:cypress' or 'npm run test:playwright'\"",
     "test:cypress": "start-server-and-test start:server 3000/api  start:client 4200 cypress:run",
     "test:cypress:dev": "start-server-and-test start:server 3000/api  start:client 4200 cypress:open",
     "test:playwright": "start-server-and-test start:server 3000/api  start:client 4200 playwright:run",
