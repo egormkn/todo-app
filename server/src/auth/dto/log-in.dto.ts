@@ -11,7 +11,7 @@ export class LogInDto implements Pick<UserPasswordInterface, 'username' | 'passw
     message:
       'Username may only contain alphanumeric characters or single hyphens, and cannot begin or end with a hyphen',
   })
-  username: string;
+  readonly username: string;
 
   /**
    * A password of the user
@@ -19,5 +19,5 @@ export class LogInDto implements Pick<UserPasswordInterface, 'username' | 'passw
    */
   @IsNotEmpty({ message: 'Password should not be empty' })
   @MinLength(8, { message: 'Password should contain at least 8 characters' })
-  password: string;
+  readonly password: string;
 }

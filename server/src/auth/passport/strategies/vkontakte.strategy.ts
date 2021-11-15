@@ -45,7 +45,7 @@ export class VkontakteStrategy extends PassportStrategy(Strategy, 'vkontakte') {
       const user = req.user as UserInterface;
       return this.authService.connectAccount(connectAccountDto, user);
     } else {
-      return this.authService.loginWithAccount(connectAccountDto);
+      return this.authService.logInWithAccount(connectAccountDto);
     }
   }
 }

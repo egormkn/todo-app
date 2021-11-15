@@ -1,28 +1,30 @@
-import { Role } from '../../common/interfaces/user.interface';
-import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
+import { Column, Entity, Index, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
 import { UserPasswordInterface } from '../../common/interfaces/user-password.interface';
-import { AccountEntity } from './account.entity';
+import { UserRole } from '../../common/interfaces/user.interface';
+import { Account } from './account.entity';
 
-@Entity('user')
-export class UserEntity implements UserPasswordInterface {
+@Entity('users')
+export class User implements UserPasswordInterface {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column({ length: 80, nullable: true, unique: true })
+  @Index()
+  @Column({ length: 256, nullable: true, unique: true })
   email: string;
 
-  @Column({ length: 20, nullable: true, unique: true })
+  @Index()
+  @Column({ length: 32, nullable: true, unique: true })
   username: string;
 
   @Column({ length: 64, nullable: true, select: false })
   password: string;
 
   @Column({ default: 'user' })
-  role: Role;
+  role: UserRole;
 
-  @Column({ length: 80, nullable: true })
+  @Column({ length: 64, nullable: true })
   name: string;
 
-  @OneToMany(() => AccountEntity, (account) => account.user)
-  accounts: AccountEntity[];
+  @OneToMany(() => Account, (account) => account.user)
+  accounts: Account[];
 }

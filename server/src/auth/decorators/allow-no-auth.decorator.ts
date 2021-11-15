@@ -1,5 +1,8 @@
 import { SetMetadata } from '@nestjs/common';
 
+/**
+ * Metadata key used to mark routes as public
+ */
 export const PUBLIC_KEY = 'public';
 
 /**

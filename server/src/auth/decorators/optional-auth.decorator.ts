@@ -1,4 +1,4 @@
-import { applyDecorators, UseGuards } from '@nestjs/common';
+import { UseGuards, applyDecorators } from '@nestjs/common';
 import { ApiBearerAuth, ApiSecurity } from '@nestjs/swagger';
 import { OptionalJwtAuthGuard } from '../passport/guards/optional-jwt-auth.guard';
 

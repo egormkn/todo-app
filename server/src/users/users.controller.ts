@@ -1,6 +1,7 @@
 import { Controller, Get, Param } from '@nestjs/common';
 import { ApiTags } from '@nestjs/swagger';
 import { Auth } from '../auth/decorators/auth.decorator';
+import { OptionalAuth } from '../auth/decorators/optional-auth.decorator';
 import { Roles } from '../auth/decorators/roles.decorator';
 import { User } from '../auth/decorators/user.decorator';
 import { UserInterface } from '../common/interfaces/user.interface';
@@ -22,11 +23,11 @@ export class UsersController {
   @Get('@me')
   @Auth()
   async getMyProfile(@User() user: UserInterface) {
-    return user;
+    return { user };
   }
 
   @Get(':username')
-  @Auth()
+  @OptionalAuth()
   async getProfile(@Param('username') username: string, @User() user?: UserInterface) {
     if (user?.username !== username) {
       user = await this.usersService.findByUsername(username);

@@ -1,13 +1,13 @@
 import { Column, Entity, ManyToOne, PrimaryColumn, Unique } from 'typeorm';
-import { AccountInterface } from '../../common/interfaces/account.interface';
-import { UserEntity } from './user.entity';
+import { AccountInterface, AccountType } from '../../common/interfaces/account.interface';
+import { User } from './user.entity';
 
-@Entity('account')
+@Entity('accounts')
 @Unique(['type', 'id'])
 @Unique(['type', 'user'])
-export class AccountEntity implements AccountInterface {
+export class Account implements AccountInterface {
   @PrimaryColumn()
-  type: string;
+  type: AccountType;
 
   @PrimaryColumn()
   id: string;
@@ -15,6 +15,6 @@ export class AccountEntity implements AccountInterface {
   @Column('simple-json')
   data: any;
 
-  @ManyToOne(() => UserEntity, (user) => user.accounts)
-  user: UserEntity;
+  @ManyToOne(() => User, (user) => user.accounts)
+  user: User;
 }

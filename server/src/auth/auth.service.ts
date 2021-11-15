@@ -26,25 +26,24 @@ export class AuthService {
       throw new UnauthorizedException('The user does not exist');
     }
     const match = await bcrypt.compare(password, user.password);
-    if (match) {
-      return omit(user, 'password') as UserInterface;
-    } else {
+    if (!match) {
       throw new UnauthorizedException('Wrong username or password');
     }
+    return omit(user, 'password') as UserInterface;
   }
 
-  async signUp(signUpDto: SignUpDto): Promise<UserInterface | null> {
+  async signUp(signUpDto: SignUpDto): Promise<UserInterface> {
     const { username, password, name, email } = signUpDto;
-    const saltRounds = this.configService.get<number>('PASSWORD_SALT_ROUNDS', 10);
-    const hash = await bcrypt.hash(password, +saltRounds);
+    const saltRounds = +this.configService.get<number>('PASSWORD_SALT_ROUNDS', 10);
+    const hash = await bcrypt.hash(password, saltRounds);
     const user = await this.usersService.createUser({ username, password: hash, name, email });
-    if (user) {
-      return omit(user, 'password') as UserInterface;
+    if (!user) {
+      throw new BadRequestException('Failed to sign up');
     }
-    return null;
+    return omit(user, 'password') as UserInterface;
   }
 
-  async loginWithAccount(connectAccountDto: ConnectAccountDto) {
+  async logInWithAccount(connectAccountDto: ConnectAccountDto): Promise<UserInterface> {
     const { type, id, info } = connectAccountDto;
     const account = await this.usersService.findAccount(type, id);
     if (!account) {
@@ -88,7 +87,7 @@ export class AuthService {
     return this.jwtService.sign(payload);
   }
 
-  async findUser(id: number) {
+  async findUserById(id: number) {
     const user = await this.usersService.findById(id);
     if (!user) {
       throw new BadRequestException('User not found');

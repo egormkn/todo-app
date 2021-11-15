@@ -1,3 +1,6 @@
+export type ArrayElement<ArrayType extends readonly unknown[]> =
+  ArrayType extends readonly (infer ElementType)[] ? ElementType : never;
+
 export function pick<T, K extends keyof T>(obj: T, ...props: K[]): Pick<T, K> {
   return props.reduce((result, prop) => ((result[prop] = obj[prop]), result), {} as Pick<T, K>);
 }

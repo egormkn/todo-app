@@ -11,7 +11,7 @@ export class SignUpDto
    * @example John Doe
    */
   @IsNotEmpty({ message: 'Please enter a name' })
-  name: string;
+  readonly name: string;
 
   /**
    * An email address of the user
@@ -19,5 +19,5 @@ export class SignUpDto
    */
   @IsNotEmpty({ message: 'Please enter an email address' })
   @IsEmail(undefined, { message: 'Please provide a valid email address' })
-  email: string;
+  readonly email: string;
 }

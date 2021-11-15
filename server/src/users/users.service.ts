@@ -1,26 +1,27 @@
-import { BadRequestException, Injectable, Logger } from '@nestjs/common';
+import { BadRequestException, Injectable, Logger, NotFoundException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
+import { AccountType } from '../common/interfaces/account.interface';
 import { UserPasswordInterface } from '../common/interfaces/user-password.interface';
 import { CreateAccountDto } from './dto/create-account.dto';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateAccountDto } from './dto/update-account.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
-import { AccountEntity } from './entities/account.entity';
-import { UserEntity } from './entities/user.entity';
+import { Account } from './entities/account.entity';
+import { User } from './entities/user.entity';
 
 @Injectable()
 export class UsersService {
   private readonly logger = new Logger(UsersService.name);
 
   constructor(
-    @InjectRepository(UserEntity)
-    private readonly usersRepository: Repository<UserEntity>,
-    @InjectRepository(AccountEntity)
-    private readonly accountsRepository: Repository<AccountEntity>,
+    @InjectRepository(User)
+    private readonly usersRepository: Repository<User>,
+    @InjectRepository(Account)
+    private readonly accountsRepository: Repository<Account>,
   ) {}
 
-  async createUser(createUserDto: CreateUserDto): Promise<UserEntity> {
+  async createUser(createUserDto: CreateUserDto): Promise<User> {
     const user = this.usersRepository.create(createUserDto);
     return this.usersRepository.save(user).catch((error) => {
       const { message } = error;
@@ -34,8 +35,23 @@ export class UsersService {
     });
   }
 
+  async findUserById(id: number): Promise<User> {
+    const user = await this.usersRepository.findOne(id, { relations: ['accounts'] });
+    if (!user) {
+      throw new NotFoundException(`User #${id} not found`);
+    }
+    return user;
+  }
+
   async updateUser(id: number, updateUserDto: UpdateUserDto) {
-    return this.usersRepository.update(id, updateUserDto).catch((error) => {
+    const user = await this.usersRepository.preload({
+      id,
+      ...updateUserDto,
+    });
+    if (!user) {
+      throw new NotFoundException(`User #${id} not found`);
+    }
+    return this.usersRepository.save(user).catch((error) => {
       const { message } = error;
       if (/unique/i.test(message) && /username/i.test(message)) {
         throw new BadRequestException('This username is already taken.');
@@ -47,14 +63,15 @@ export class UsersService {
     });
   }
 
-  async removeUser(id: number): Promise<any> {
-    return this.usersRepository.delete(id).catch((error) => {
+  async removeUser(id: number): Promise<User> {
+    const user = await this.findUserById(id);
+    return this.usersRepository.remove(user).catch((error) => {
       const { message } = error;
       throw new BadRequestException(`Error while deleting a user: ${message}`);
     });
   }
 
-  async createAccount(id: number, createAccountDto: CreateAccountDto): Promise<AccountEntity> {
+  async createAccount(id: number, createAccountDto: CreateAccountDto): Promise<Account> {
     const user = await this.findById(id);
     if (!user) {
       throw new BadRequestException(`User does not exist`);
@@ -67,28 +84,28 @@ export class UsersService {
     });
   }
 
-  async updateAccount(type: string, id: string, updateAccountDto: UpdateAccountDto) {
+  async updateAccount(type: AccountType, id: string, updateAccountDto: UpdateAccountDto) {
     return this.accountsRepository.update({ type, id }, updateAccountDto).catch((error) => {
       const { message } = error;
       throw new BadRequestException(`Error while updating an account: ${message}`);
     });
   }
 
-  async removeAccount(type: string, id: string): Promise<any> {
+  async removeAccount(type: AccountType, id: string): Promise<any> {
     return this.accountsRepository.delete({ type, id }).catch((error) => {
       const { message } = error;
       throw new BadRequestException(`Error while removing an account: ${message}`);
     });
   }
 
-  async findAll(): Promise<UserEntity[]> {
+  async findAll(): Promise<User[]> {
     return this.usersRepository.find({ relations: ['accounts'] }).catch((error) => {
       const { message } = error;
       throw new BadRequestException(`Error while finding the users: ${message}`);
     });
   }
 
-  async findById(id: number): Promise<UserEntity | undefined> {
+  async findById(id: number): Promise<User | undefined> {
     return this.usersRepository.findOne(id, { relations: ['accounts'] }).catch((error) => {
       const { message } = error;
       throw new BadRequestException(`Error while finding the user by id: ${message}`);

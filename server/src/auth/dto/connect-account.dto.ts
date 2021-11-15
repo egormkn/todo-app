@@ -1,32 +1,35 @@
 import { IsIn, IsNotEmpty, IsOptional } from 'class-validator';
-import { accountTypes } from '../../common/account-types';
-import { AccountInterface } from '../../common/interfaces/account.interface';
+import {
+  AccountInterface,
+  AccountType,
+  accountTypes,
+} from '../../common/interfaces/account.interface';
 import { UserInterface } from '../../common/interfaces/user.interface';
 
-export class ConnectAccountDto implements Omit<AccountInterface, 'user'> {
+export class ConnectAccountDto implements Pick<AccountInterface, 'type' | 'id' | 'data'> {
   /**
    * A type of the account to connect
    * @example vkontakte
    */
   @IsIn(accountTypes)
-  type: 'facebook' | 'google' | 'vkontakte';
+  readonly type: AccountType;
 
   /**
    * An id of the account to connect
    * @example 49899993
    */
   @IsNotEmpty()
-  id: string;
+  readonly id: string;
 
   /**
    * Any additional data for the account
    */
   @IsOptional()
-  data: any;
+  readonly data: any;
 
   /**
    * Basic user info to assign to the user
    */
   @IsOptional()
-  info: Partial<UserInterface>;
+  readonly info: Partial<UserInterface>;
 }

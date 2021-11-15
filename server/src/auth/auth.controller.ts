@@ -1,4 +1,4 @@
-import { BadRequestException, Body, Controller, Get, Post } from '@nestjs/common';
+import { Body, Controller, Get, Post } from '@nestjs/common';
 import { ApiBody, ApiTags } from '@nestjs/swagger';
 import { UserInterface } from '../common/interfaces/user.interface';
 import { AuthService } from './auth.service';
@@ -29,11 +29,8 @@ export class AuthController {
   @NoAuth()
   async signUp(@Body() signUpDto: SignUpDto) {
     const user = await this.authService.signUp(signUpDto);
-    if (user) {
-      const token = await this.authService.issueJwt(user);
-      return { access_token: token };
-    }
-    throw new BadRequestException('Failed to sign up');
+    const token = await this.authService.issueJwt(user);
+    return { access_token: token };
   }
 
   @Post('logout')
@@ -45,7 +42,6 @@ export class AuthController {
   @Get('google')
   @OptionalAuth(GoogleAuthGuard)
   async logInWithGoogle(@User() user: UserInterface) {
-    console.log(user);
     const token = await this.authService.issueJwt(user);
     return { access_token: token };
   }
@@ -56,16 +52,4 @@ export class AuthController {
     const token = await this.authService.issueJwt(user);
     return { access_token: token };
   }
-
-  // @Get('test')
-  // @OptionalAuth()
-  // async test(@User() user?: UserInterface) {
-  //   return { user };
-  // }
-
-  // @Get('test2')
-  // @Auth()
-  // async test2(@User() user?: UserInterface) {
-  //   return { user };
-  // }
 }

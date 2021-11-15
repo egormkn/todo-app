@@ -53,6 +53,9 @@ async function bootstrap() {
       whitelist: true,
       forbidNonWhitelisted: false,
       forbidUnknownValues: true,
+      transformOptions: {
+        enableImplicitConversion: true,
+      },
     }),
   );
 
