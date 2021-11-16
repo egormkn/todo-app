@@ -6,10 +6,12 @@ describe('Login page', () => {
   it('shows error message when user does not exist', () => {
     cy.visit('/auth/login');
     cy.get('form').within(() => {
-      cy.get('input[name=username]').type('doesnotexist');
-      cy.get('input[name=password]').type('doesnotexist');
+      const username = 'doesnotexist';
+      const password = 'doesnotexist';
+      cy.get('input[name=username]').type(username);
+      cy.get('input[name=password]').type(password);
       cy.get('button[type=submit]').click();
-      cy.root().contains('The user does not exist');
+      cy.root().contains(`User "${username}" was not found`);
     });
   });
 

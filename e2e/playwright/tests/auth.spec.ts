@@ -9,10 +9,12 @@ test.describe('Login page', () => {
   test('shows error message when user does not exist', async ({ page }) => {
     await page.goto('/auth/login');
     const form = page.locator('form');
-    await form.locator('input[name=username]').type('doesnotexist');
-    await form.locator('input[name=password]').type('doesnotexist');
+    const username = 'doesnotexist';
+    const password = 'doesnotexist';
+    await form.locator('input[name=username]').type(username);
+    await form.locator('input[name=password]').type(password);
     await form.locator('button[type=submit]').click();
-    await expect(form).toContainText('The user does not exist');
+    await expect(form).toContainText(`User "${username}" was not found`);
   });
 
   test.describe('when user exists', () => {
