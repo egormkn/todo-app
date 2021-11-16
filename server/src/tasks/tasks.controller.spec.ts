@@ -1,54 +1,26 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { getRepositoryToken } from '@nestjs/typeorm';
-import { TaskList } from './entities/task-list.entity';
-import { Task } from './entities/task.entity';
+import { createMockObj } from '../common/testing';
 import { TasksController } from './tasks.controller';
 import { TasksService } from './tasks.service';
 
-const mockList = new TaskList();
-
-export const mockListRepository = {
-  find: async () => [mockList],
-  findOne: async () => mockList,
-  save: async () => mockList,
-};
-
-const mockTask = new Task();
-
-export const mockTaskRepository = {
-  find: async () => [mockTask],
-  findOne: async () => mockTask,
-  save: async () => mockTask,
-};
-
-xdescribe('TasksController', () => {
-  let controller: TasksController;
-  let service: TasksService;
+describe('TasksController', () => {
+  let tasksController: TasksController;
+  let tasksService: jest.Mocked<TasksService>;
 
   beforeEach(async () => {
+    const mockedTasksService = createMockObj<TasksService>(['findAllLists']);
+
     const module: TestingModule = await Test.createTestingModule({
       controllers: [TasksController],
-      providers: [TasksService],
-    })
-      .overrideProvider(getRepositoryToken(Task))
-      .useValue(mockTaskRepository)
-      .overrideProvider(getRepositoryToken(TaskList))
-      .useValue(mockListRepository)
-      .compile();
+      providers: [{ provide: TasksService, useValue: mockedTasksService }],
+    }).compile();
 
-    controller = module.get<TasksController>(TasksController);
-    service = module.get<TasksService>(TasksService);
+    tasksController = module.get<TasksController>(TasksController);
+    tasksService = module.get(TasksService) as jest.Mocked<TasksService>;
   });
 
   it('should be defined', () => {
-    expect(controller).toBeDefined();
-  });
-
-  describe('findAllLists', () => {
-    it('should return all lists', async () => {
-      jest.spyOn(service, 'findAllLists').mockImplementation(async () => []);
-
-      expect(await controller.findAllLists()).toEqual({ lists: [] });
-    });
+    expect(tasksController).toBeDefined();
+    expect(tasksService).toBeDefined();
   });
 });

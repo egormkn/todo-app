@@ -16,21 +16,24 @@ export class UsersController {
   @Auth()
   @Roles('moderator', 'admin')
   async getAll() {
-    const users = await this.usersService.findAll();
+    const users = await this.usersService.findAllUsers();
     return { users };
   }
 
-  @Get('@me')
-  @Auth()
-  async getMyProfile(@User() user: UserInterface) {
+  @Get(':id')
+  @OptionalAuth()
+  async getProfileById(@Param('id') id: number, @User() user?: UserInterface) {
+    if (user?.id !== id) {
+      user = await this.usersService.findUserById(id);
+    }
     return { user };
   }
 
-  @Get(':username')
+  @Get('@:username')
   @OptionalAuth()
-  async getProfile(@Param('username') username: string, @User() user?: UserInterface) {
+  async getProfileByUsername(@Param('username') username: string, @User() user?: UserInterface) {
     if (user?.username !== username) {
-      user = await this.usersService.findByUsername(username);
+      user = await this.usersService.findUserByUsername(username);
     }
     return { user };
   }

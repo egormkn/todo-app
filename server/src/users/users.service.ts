@@ -1,8 +1,6 @@
 import { BadRequestException, Injectable, Logger, NotFoundException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
-import { AccountType } from '../common/interfaces/account.interface';
-import { UserPasswordInterface } from '../common/interfaces/user-password.interface';
 import { CreateAccountDto } from './dto/create-account.dto';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateAccountDto } from './dto/update-account.dto';
@@ -23,8 +21,7 @@ export class UsersService {
 
   async createUser(createUserDto: CreateUserDto): Promise<User> {
     const user = this.usersRepository.create(createUserDto);
-    return this.usersRepository.save(user).catch((error) => {
-      const { message } = error;
+    return this.usersRepository.save(user).catch(({ message }) => {
       if (/unique/i.test(message) && /username/i.test(message)) {
         throw new BadRequestException('This username is already taken.');
       }
@@ -38,21 +35,50 @@ export class UsersService {
   async findUserById(id: number): Promise<User> {
     const user = await this.usersRepository.findOne(id, { relations: ['accounts'] });
     if (!user) {
-      throw new NotFoundException(`User #${id} not found`);
+      throw new NotFoundException(`User #${id} was not found`);
     }
     return user;
   }
 
-  async updateUser(id: number, updateUserDto: UpdateUserDto) {
+  async findUserByUsername(username: string, withPassword = false): Promise<User> {
+    let query = this.usersRepository
+      .createQueryBuilder('user')
+      .leftJoinAndSelect('user.accounts', 'account')
+      .where('user.username = :username', { username });
+    if (withPassword) {
+      query = query.addSelect('user.password');
+    }
+    const user = await query.getOne();
+    if (!user) {
+      throw new NotFoundException(`User "${username}" was not found`);
+    }
+    return user;
+  }
+
+  async findUserByEmail(email: string, withPassword = false) {
+    let query = this.usersRepository
+      .createQueryBuilder('user')
+      .leftJoinAndSelect('user.accounts', 'account')
+      .where('user.email = :email', { email });
+    if (withPassword) {
+      query = query.addSelect('user.password');
+    }
+    const user = await query.getOne();
+    if (!user) {
+      throw new NotFoundException(`User with email ${email} was not found`);
+    }
+    return user;
+  }
+
+  async updateUser(id: number, updateUserDto: UpdateUserDto): Promise<User> {
     const user = await this.usersRepository.preload({
       id,
       ...updateUserDto,
     });
     if (!user) {
-      throw new NotFoundException(`User #${id} not found`);
+      throw new NotFoundException(`User #${id} was not found`);
     }
-    return this.usersRepository.save(user).catch((error) => {
-      const { message } = error;
+    return this.usersRepository.save(user).catch(({ message }) => {
       if (/unique/i.test(message) && /username/i.test(message)) {
         throw new BadRequestException('This username is already taken.');
       }
@@ -65,17 +91,13 @@ export class UsersService {
 
   async removeUser(id: number): Promise<User> {
     const user = await this.findUserById(id);
-    return this.usersRepository.remove(user).catch((error) => {
-      const { message } = error;
+    return this.usersRepository.remove(user).catch(({ message }) => {
       throw new BadRequestException(`Error while deleting a user: ${message}`);
     });
   }
 
   async createAccount(id: number, createAccountDto: CreateAccountDto): Promise<Account> {
-    const user = await this.findById(id);
-    if (!user) {
-      throw new BadRequestException(`User does not exist`);
-    }
+    const user = await this.findUserById(id);
     const account = this.accountsRepository.create({ ...createAccountDto, user });
     this.logger.debug(`Create account: ${JSON.stringify(account)}`);
     return this.accountsRepository.save(account).catch((error) => {
@@ -84,79 +106,38 @@ export class UsersService {
     });
   }
 
-  async updateAccount(type: AccountType, id: string, updateAccountDto: UpdateAccountDto) {
+  async updateAccount(
+    type: Account['type'],
+    id: Account['id'],
+    updateAccountDto: UpdateAccountDto,
+  ) {
     return this.accountsRepository.update({ type, id }, updateAccountDto).catch((error) => {
       const { message } = error;
       throw new BadRequestException(`Error while updating an account: ${message}`);
     });
   }
 
-  async removeAccount(type: AccountType, id: string): Promise<any> {
+  async removeAccount(type: Account['type'], id: Account['id']): Promise<any> {
     return this.accountsRepository.delete({ type, id }).catch((error) => {
       const { message } = error;
       throw new BadRequestException(`Error while removing an account: ${message}`);
     });
   }
 
-  async findAll(): Promise<User[]> {
-    return this.usersRepository.find({ relations: ['accounts'] }).catch((error) => {
-      const { message } = error;
+  async findAllUsers(): Promise<User[]> {
+    return this.usersRepository.find({ relations: ['accounts'] }).catch(({ message }) => {
       throw new BadRequestException(`Error while finding the users: ${message}`);
     });
   }
 
-  async findById(id: number): Promise<User | undefined> {
-    return this.usersRepository.findOne(id, { relations: ['accounts'] }).catch((error) => {
-      const { message } = error;
-      throw new BadRequestException(`Error while finding the user by id: ${message}`);
-    });
-  }
-
-  async findByUsername(username: string) {
-    return this.usersRepository
-      .findOne({
-        where: { username },
-        relations: ['accounts'],
-        select: ['username', 'password'],
-      })
-      .catch((error) => {
-        const { message } = error;
-        throw new BadRequestException(`Error while finding the user by username: ${message}`);
-      });
-  }
-
-  async findByUsernameWithPassword(username: string): Promise<UserPasswordInterface | undefined> {
-    return this.usersRepository
-      .createQueryBuilder('user')
-      .where('user.username = :username', { username })
-      .addSelect('user.password')
-      .getOne()
-      .catch((error) => {
-        const { message } = error;
-        throw new BadRequestException(
-          `Error while finding the user/password by username: ${message}`,
-        );
-      });
-  }
-
-  async findByEmail(email: string) {
-    return this.usersRepository
-      .findOne({ where: { email }, relations: ['accounts'] })
-      .catch((error) => {
-        const { message } = error;
-        throw new BadRequestException(`Error while finding the user by email: ${message}`);
-      });
-  }
-
   async findAccount(type: string, id: string) {
-    return this.accountsRepository
-      .findOne({
-        where: { type, id },
-        relations: ['user'],
-      })
-      .catch((error) => {
-        const { message } = error;
-        throw new BadRequestException(`Error while finding the account: ${message}`);
-      });
+    const account = await this.accountsRepository.findOne({
+      where: { type, id },
+      relations: ['user'],
+    });
+    if (!account) {
+      throw new NotFoundException(`Account ${id}@${type} was not found`);
+    }
+    return account;
   }
 }

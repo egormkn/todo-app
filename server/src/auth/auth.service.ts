@@ -21,7 +21,7 @@ export class AuthService {
 
   async logIn(logInDto: LogInDto): Promise<UserInterface> {
     const { username, password } = logInDto;
-    const user = await this.usersService.findByUsernameWithPassword(username);
+    const user = await this.usersService.findUserByUsername(username, true);
     if (!user) {
       throw new UnauthorizedException('The user does not exist');
     }
@@ -88,7 +88,7 @@ export class AuthService {
   }
 
   async findUserById(id: number) {
-    const user = await this.usersService.findById(id);
+    const user = await this.usersService.findUserById(id);
     if (!user) {
       throw new BadRequestException('User not found');
     }
