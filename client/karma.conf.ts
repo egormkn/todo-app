@@ -25,7 +25,7 @@ module.exports = (config: any) => {
       suppressAll: true, // removes the duplicated traces
     },
     coverageReporter: {
-      dir: './coverage/app',
+      dir: './coverage/',
       subdir: '.',
       reporters: [{ type: 'html' }, { type: 'text-summary' }],
     },
