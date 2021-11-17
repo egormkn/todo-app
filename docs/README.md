@@ -85,7 +85,7 @@ permalink: /
 ## Задание 4: Reporting
 
 ### Bonus часть:
-- [ ] Использовать Allure reporting для написанных тестов.
+- [x] Использовать Allure reporting для написанных тестов.
 
 ## Задание 5: Contract tests, Pact, Spring cloud contract
 

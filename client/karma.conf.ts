@@ -8,6 +8,7 @@ module.exports = (config: any) => {
     plugins: [
       'karma-jasmine',
       'karma-chrome-launcher',
+      'karma-allure-reporter',
       'karma-jasmine-html-reporter',
       'karma-coverage',
       '@angular-devkit/build-angular/plugins/karma',
@@ -28,6 +29,9 @@ module.exports = (config: any) => {
       dir: './coverage/',
       subdir: '.',
       reporters: [{ type: 'html' }, { type: 'text-summary' }],
+    },
+    allureReport: {
+      reportDir: 'allure',
     },
     reporters: ['progress', 'kjhtml'],
     port: 9876,
