@@ -2,8 +2,8 @@
 #             BUILD STAGE              #
 ########################################
 
-# Initialize from NodeJS v14
-FROM node:14 as build
+# Initialize from NodeJS v14 (Debian)
+FROM node:16 as build
 
 # Set working directory
 WORKDIR /app
@@ -14,41 +14,46 @@ RUN chown -R node:node .
 # Switch to non-root user
 USER node
 
-# Copy client manifest files
-COPY --chown=node:node client/package*.json client/
+############ BUILD CLIENT ##############
 
-# Copy server manifest files
-COPY --chown=node:node server/package*.json server/
+# Extend from build image for client
+FROM build as build-client
+
+# Copy client manifest files
+COPY --chown=node:node client/package*.json ./
 
 # Install all dependencies and clean cache
-RUN npm ci --prefix=client && \
-    npm ci --prefix=server && \
-    npm cache clean --force
-
-# Change working directory to client
-WORKDIR /app/client/
+RUN npm ci --loglevel=http && npm cache clean --force
 
 # Copy client files
 COPY --chown=node:node client ./
 
 # Build client
-RUN npm run build:ssr
+RUN npm run docs && npm run build:ssr
 
-# Change working directory to server
-WORKDIR /app/server/
+############ BUILD SERVER ##############
+
+# Extend from build image for server
+FROM build as build-server
+
+# Copy server manifest files
+COPY --chown=node:node server/package*.json ./
+
+# Install all dependencies and clean cache
+RUN npm ci --loglevel=http && npm cache clean --force
 
 # Copy server files
 COPY --chown=node:node server ./
 
 # Build server and prune dependencies
-RUN npm run build && npm prune --production
+RUN npm run docs && npm run build
 
 ########################################
 #           PRODUCTION STAGE           #
 ########################################
 
-# Initialize from NodeJS v14 (Alpine Linux)
-FROM node:14-alpine as production
+# Initialize from NodeJS v14 (Alpine)
+FROM node:16-alpine as production
 
 # Set working directory
 WORKDIR /app
@@ -59,20 +64,29 @@ RUN chown -R node:node .
 # Switch to non-root user
 USER node
 
-# Copy client dist files from build image
-COPY --chown=node:node --from=build /app/client/dist client/
+# Copy server manifest files
+COPY --chown=node:node server/package*.json ./
 
-# Copy server dist files from build image
-COPY --chown=node:node --from=build /app/server/dist server/
+# Install production dependencies and clean cache
+RUN npm ci --loglevel=http --omit=dev && npm cache clean --force
 
-# Copy server node_modules from build image
-COPY --chown=node:node --from=build /app/server/node_modules node_modules/
+# Copy client dist files from build-client image
+COPY --chown=node:node --from=build-client /app/dist client/dist/
+
+# Copy server dist files from build-server image
+COPY --chown=node:node --from=build-server /app/dist server/dist/
+
+# Copy client documentation from build-client image
+COPY --chown=node:node --from=build-client /app/docs client/docs/
+
+# Copy server documentation from build-server image
+COPY --chown=node:node --from=build-server /app/docs server/docs/
 
 # Copy server env file from build image
-COPY --chown=node:node --from=build /app/server/.env.example ./
+COPY --chown=node:node --from=build-server /app/.env.example ./
 
 # Set a path to the client dist directory for SSR
-ENV CLIENT_DIST="client/app"
+ENV CLIENT="../client/"
 
 # Set NODE_ENV from build arguments
 ARG NODE_ENV=production
@@ -90,4 +104,4 @@ ENV PORT=${PORT}
 EXPOSE ${PORT}
 
 # Run main script
-CMD ["node", "server/main"]
+CMD ["node", "server/dist/main"]
