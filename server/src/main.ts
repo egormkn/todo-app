@@ -59,16 +59,35 @@ async function bootstrap() {
     }),
   );
 
-  const clientDist = configService.get<string>('CLIENT_DIST');
+  const serverDocsPath = join(__dirname, '..', 'docs');
+  if (existsSync(serverDocsPath)) {
+    app.useStaticAssets(serverDocsPath, { prefix: `/docs/server` });
+  }
 
-  if (clientDist) {
-    const browserDist = join(__dirname, '..', clientDist, 'browser');
-    const serverDist = join(__dirname, '..', clientDist, 'server');
-    const serverMain = join(serverDist, 'main.js');
+  const serverCoveragePath = join(__dirname, '..', 'coverage', 'lcov-report');
+  if (existsSync(serverCoveragePath)) {
+    app.useStaticAssets(serverCoveragePath, { prefix: `/coverage/server` });
+  }
+
+  const client = configService.get<string>('CLIENT');
+
+  if (client) {
+    const clientDocsPath = join(__dirname, '..', client, 'docs');
+    if (existsSync(clientDocsPath)) {
+      app.useStaticAssets(clientDocsPath, { prefix: `/docs/client` });
+    }
+
+    const clientCoveragePath = join(__dirname, '..', client, 'coverage');
+    if (existsSync(clientCoveragePath)) {
+      app.useStaticAssets(clientCoveragePath, { prefix: `/coverage/client` });
+    }
+
+    const clientDistBrowser = join(__dirname, '..', client, 'dist', 'browser');
+    const clientDistServer = join(__dirname, '..', client, 'dist', 'server');
 
     let engine, appBaseHref;
     try {
-      const { getEngine, APP_BASE_HREF } = await import(serverMain);
+      const { getEngine, APP_BASE_HREF } = await import(join(clientDistServer, 'main.js'));
       engine = getEngine();
       appBaseHref = APP_BASE_HREF;
     } catch {
@@ -84,10 +103,10 @@ async function bootstrap() {
 
     app.engine('html', engine);
     app.setViewEngine('html');
-    app.setBaseViewsDir(browserDist);
-    app.useStaticAssets(browserDist, { maxAge: '1y' });
+    app.setBaseViewsDir(clientDistBrowser);
+    app.useStaticAssets(clientDistBrowser, { maxAge: '1y' });
 
-    const indexHtml = existsSync(join(browserDist, 'index.original.html'))
+    const indexHtml = existsSync(join(clientDistBrowser, 'index.original.html'))
       ? 'index.original.html'
       : 'index.html';
     const { httpAdapter } = app.get(HttpAdapterHost);
