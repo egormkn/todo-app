@@ -191,7 +191,7 @@ jobs:
   deploy:
     name: Deploy documentation
     runs-on: ubuntu-latest
-    needs: [client, server, docs]
+    needs: [client, server, docs, allure]
     steps:
       - name: Download artifacts (allure)
         uses: actions/download-artifact@v2
