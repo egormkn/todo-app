@@ -28,7 +28,7 @@ module.exports = (config: any) => {
     coverageReporter: {
       dir: './coverage/',
       subdir: '.',
-      reporters: [{ type: 'html' }, { type: 'text-summary' }],
+      reporters: [{ type: 'html' }, { type: 'text' }],
     },
     allureReport: {
       reportDir: 'allure/xml',
