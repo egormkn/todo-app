@@ -1,0 +1,51 @@
+{
+  "uid" : "764147ff1ec97a20",
+  "name" : "should create",
+  "fullName" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] TaskListEditorComponent.should create",
+  "historyId" : "9a273b7aa26740661c77465e8dea7eed",
+  "time" : {
+    "start" : 1637452007665,
+    "stop" : 1637452007665,
+    "duration" : 0
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "skipped",
+  "statusMessage" : "This test was ignored",
+  "statusTrace" : "",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "host",
+    "value" : "Chrome Headless 95.0.4638.69 (Linux x86_64)"
+  }, {
+    "name" : "suite",
+    "value" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] TaskListEditorComponent"
+  }, {
+    "name" : "testClass",
+    "value" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] TaskListEditorComponent"
+  }, {
+    "name" : "testMethod",
+    "value" : "should create"
+  }, {
+    "name" : "package",
+    "value" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] TaskListEditorComponent"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "764147ff1ec97a20.json",
+  "parameterValues" : [ ]
+}
