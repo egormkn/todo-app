@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2021-11-20T21:48:46+00:00</updated><id>/feed.xml</id><title type="html">Software Testing Course</title><entry><title type="html">Сравнение Cypress и Playwright</title><link href="/2021/11/09/cypress-playwright-comparison.html" rel="alternate" type="text/html" title="Сравнение Cypress и Playwright" /><published>2021-11-09T00:00:00+00:00</published><updated>2021-11-09T00:00:00+00:00</updated><id>/2021/11/09/cypress-playwright-comparison</id><content type="html" xml:base="/2021/11/09/cypress-playwright-comparison.html">&lt;h1 id=&quot;особенности-cypress&quot;&gt;Особенности Cypress&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;фреймворк для тестирования и отладки веб-приложений, создан в 2015 г. как стартап&lt;/li&gt;
+  &lt;li&gt;большое сообщество разработчиков, есть интеграция с веб-фреймворками (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@cypress/schematic&lt;/code&gt; для Angular)&lt;/li&gt;
+  &lt;li&gt;TODO: Дописать&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;особенности-playwright&quot;&gt;Особенности Playwright&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;фреймворк для автоматизации браузера, создан в Microsoft в 2020 г. на основе инструмента Puppeteer от Google&lt;/li&gt;
+  &lt;li&gt;TODO: Дописать&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">Особенности Cypress</summary></entry></feed>

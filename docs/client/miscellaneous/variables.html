@@ -1,0 +1,560 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>client documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css" media="(prefers-color-scheme: dark)">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">client documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content miscellaneous-variables">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Miscellaneous</li>
+  <li>Variables</li>
+</ol>
+
+<section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <ul class="index-list">
+                        <li>
+                            <a href="#API_PREFIX" title="src/app/api.ts" ><b>API_PREFIX</b>&nbsp;&nbsp;&nbsp;(src/.../api.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#apiPrefix" title="src/app/tasks/tasks.service.ts" ><b>apiPrefix</b>&nbsp;&nbsp;&nbsp;(src/.../tasks.service.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#apiPrefix" title="src/app/users/users.service.ts" ><b>apiPrefix</b>&nbsp;&nbsp;&nbsp;(src/.../users.service.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#authModule" title="src/app/app-routing.module.ts" ><b>authModule</b>&nbsp;&nbsp;&nbsp;(src/.../app-routing.module.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#context" title="src/test.ts" ><b>context</b>&nbsp;&nbsp;&nbsp;(src/.../test.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#environment" title="src/environments/environment.prod.ts" ><b>environment</b>&nbsp;&nbsp;&nbsp;(src/.../environment.prod.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#environment" title="src/environments/environment.ts" ><b>environment</b>&nbsp;&nbsp;&nbsp;(src/.../environment.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#faNestJs" title="src/app/footer/fontawesome-svg-nestjs.ts" ><b>faNestJs</b>&nbsp;&nbsp;&nbsp;(src/.../fontawesome-svg-nestjs.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#httpStatusModule" title="src/app/app-routing.module.ts" ><b>httpStatusModule</b>&nbsp;&nbsp;&nbsp;(src/.../app-routing.module.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#jwtOptionsProvider" title="src/app/app.module.ts" ><b>jwtOptionsProvider</b>&nbsp;&nbsp;&nbsp;(src/.../app.module.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#require" title="src/test.ts" ><b>require</b>&nbsp;&nbsp;&nbsp;(src/.../test.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#services" title="src/app/auth/social/social.model.ts" ><b>services</b>&nbsp;&nbsp;&nbsp;(src/.../social.model.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#tasksModule" title="src/app/app-routing.module.ts" ><b>tasksModule</b>&nbsp;&nbsp;&nbsp;(src/.../app-routing.module.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#usersModule" title="src/app/app-routing.module.ts" ><b>usersModule</b>&nbsp;&nbsp;&nbsp;(src/.../app-routing.module.ts)</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+    <h3>src/app/api.ts</h3>
+    <section>
+    <h3></h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="API_PREFIX"></a>
+                    <span class="name">
+                        <span ><b>API_PREFIX</b></span>
+                        <a href="#API_PREFIX"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new InjectionToken&lt;string&gt;(&#x27;Prefix of API url&#x27;, {
+  providedIn: &#x27;root&#x27;,
+  factory() {
+    return environment.apiPrefix;
+  },
+})</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+</section>
+    <h3>src/app/tasks/tasks.service.ts</h3>
+    <section>
+    <h3></h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="apiPrefix"></a>
+                    <span class="name">
+                        <span ><b>apiPrefix</b></span>
+                        <a href="#apiPrefix"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;/api&#x27;</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+</section>
+    <h3>src/app/users/users.service.ts</h3>
+    <section>
+    <h3></h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="apiPrefix"></a>
+                    <span class="name">
+                        <span ><b>apiPrefix</b></span>
+                        <a href="#apiPrefix"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;/api&#x27;</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+</section>
+    <h3>src/app/app-routing.module.ts</h3>
+    <section>
+    <h3></h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="authModule"></a>
+                    <span class="name">
+                        <span ><b>authModule</b></span>
+                        <a href="#authModule"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>() &#x3D;&gt; import(&#x27;./auth/auth.module&#x27;).then((m) &#x3D;&gt; m.AuthModule)</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="httpStatusModule"></a>
+                    <span class="name">
+                        <span ><b>httpStatusModule</b></span>
+                        <a href="#httpStatusModule"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>() &#x3D;&gt;
+  import(&#x27;./http-status/http-status.module&#x27;).then((m) &#x3D;&gt; m.HttpStatusModule)</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="tasksModule"></a>
+                    <span class="name">
+                        <span ><b>tasksModule</b></span>
+                        <a href="#tasksModule"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>() &#x3D;&gt; import(&#x27;./tasks/tasks.module&#x27;).then((m) &#x3D;&gt; m.TasksModule)</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="usersModule"></a>
+                    <span class="name">
+                        <span ><b>usersModule</b></span>
+                        <a href="#usersModule"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>() &#x3D;&gt; import(&#x27;./users/users.module&#x27;).then((m) &#x3D;&gt; m.UsersModule)</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+</section>
+    <h3>src/test.ts</h3>
+    <section>
+    <h3></h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="context"></a>
+                    <span class="name">
+                        <span ><b>context</b></span>
+                        <a href="#context"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>require.context(&#x27;./&#x27;, true, /\.spec\.ts$/)</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="require"></a>
+                    <span class="name">
+                        <span ><b>require</b></span>
+                        <a href="#require"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>literal type</code>
+
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+</section>
+    <h3>src/environments/environment.prod.ts</h3>
+    <section>
+    <h3></h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="environment"></a>
+                    <span class="name">
+                        <span ><b>environment</b></span>
+                        <a href="#environment"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>{
+  production: true,
+  apiPrefix: &#x27;/api&#x27;,
+}</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+</section>
+    <h3>src/environments/environment.ts</h3>
+    <section>
+    <h3></h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="environment"></a>
+                    <span class="name">
+                        <span ><b>environment</b></span>
+                        <a href="#environment"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>{
+  production: false,
+  apiPrefix: &#x27;/api&#x27;,
+}</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+</section>
+    <h3>src/app/footer/fontawesome-svg-nestjs.ts</h3>
+    <section>
+    <h3></h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="faNestJs"></a>
+                    <span class="name">
+                        <span ><b>faNestJs</b></span>
+                        <a href="#faNestJs"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>IconDefinition</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>{
+  prefix: &#x27;fac&#x27; as IconPrefix,
+  iconName: &#x27;nestjs&#x27; as IconName,
+  icon: [
+    448, // width
+    448, // height
+    [], // ligatures
+    null as unknown as string, // unicode
+    &#x27;m263.7 0.719c-19.46-1.006 12.72 18.27 0.9988 31.26-12.27 9.077 1.416 48.88-0.1754 18.49 3.394-17.79 40.65-30.13 12.84-45.82-4.085-2.519-8.849-3.982-13.66-3.937zm36.82 6.6c2.612 21.62-22.83 25.37-30.1 41.57-7.03 10.09 7.383 30.46-10.16 19.39-43.53-18.22-93.79-20.75-138.8-6.832-19.24 7.155-35.65 19.74-48.85 35.29-15.63 19.33-42.43 17.06-61.63 28.8-12.65 9.918-16.46 32.73 0.3332 40.86 11.2 6.288 11.17 26.13 28.04 27.23-6.202 26.14 10.74 3.74 11.45 4.435-2.931 11.82 1.25 25.68 9.903 8.13 15.14-17.54 46-10.09 67.36-7.207 54.73 12.15 97.61 62.21 102.1 118-2.552-17.41-28.58-25.75-31.15-3.865-7.939 13.05-13.94 14.28-11.56-1.939-2.561-22.18-7.91 35.32-27.75 19.01-21.13-4.086-18.92-24.7-15.15-39.36-14.87-14.09-40.67 1.287-41.67 20.28-2.139 18.45 6.539 37.96 21.44 48.94-12.53 0.754-22.63 5.863-4.617 10.56 44.54 20.83 101.9 6.692 131.2-33.15 12.31-11.68 19.47-42.85 22.48-48.39 8.823 43.34-11.13 90.62-48.64 114.3 16.94 1.43 46.45-12.7 54.99-12.36-18.28 24.18-42.63 43.69-70.16 56.36 61.42-3.345 119.4-40.38 148.9-94.25-4.725 26.71-15.46 52.33-31.15 74.45 42.49-27.7 72-74.04 79.66-124.1 5.656 15.42 2.235 47.41 5.288 53.08 37.7-51.71 45.79-121.8 23.49-181.5-11.05-31.38-28.36-62.08-51-85.69-0.6852 46.85-49.77 83.93-95.06 73.29-19.79-3.334 18.03-3.495 22.35-10.31 40.9-18.81 56.67-75.35 30.92-112.4-9.929-15.05-25.53-26.42-42.38-32.54z&#x27;, // svgPathData
+  ],
+}</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+</section>
+    <h3>src/app/app.module.ts</h3>
+    <section>
+    <h3></h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="jwtOptionsProvider"></a>
+                    <span class="name">
+                        <span ><b>jwtOptionsProvider</b></span>
+                        <a href="#jwtOptionsProvider"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>{
+  provide: JWT_OPTIONS,
+  useFactory: jwtOptionsFactory,
+  deps: [LOCAL_STORAGE],
+}</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+</section>
+    <h3>src/app/auth/social/social.model.ts</h3>
+    <section>
+    <h3></h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="services"></a>
+                    <span class="name">
+                        <span ><b>services</b></span>
+                        <a href="#services"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/SocialService.html" target="_self" >SocialService[]</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[
+  {
+    type: &#x27;facebook&#x27;,
+    title: &#x27;Facebook&#x27;,
+    icon: faFacebookF,
+    isEnabled: false,
+  },
+  {
+    type: &#x27;vkontakte&#x27;,
+    title: &#x27;Vkontakte&#x27;,
+    icon: faVk,
+    isEnabled: false,
+  },
+  {
+    type: &#x27;google&#x27;,
+    title: &#x27;Google&#x27;,
+    icon: faGoogle,
+    isEnabled: true,
+  },
+]</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'miscellaneous-variables';
+            var COMPODOC_CURRENT_PAGE_URL = 'variables.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
