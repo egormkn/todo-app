@@ -10,6 +10,7 @@
     "test": "ng test --no-watch --no-progress --browsers=ChromeHeadlessCI",
     "test:watch": "ng test",
     "test:coverage": "ng test --no-watch --no-progress --code-coverage --browsers=ChromeHeadlessCI",
+    "allure": "npx allure-commandline generate -o allure/report allure/xml",
     "docs": "npx @compodoc/compodoc",
     "lint": "ng lint",
     "lint:debug": "DEBUG=typescript-eslint:* ng lint",
