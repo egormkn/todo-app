@@ -61,7 +61,7 @@ jobs:
     - name: Run tests
       run: npm test -- --coverage
     - name: Run E2E tests
-      run: npm test:e2e
+      run: npm run test:e2e
     - name: Upload artifacts
       uses: actions/upload-artifact@v2
       if: ${{ matrix.node-version == '16.x' }}
