@@ -33,13 +33,13 @@ jobs:
         run: npm run build
       - name: Run tests
         run: npm run test:coverage
-      - name: Upload build artifacts
+      - name: Upload artifacts (client-dist)
         uses: actions/upload-artifact@v2
         if: ${{ matrix.node-version == '16.x' }}
         with:
           name: client-dist
           path: client/dist/
-      - name: Upload coverage artifacts
+      - name: Upload artifacts (client-coverage)
         uses: actions/upload-artifact@v2
         if: ${{ matrix.node-version == '16.x' }}
         with:
@@ -70,15 +70,15 @@ jobs:
         run: npm run build
       - name: Run tests
         run: npm run test:coverage
-      - name: Run E2E tests
+      - name: Run end-to-end tests
         run: npm run test:e2e
-      - name: Upload build artifacts
+      - name: Upload artifacts (server-dist)
         uses: actions/upload-artifact@v2
         if: ${{ matrix.node-version == '16.x' }}
         with:
           name: server-dist
           path: server/dist/
-      - name: Upload coverage artifacts
+      - name: Upload artifacts (server-coverage)
         uses: actions/upload-artifact@v2
         if: ${{ matrix.node-version == '16.x' }}
         with:
@@ -86,7 +86,7 @@ jobs:
           path: server/coverage/
 
   e2e:
-    name: Run E2E tests (Node.js ${{ matrix.node-version }}, ${{ matrix.tool.name }})
+    name: Run end-to-end tests (Node.js ${{ matrix.node-version }}, ${{ matrix.tool.name }})
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -113,7 +113,7 @@ jobs:
       - name: Install Playwright browsers
         if: ${{ matrix.tool.name == 'Playwright' }}
         run: npx playwright install-deps && npx playwright install
-      - name: Run tests with ${{ matrix.tool.name }}
+      - name: Run end-to-end tests with ${{ matrix.tool.name }}
         run: npm run ${{ matrix.tool.command }}
 
   docs:
@@ -131,9 +131,8 @@ jobs:
       - name: Build documentation
         run: bundle exec jekyll build
         working-directory: docs
-      - name: Upload coverage artifacts
+      - name: Upload artifacts (docs)
         uses: actions/upload-artifact@v2
-        if: ${{ matrix.node-version == '16.x' }}
         with:
           name: docs
           path: docs/_site/
