@@ -33,6 +33,7 @@ jobs:
       run: npm test -- --no-watch --no-progress --code-coverage --browsers=ChromeHeadlessCI
     - name: Upload artifacts
       uses: actions/upload-artifact@v2
+      if: ${{ matrix.node-version == '16.x' }}
       with:
         name: client-coverage
         path: client/coverage/
@@ -59,8 +60,11 @@ jobs:
       run: npm ci
     - name: Run tests
       run: npm test -- --coverage
+    - name: Run E2E tests
+      run: npm test:e2e
     - name: Upload artifacts
       uses: actions/upload-artifact@v2
+      if: ${{ matrix.node-version == '16.x' }}
       with:
         name: server-coverage
         path: server/coverage/
@@ -91,3 +95,24 @@ jobs:
     - name: Run tests with Playwright
       if: always()
       run: npx playwright install-deps && npx playwright install && npm run test:playwright
+
+  deploy:
+    name: Deploy to Github Pages
+    runs-on: ubuntu-latest
+    needs: [test-client, test-server]
+    steps:
+      - name: List directory files
+        run: echo "$(pwd)" && ls -al
+      - name: Download artifacts (client coverage)
+        uses: actions/download-artifact@v2
+        with:
+          name: client-coverage
+          path: coverage/client
+      - name: List directory files
+        run: echo "$(pwd)" && ls -al
+      # - name: Deploy
+      #   uses: peaceiris/actions-gh-pages@v3
+      #   if: ${{ github.ref == 'refs/heads/main' }}
+      #   with:
+      #     github_token: ${{ secrets.GITHUB_TOKEN }}
+      #     publish_dir: ./public
