@@ -1,4 +1,4 @@
-import { Logger, ValidationPipe } from '@nestjs/common';
+import { Logger } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { HttpAdapterHost, NestFactory } from '@nestjs/core';
 import { NestExpressApplication } from '@nestjs/platform-express';
@@ -45,19 +45,6 @@ async function bootstrap() {
     .build();
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup(api.prefix, app, document);
-
-  app.useGlobalPipes(
-    new ValidationPipe({
-      transform: true,
-      validateCustomDecorators: true,
-      whitelist: true,
-      forbidNonWhitelisted: false,
-      forbidUnknownValues: true,
-      transformOptions: {
-        enableImplicitConversion: true,
-      },
-    }),
-  );
 
   const serverDocsPath = join(__dirname, '..', 'docs');
   if (existsSync(serverDocsPath)) {
