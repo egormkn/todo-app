@@ -11,7 +11,7 @@
     "test:watch": "ng test",
     "test:coverage": "ng test --no-watch --no-progress --code-coverage --browsers=ChromeHeadlessCI",
     "allure": "npx allure-commandline generate -o allure/report allure/xml",
-    "docs": "npx @compodoc/compodoc",
+    "docs": "compodoc -p ./tsconfig.json",
     "lint": "ng lint",
     "lint:debug": "DEBUG=typescript-eslint:* ng lint",
     "dev:ssr": "ng run app:serve-ssr",
