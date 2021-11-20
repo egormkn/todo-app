@@ -33,6 +33,17 @@ jobs:
         run: npm run build
       - name: Run tests
         run: npm run test:coverage
+      - name: Generate Allure report
+        uses: afiore/action-allure-report@v0.1.0
+        with:
+          results-dir: allure/xml
+          report-dir: allure/report
+      - name: Upload artifacts (client-allure)
+        uses: actions/upload-artifact@v2
+        if: ${{ matrix.node-version == '16.x' }}
+        with:
+          name: client-allure
+          path: client/allure/report/
       - name: Upload artifacts (client-dist)
         uses: actions/upload-artifact@v2
         if: ${{ matrix.node-version == '16.x' }}
@@ -136,18 +147,45 @@ jobs:
         with:
           name: docs
           path: docs/_site/
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16
+      - name: Install compodoc
+        run: npm install -g @compodoc/compodoc
+      - name: Generate client documentation
+        working-directory: client
+        run: npm run docs
+      - name: Generate server documentation
+        working-directory: server
+        run: npm run docs
+      - name: Upload artifacts (client-docs)
+        uses: actions/upload-artifact@v2
+        with:
+          name: client-docs
+          path: client/docs/
+      - name: Upload artifacts (server-docs)
+        uses: actions/upload-artifact@v2
+        with:
+          name: server-docs
+          path: server/docs/
 
   deploy:
     name: Deploy documentation
     runs-on: ubuntu-latest
     needs: [client, server, docs]
     steps:
-      - name: Download artifacts (client coverage)
+      - name: Download artifacts (client-allure)
+        uses: actions/download-artifact@v2
+        with:
+          name: client-allure
+          path: allure/client
+      - name: Download artifacts (client-coverage)
         uses: actions/download-artifact@v2
         with:
           name: client-coverage
           path: coverage/client
-      - name: Download artifacts (server coverage)
+      - name: Download artifacts (server-coverage)
         uses: actions/download-artifact@v2
         with:
           name: server-coverage
@@ -157,18 +195,16 @@ jobs:
         with:
           name: docs
           path: docs/
-      - name: Setup Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v2
+      - name: Download artifacts (client-docs)
+        uses: actions/download-artifact@v2
         with:
-          node-version: ${{ matrix.node-version }}
-      - name: Install compodoc
-        run: npm install -g @compodoc/compodoc
-      - name: Generate client documentation
-        working-directory: client
-        run: npm run docs -- --output docs/client/
-      - name: Generate server documentation
-        working-directory: server
-        run: npm run docs -- --output docs/server/
+          name: client-docs
+          path: docs/client/
+      - name: Download artifacts (server-docs)
+        uses: actions/download-artifact@v2
+        with:
+          name: server-docs
+          path: docs/server/
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         if: ${{ github.ref == 'refs/heads/main' }}

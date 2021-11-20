@@ -31,9 +31,9 @@ module.exports = (config: any) => {
       reporters: [{ type: 'html' }, { type: 'text-summary' }],
     },
     allureReport: {
-      reportDir: 'allure',
+      reportDir: 'allure/xml',
     },
-    reporters: ['progress', 'kjhtml'],
+    reporters: ['progress', 'kjhtml', 'allure'],
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,
