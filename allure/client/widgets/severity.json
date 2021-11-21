@@ -1,470 +1,470 @@
 [ {
-  "uid" : "e7570ce8eaeb5deb",
-  "name" : "should be created",
-  "time" : {
-    "start" : 1637491954336,
-    "stop" : 1637491954340,
-    "duration" : 4
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "dafa64d6ed81fc4",
+  "uid" : "18c51b0d600756b7",
   "name" : "should create",
   "time" : {
-    "start" : 1637491954319,
-    "stop" : 1637491954319,
+    "start" : 1637501245527,
+    "stop" : 1637501245527,
     "duration" : 0
   },
   "status" : "skipped",
   "severity" : "normal"
 }, {
-  "uid" : "cc0d58927442a28c",
-  "name" : "#connect forwards url parameters and receives access token",
+  "uid" : "efff3faaa9455eb",
+  "name" : "is invalid when empty",
   "time" : {
-    "start" : 1637491954668,
-    "stop" : 1637491954671,
-    "duration" : 3
+    "start" : 1637501245428,
+    "stop" : 1637501245443,
+    "duration" : 15
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "ea959f7f349251f5",
-  "name" : "should create",
+  "uid" : "e1d7336a03df762",
+  "name" : "#logIn sends username and password and receives access token",
   "time" : {
-    "start" : 1637491954322,
-    "stop" : 1637491954322,
-    "duration" : 0
-  },
-  "status" : "skipped",
-  "severity" : "normal"
-}, {
-  "uid" : "e615602af5bfc6b8",
-  "name" : "should create",
-  "time" : {
-    "start" : 1637491954673,
-    "stop" : 1637491954673,
-    "duration" : 0
-  },
-  "status" : "skipped",
-  "severity" : "normal"
-}, {
-  "uid" : "bce88813c5256b40",
-  "name" : "should be created",
-  "time" : {
-    "start" : 1637491954331,
-    "stop" : 1637491954335,
-    "duration" : 4
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "b3b050433881b7b5",
-  "name" : "#getUsername returns username property of a JWT payload",
-  "time" : {
-    "start" : 1637491954655,
-    "stop" : 1637491954657,
-    "duration" : 2
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "f615d326c644d1c2",
-  "name" : "should be created",
-  "time" : {
-    "start" : 1637491954666,
-    "stop" : 1637491954667,
-    "duration" : 1
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "7fd072ad3f321b99",
-  "name" : "should be created",
-  "time" : {
-    "start" : 1637491954302,
-    "stop" : 1637491954305,
-    "duration" : 3
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "18f7391c9318b12e",
-  "name" : "#isLoggedOut returns true if user is not logged in",
-  "time" : {
-    "start" : 1637491954647,
-    "stop" : 1637491954650,
-    "duration" : 3
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "8b14593c58e35680",
-  "name" : "should create",
-  "time" : {
-    "start" : 1637491954542,
-    "stop" : 1637491954559,
-    "duration" : 17
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "dd4ddbd23bd0d92d",
-  "name" : "should create",
-  "time" : {
-    "start" : 1637491954316,
-    "stop" : 1637491954316,
-    "duration" : 0
-  },
-  "status" : "skipped",
-  "severity" : "normal"
-}, {
-  "uid" : "87d399717847faa4",
-  "name" : "should create",
-  "time" : {
-    "start" : 1637491954612,
-    "stop" : 1637491954612,
-    "duration" : 0
-  },
-  "status" : "skipped",
-  "severity" : "normal"
-}, {
-  "uid" : "68a87b09bfc63b60",
-  "name" : "should be created",
-  "time" : {
-    "start" : 1637491954682,
-    "stop" : 1637491954682,
-    "duration" : 0
-  },
-  "status" : "skipped",
-  "severity" : "normal"
-}, {
-  "uid" : "ac896084f4b22b28",
-  "name" : "should create",
-  "time" : {
-    "start" : 1637491954606,
-    "stop" : 1637491954606,
-    "duration" : 0
-  },
-  "status" : "skipped",
-  "severity" : "normal"
-}, {
-  "uid" : "2bca7979a80693e",
-  "name" : "should be empty",
-  "time" : {
-    "start" : 1637491954562,
-    "stop" : 1637491954580,
-    "duration" : 18
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "c77eeeac6459f35b",
-  "name" : "should initialize its properties",
-  "time" : {
-    "start" : 1637491954583,
-    "stop" : 1637491954601,
-    "duration" : 18
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "cc99dc8bff756db3",
-  "name" : "should create",
-  "time" : {
-    "start" : 1637491954317,
-    "stop" : 1637491954317,
-    "duration" : 0
-  },
-  "status" : "skipped",
-  "severity" : "normal"
-}, {
-  "uid" : "37f3b773d6d97437",
-  "name" : "should open a modal",
-  "time" : {
-    "start" : 1637491954295,
-    "stop" : 1637491954302,
-    "duration" : 7
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "bd4b6530f61b6f24",
-  "name" : "should create",
-  "time" : {
-    "start" : 1637491954319,
-    "stop" : 1637491954319,
-    "duration" : 0
-  },
-  "status" : "skipped",
-  "severity" : "normal"
-}, {
-  "uid" : "e3a636a7447ece39",
-  "name" : "should be created",
-  "time" : {
-    "start" : 1637491954327,
-    "stop" : 1637491954327,
-    "duration" : 0
-  },
-  "status" : "skipped",
-  "severity" : "normal"
-}, {
-  "uid" : "bf2b2cafbd5311d9",
-  "name" : "should create",
-  "time" : {
-    "start" : 1637491954682,
-    "stop" : 1637491954682,
-    "duration" : 0
-  },
-  "status" : "skipped",
-  "severity" : "normal"
-}, {
-  "uid" : "ca9eb9eccef95464",
-  "name" : "should create",
-  "time" : {
-    "start" : 1637491954325,
-    "stop" : 1637491954325,
-    "duration" : 0
-  },
-  "status" : "skipped",
-  "severity" : "normal"
-}, {
-  "uid" : "8ebc1f0739b23e1e",
-  "name" : "clears the token from localStorage and emits the status",
-  "time" : {
-    "start" : 1637491954614,
-    "stop" : 1637491954623,
-    "duration" : 9
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "69cc15106fefe846",
-  "name" : "should create",
-  "time" : {
-    "start" : 1637491954680,
-    "stop" : 1637491954680,
-    "duration" : 0
-  },
-  "status" : "skipped",
-  "severity" : "normal"
-}, {
-  "uid" : "d7375d69afd8657a",
-  "name" : "should render title",
-  "time" : {
-    "start" : 1637491954608,
-    "stop" : 1637491954608,
-    "duration" : 0
-  },
-  "status" : "skipped",
-  "severity" : "normal"
-}, {
-  "uid" : "a8a727f44e38e460",
-  "name" : "should be created",
-  "time" : {
-    "start" : 1637491954678,
-    "stop" : 1637491954678,
-    "duration" : 0
-  },
-  "status" : "skipped",
-  "severity" : "normal"
-}, {
-  "uid" : "51eb6bf90e999dfe",
-  "name" : "#isLoggedIn returns false if token is expired",
-  "time" : {
-    "start" : 1637491954629,
-    "stop" : 1637491954631,
-    "duration" : 2
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "261cf5c233b5177d",
-  "name" : "is valid with user data",
-  "time" : {
-    "start" : 1637491954348,
-    "stop" : 1637491954461,
-    "duration" : 113
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "841bce3a601f4d81",
-  "name" : "should create",
-  "time" : {
-    "start" : 1637491954676,
-    "stop" : 1637491954676,
-    "duration" : 0
-  },
-  "status" : "skipped",
-  "severity" : "normal"
-}, {
-  "uid" : "c57cf75983a75d36",
-  "name" : "submits the form successfully",
-  "time" : {
-    "start" : 1637491954514,
-    "stop" : 1637491954533,
-    "duration" : 19
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "651d86b88d297b5f",
-  "name" : "shows an error message if something goes wrong",
-  "time" : {
-    "start" : 1637491954490,
-    "stop" : 1637491954511,
-    "duration" : 21
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "8ae671f8011ae958",
-  "name" : "should have as title 'App'",
-  "time" : {
-    "start" : 1637491954609,
-    "stop" : 1637491954609,
-    "duration" : 0
-  },
-  "status" : "skipped",
-  "severity" : "normal"
-}, {
-  "uid" : "f347967cf40bff32",
-  "name" : "should create the app",
-  "time" : {
-    "start" : 1637491954607,
-    "stop" : 1637491954607,
-    "duration" : 0
-  },
-  "status" : "skipped",
-  "severity" : "normal"
-}, {
-  "uid" : "288a26bd436ddd72",
-  "name" : "#isLoggedIn returns true if token is not expired",
-  "time" : {
-    "start" : 1637491954638,
-    "stop" : 1637491954643,
+    "start" : 1637501245244,
+    "stop" : 1637501245249,
     "duration" : 5
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "11212cdbcac937c9",
-  "name" : "#logOut clears the saved token",
-  "time" : {
-    "start" : 1637491954658,
-    "stop" : 1637491954660,
-    "duration" : 2
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "af045e6b49dfb419",
+  "uid" : "570dc31d22ae60f0",
   "name" : "should create",
   "time" : {
-    "start" : 1637491954324,
-    "stop" : 1637491954324,
+    "start" : 1637501245553,
+    "stop" : 1637501245553,
     "duration" : 0
   },
   "status" : "skipped",
   "severity" : "normal"
 }, {
-  "uid" : "6240ec8009c03daa",
-  "name" : "saves the token to localStorage and emits the status",
-  "time" : {
-    "start" : 1637491954623,
-    "stop" : 1637491954627,
-    "duration" : 4
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "58e7892f3ed99826",
-  "name" : "is invalid when empty",
-  "time" : {
-    "start" : 1637491954462,
-    "stop" : 1637491954488,
-    "duration" : 26
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "a5253e36422c882a",
+  "uid" : "1c6ff3e084ddbbd6",
   "name" : "should create",
   "time" : {
-    "start" : 1637491954603,
-    "stop" : 1637491954603,
+    "start" : 1637501245171,
+    "stop" : 1637501245171,
     "duration" : 0
   },
   "status" : "skipped",
   "severity" : "normal"
 }, {
-  "uid" : "b9389fc79e7d4cee",
-  "name" : "#logIn sends username and password and receives access token",
+  "uid" : "d6521fe27035b166",
+  "name" : "should be created",
   "time" : {
-    "start" : 1637491954644,
-    "stop" : 1637491954648,
-    "duration" : 4
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "89ee2cd7f605932d",
-  "name" : "should create",
-  "time" : {
-    "start" : 1637491954674,
-    "stop" : 1637491954674,
+    "start" : 1637501245530,
+    "stop" : 1637501245530,
     "duration" : 0
   },
   "status" : "skipped",
   "severity" : "normal"
 }, {
-  "uid" : "1fae91f1654ae4eb",
-  "name" : "should create",
+  "uid" : "b23d9e5583738fad",
+  "name" : "#getName returns name property of a JWT payload",
   "time" : {
-    "start" : 1637491954308,
-    "stop" : 1637491954308,
-    "duration" : 0
-  },
-  "status" : "skipped",
-  "severity" : "normal"
-}, {
-  "uid" : "bb4b8c0c19f33ebe",
-  "name" : "#signUp sends user data and receives access token",
-  "time" : {
-    "start" : 1637491954631,
-    "stop" : 1637491954637,
-    "duration" : 6
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "b9f991018e7b593a",
-  "name" : "should close all modals",
-  "time" : {
-    "start" : 1637491954274,
-    "stop" : 1637491954295,
-    "duration" : 21
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "58f062462a041f70",
-  "name" : "#isLoggedOut returns false if user is logged in",
-  "time" : {
-    "start" : 1637491954650,
-    "stop" : 1637491954653,
+    "start" : 1637501245281,
+    "stop" : 1637501245284,
     "duration" : 3
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "24ceaff67d6c1059",
-  "name" : "#getName returns name property of a JWT payload",
+  "uid" : "877f166bcfe35a20",
+  "name" : "should be empty",
   "time" : {
-    "start" : 1637491954662,
-    "stop" : 1637491954664,
+    "start" : 1637501245501,
+    "stop" : 1637501245522,
+    "duration" : 21
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "2e375508bc9db120",
+  "name" : "should create",
+  "time" : {
+    "start" : 1637501245524,
+    "stop" : 1637501245524,
+    "duration" : 0
+  },
+  "status" : "skipped",
+  "severity" : "normal"
+}, {
+  "uid" : "55f18e19ad8c5f0f",
+  "name" : "should create",
+  "time" : {
+    "start" : 1637501245550,
+    "stop" : 1637501245550,
+    "duration" : 0
+  },
+  "status" : "skipped",
+  "severity" : "normal"
+}, {
+  "uid" : "7e3372a06d86ff85",
+  "name" : "clears the token from localStorage and emits the status",
+  "time" : {
+    "start" : 1637501245251,
+    "stop" : 1637501245256,
+    "duration" : 5
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "14e94e320f8aea46",
+  "name" : "#connect forwards url parameters and receives access token",
+  "time" : {
+    "start" : 1637501245268,
+    "stop" : 1637501245272,
+    "duration" : 4
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "55b590414be889f6",
+  "name" : "saves the token to localStorage and emits the status",
+  "time" : {
+    "start" : 1637501245256,
+    "stop" : 1637501245260,
+    "duration" : 4
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "81f4f94e2e99157b",
+  "name" : "should be created",
+  "time" : {
+    "start" : 1637501245552,
+    "stop" : 1637501245552,
+    "duration" : 0
+  },
+  "status" : "skipped",
+  "severity" : "normal"
+}, {
+  "uid" : "4c40197354ce423",
+  "name" : "should create",
+  "time" : {
+    "start" : 1637501245560,
+    "stop" : 1637501245560,
+    "duration" : 0
+  },
+  "status" : "skipped",
+  "severity" : "normal"
+}, {
+  "uid" : "aa508b50253280cb",
+  "name" : "should have as title 'App'",
+  "time" : {
+    "start" : 1637501245532,
+    "stop" : 1637501245532,
+    "duration" : 0
+  },
+  "status" : "skipped",
+  "severity" : "normal"
+}, {
+  "uid" : "c46882175868ab44",
+  "name" : "submits the form successfully",
+  "time" : {
+    "start" : 1637501245449,
+    "stop" : 1637501245466,
+    "duration" : 17
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "4cb7747191865606",
+  "name" : "#logOut clears the saved token",
+  "time" : {
+    "start" : 1637501245262,
+    "stop" : 1637501245265,
+    "duration" : 3
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "11758a5d3fc678c8",
+  "name" : "should create",
+  "time" : {
+    "start" : 1637501245546,
+    "stop" : 1637501245546,
+    "duration" : 0
+  },
+  "status" : "skipped",
+  "severity" : "normal"
+}, {
+  "uid" : "3d8d2c92147f558b",
+  "name" : "#signUp sends user data and receives access token",
+  "time" : {
+    "start" : 1637501245229,
+    "stop" : 1637501245238,
+    "duration" : 9
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "e274e583d1fcc2b3",
+  "name" : "should create",
+  "time" : {
+    "start" : 1637501245469,
+    "stop" : 1637501245483,
+    "duration" : 14
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "70f7e3676307f0b",
+  "name" : "shows an error message if something goes wrong",
+  "time" : {
+    "start" : 1637501245396,
+    "stop" : 1637501245426,
+    "duration" : 30
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "bf31b7e176e12180",
+  "name" : "should create",
+  "time" : {
+    "start" : 1637501245176,
+    "stop" : 1637501245176,
+    "duration" : 0
+  },
+  "status" : "skipped",
+  "severity" : "normal"
+}, {
+  "uid" : "3958f0b39c61878",
+  "name" : "should create",
+  "time" : {
+    "start" : 1637501245556,
+    "stop" : 1637501245556,
+    "duration" : 0
+  },
+  "status" : "skipped",
+  "severity" : "normal"
+}, {
+  "uid" : "4fcd30421ba53432",
+  "name" : "should create",
+  "time" : {
+    "start" : 1637501245564,
+    "stop" : 1637501245564,
+    "duration" : 0
+  },
+  "status" : "skipped",
+  "severity" : "normal"
+}, {
+  "uid" : "10a8f288e60fdc7c",
+  "name" : "should initialize its properties",
+  "time" : {
+    "start" : 1637501245485,
+    "stop" : 1637501245499,
+    "duration" : 14
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "35dc8264e9295536",
+  "name" : "#isLoggedIn returns true if token is not expired",
+  "time" : {
+    "start" : 1637501245241,
+    "stop" : 1637501245243,
     "duration" : 2
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "744a056555dae00e",
+  "name" : "should open a modal",
+  "time" : {
+    "start" : 1637501245178,
+    "stop" : 1637501245199,
+    "duration" : 21
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "efc5a0c54f334886",
+  "name" : "should create",
+  "time" : {
+    "start" : 1637501245547,
+    "stop" : 1637501245547,
+    "duration" : 0
+  },
+  "status" : "skipped",
+  "severity" : "normal"
+}, {
+  "uid" : "bea1d0cf39a0bab2",
+  "name" : "is valid with user data",
+  "time" : {
+    "start" : 1637501245287,
+    "stop" : 1637501245393,
+    "duration" : 106
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "3b2dc31088314905",
+  "name" : "#isLoggedIn returns false if token is expired",
+  "time" : {
+    "start" : 1637501245223,
+    "stop" : 1637501245228,
+    "duration" : 5
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "24ff6342eba37117",
+  "name" : "should be created",
+  "time" : {
+    "start" : 1637501245540,
+    "stop" : 1637501245540,
+    "duration" : 0
+  },
+  "status" : "skipped",
+  "severity" : "normal"
+}, {
+  "uid" : "33668f4bb9c7a96a",
+  "name" : "should create",
+  "time" : {
+    "start" : 1637501245536,
+    "stop" : 1637501245536,
+    "duration" : 0
+  },
+  "status" : "skipped",
+  "severity" : "normal"
+}, {
+  "uid" : "696070065321d4c2",
+  "name" : "#getUsername returns username property of a JWT payload",
+  "time" : {
+    "start" : 1637501245277,
+    "stop" : 1637501245279,
+    "duration" : 2
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "29ebb71a62500399",
+  "name" : "should create",
+  "time" : {
+    "start" : 1637501245558,
+    "stop" : 1637501245558,
+    "duration" : 0
+  },
+  "status" : "skipped",
+  "severity" : "normal"
+}, {
+  "uid" : "7c31955c93144093",
+  "name" : "should be created",
+  "time" : {
+    "start" : 1637501245542,
+    "stop" : 1637501245544,
+    "duration" : 2
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "3c33790973076e5e",
+  "name" : "should be created",
+  "time" : {
+    "start" : 1637501245212,
+    "stop" : 1637501245214,
+    "duration" : 2
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "1aec7ed90a0e2478",
+  "name" : "should render title",
+  "time" : {
+    "start" : 1637501245531,
+    "stop" : 1637501245531,
+    "duration" : 0
+  },
+  "status" : "skipped",
+  "severity" : "normal"
+}, {
+  "uid" : "d855bea3bf0c6c2e",
+  "name" : "#isLoggedOut returns false if user is logged in",
+  "time" : {
+    "start" : 1637501245274,
+    "stop" : 1637501245276,
+    "duration" : 2
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "e3d95a6475cdac8e",
+  "name" : "should be created",
+  "time" : {
+    "start" : 1637501245280,
+    "stop" : 1637501245282,
+    "duration" : 2
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "33ef4e144bf9eb0e",
+  "name" : "should create",
+  "time" : {
+    "start" : 1637501245562,
+    "stop" : 1637501245562,
+    "duration" : 0
+  },
+  "status" : "skipped",
+  "severity" : "normal"
+}, {
+  "uid" : "a46f4ac52168bdd8",
+  "name" : "should create the app",
+  "time" : {
+    "start" : 1637501245533,
+    "stop" : 1637501245533,
+    "duration" : 0
+  },
+  "status" : "skipped",
+  "severity" : "normal"
+}, {
+  "uid" : "603d366449596679",
+  "name" : "should create",
+  "time" : {
+    "start" : 1637501245162,
+    "stop" : 1637501245162,
+    "duration" : 0
+  },
+  "status" : "skipped",
+  "severity" : "normal"
+}, {
+  "uid" : "300dd665cb4d4cac",
+  "name" : "should close all modals",
+  "time" : {
+    "start" : 1637501245203,
+    "stop" : 1637501245210,
+    "duration" : 7
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "c341c75079fb632f",
+  "name" : "#isLoggedOut returns true if user is not logged in",
+  "time" : {
+    "start" : 1637501245265,
+    "stop" : 1637501245269,
+    "duration" : 4
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "fa4a4f7847723039",
+  "name" : "should create",
+  "time" : {
+    "start" : 1637501245534,
+    "stop" : 1637501245534,
+    "duration" : 0
+  },
+  "status" : "skipped",
+  "severity" : "normal"
+}, {
+  "uid" : "4a8e92d7877c0b2b",
+  "name" : "should be created",
+  "time" : {
+    "start" : 1637501245216,
+    "stop" : 1637501245220,
+    "duration" : 4
   },
   "status" : "passed",
   "severity" : "normal"

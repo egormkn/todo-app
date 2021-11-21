@@ -1,0 +1,49 @@
+{
+  "uid" : "70f7e3676307f0b",
+  "name" : "shows an error message if something goes wrong",
+  "fullName" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] LoginFormComponent.shows an error message if something goes wrong",
+  "historyId" : "89b1859ef09df6d3b2db8153bee97a35",
+  "time" : {
+    "start" : 1637501245396,
+    "stop" : 1637501245426,
+    "duration" : 30
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "host",
+    "value" : "Chrome Headless 95.0.4638.69 (Linux x86_64)"
+  }, {
+    "name" : "suite",
+    "value" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] LoginFormComponent"
+  }, {
+    "name" : "testClass",
+    "value" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] LoginFormComponent"
+  }, {
+    "name" : "testMethod",
+    "value" : "shows an error message if something goes wrong"
+  }, {
+    "name" : "package",
+    "value" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] LoginFormComponent"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "70f7e3676307f0b.json",
+  "parameterValues" : [ ]
+}
