@@ -201,7 +201,7 @@ jobs:
           path: allure/
 
   deploy-docs:
-    name: Deploy documentation
+    name: Deploy documentation to GitHub Pages
     runs-on: ubuntu-latest
     needs: [client, server, docs, allure]
     steps:
@@ -248,10 +248,17 @@ jobs:
           publish_dir: ./
 
   deploy:
-    name: Deploy application
+    name: Build Docker image and deploy to Heroku
     runs-on: ubuntu-latest
     needs: [client, server, e2e]
+    env:
+      HEROKU_APP_NAME: egormkn-todo-app
     steps:
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v1
+      - name: Set up Docker Buildx
+        id: buildx
+        uses: docker/setup-buildx-action@v1
       - name: Restore Docker layers from cache
         uses: actions/cache@v2
         with:
@@ -259,23 +266,33 @@ jobs:
           key: ${{ runner.os }}-buildx-${{ github.sha }}
           restore-keys: |
             ${{ runner.os }}-buildx-
-      - name: Set up Docker Buildx
-        id: buildx
-        uses: docker/setup-buildx-action@v1
       - name: Login to GitHub Container Registry
         uses: docker/login-action@v1
         with:
           registry: ghcr.io
           username: ${{ github.repository_owner }}
           password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Login to Heroku Container Registry
+        uses: docker/login-action@v1
+        with:
+          registry: registry.heroku.com
+          username: ${{ secrets.HEROKU_USERNAME }}
+          password: ${{ secrets.HEROKU_API_KEY }}
       - name: Build and push
         id: docker_build
         uses: docker/build-push-action@v2
         with:
           builder: ${{ steps.buildx.outputs.name }}
           push: true
-          tags: ghcr.io/${{ github.repository_owner }}/todo-app:latest
+          platforms: linux/amd64,linux/arm64
+          tags: |
+            ghcr.io/${{ github.repository_owner }}/todo-app:latest
+            registry.heroku.com/${{ env.HEROKU_APP_NAME }}/web
           cache-from: type=local,src=/tmp/.buildx-cache
-          cache-to: type=local,dest=/tmp/.buildx-cache
+          cache-to: type=local,dest=/tmp/.buildx-cache-new,mode=max
+      - name: Move cache (see https://github.com/docker/build-push-action/issues/252)
+        run: |
+          rm -rf /tmp/.buildx-cache
+          mv /tmp/.buildx-cache-new /tmp/.buildx-cache
       - name: Print image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
