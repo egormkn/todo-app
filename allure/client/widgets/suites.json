@@ -7,9 +7,9 @@
       "failed" : 0,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 9,
+      "passed" : 11,
       "unknown" : 0,
-      "total" : 9
+      "total" : 11
     }
   }, {
     "uid" : "0069b73e4966e92ef247d7dcaa0acd5d",
@@ -23,17 +23,6 @@
       "total" : 7
     }
   }, {
-    "uid" : "c1d4691d3533d4c3f563d1abe04be75f",
-    "name" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] AuthService",
-    "statistic" : {
-      "failed" : 0,
-      "broken" : 0,
-      "skipped" : 0,
-      "passed" : 4,
-      "unknown" : 0,
-      "total" : 4
-    }
-  }, {
     "uid" : "a50971c8fe45484ac1f4b3cc96132ea4",
     "name" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] ModalService",
     "statistic" : {
@@ -43,6 +32,17 @@
       "passed" : 3,
       "unknown" : 0,
       "total" : 3
+    }
+  }, {
+    "uid" : "c1d4691d3533d4c3f563d1abe04be75f",
+    "name" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] AuthService",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 2,
+      "unknown" : 0,
+      "total" : 2
     }
   }, {
     "uid" : "5f3abdf59299f9a777c23820b038d08f",
@@ -78,8 +78,8 @@
       "total" : 3
     }
   }, {
-    "uid" : "1143757e2d002599e013f323c6325aa0",
-    "name" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] FooterComponent",
+    "uid" : "507fea482639caa001de792d49d9ada9",
+    "name" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] UsersService",
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
@@ -89,8 +89,8 @@
       "total" : 1
     }
   }, {
-    "uid" : "ba60026b0f6e87101aac6b0d3f9802ec",
-    "name" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] TaskEditorComponent",
+    "uid" : "55061303e4c238461f22d94232dd0074",
+    "name" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] TasksService",
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
@@ -100,8 +100,8 @@
       "total" : 1
     }
   }, {
-    "uid" : "495e66cd96bcc1ef350c9eb632483c67",
-    "name" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] ConnectAccountFormComponent",
+    "uid" : "ca9c00caafb0acb0bcb22a6bd306d427",
+    "name" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] TaskListEditorComponent",
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
