@@ -58,8 +58,14 @@ See more in the [GitHub Actions workflow file][workflow].
 
 ## Deployment
 
+Build an image from the Dockerfile:
 ```bash
 docker build -t egormkn/todo-app --progress=plain .
 
 docker run -it -p 3000:3000/tcp --rm --name todo-app --init egormkn/todo-app
+```
+
+Or use a prebuilt image from GitHub registry:
+```bash
+docker pull ghcr.io/egormkn/todo-app:latest
 ```
