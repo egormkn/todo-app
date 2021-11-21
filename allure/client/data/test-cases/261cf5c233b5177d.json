@@ -1,0 +1,49 @@
+{
+  "uid" : "261cf5c233b5177d",
+  "name" : "is valid with user data",
+  "fullName" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] LoginFormComponent.is valid with user data",
+  "historyId" : "357332b183be750f6ff7fcebdd7aede8",
+  "time" : {
+    "start" : 1637491954348,
+    "stop" : 1637491954461,
+    "duration" : 113
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "host",
+    "value" : "Chrome Headless 95.0.4638.69 (Linux x86_64)"
+  }, {
+    "name" : "suite",
+    "value" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] LoginFormComponent"
+  }, {
+    "name" : "testClass",
+    "value" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] LoginFormComponent"
+  }, {
+    "name" : "testMethod",
+    "value" : "is valid with user data"
+  }, {
+    "name" : "package",
+    "value" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] LoginFormComponent"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "261cf5c233b5177d.json",
+  "parameterValues" : [ ]
+}

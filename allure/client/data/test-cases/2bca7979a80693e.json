@@ -1,0 +1,49 @@
+{
+  "uid" : "2bca7979a80693e",
+  "name" : "should be empty",
+  "fullName" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] LoginFormComponent.should be empty",
+  "historyId" : "ddbc2ef68bdfab64c81fd25210557d27",
+  "time" : {
+    "start" : 1637491954562,
+    "stop" : 1637491954580,
+    "duration" : 18
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "host",
+    "value" : "Chrome Headless 95.0.4638.69 (Linux x86_64)"
+  }, {
+    "name" : "suite",
+    "value" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] LoginFormComponent"
+  }, {
+    "name" : "testClass",
+    "value" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] LoginFormComponent"
+  }, {
+    "name" : "testMethod",
+    "value" : "should be empty"
+  }, {
+    "name" : "package",
+    "value" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] LoginFormComponent"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "2bca7979a80693e.json",
+  "parameterValues" : [ ]
+}
