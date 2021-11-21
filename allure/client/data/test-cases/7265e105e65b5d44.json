@@ -1,0 +1,49 @@
+{
+  "uid" : "7265e105e65b5d44",
+  "name" : "should be created",
+  "fullName" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] LoggerService.should be created",
+  "historyId" : "8dc6489ae879a692df3b8cd216bb8c9c",
+  "time" : {
+    "start" : 1637518572641,
+    "stop" : 1637518572645,
+    "duration" : 4
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "host",
+    "value" : "Chrome Headless 95.0.4638.69 (Linux x86_64)"
+  }, {
+    "name" : "suite",
+    "value" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] LoggerService"
+  }, {
+    "name" : "testClass",
+    "value" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] LoggerService"
+  }, {
+    "name" : "testMethod",
+    "value" : "should be created"
+  }, {
+    "name" : "package",
+    "value" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] LoggerService"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "7265e105e65b5d44.json",
+  "parameterValues" : [ ]
+}

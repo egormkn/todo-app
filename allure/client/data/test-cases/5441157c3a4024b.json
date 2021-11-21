@@ -1,0 +1,51 @@
+{
+  "uid" : "5441157c3a4024b",
+  "name" : "should create",
+  "fullName" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] ConnectAccountFormComponent.should create",
+  "historyId" : "361761e619c006c8907b0bc88e03b248",
+  "time" : {
+    "start" : 1637518572553,
+    "stop" : 1637518572553,
+    "duration" : 0
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "skipped",
+  "statusMessage" : "This test was ignored",
+  "statusTrace" : "",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "host",
+    "value" : "Chrome Headless 95.0.4638.69 (Linux x86_64)"
+  }, {
+    "name" : "suite",
+    "value" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] ConnectAccountFormComponent"
+  }, {
+    "name" : "testClass",
+    "value" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] ConnectAccountFormComponent"
+  }, {
+    "name" : "testMethod",
+    "value" : "should create"
+  }, {
+    "name" : "package",
+    "value" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] ConnectAccountFormComponent"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "5441157c3a4024b.json",
+  "parameterValues" : [ ]
+}

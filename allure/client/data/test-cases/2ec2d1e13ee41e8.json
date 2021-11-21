@@ -1,0 +1,51 @@
+{
+  "uid" : "2ec2d1e13ee41e8",
+  "name" : "should create",
+  "fullName" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] ModalComponent.should create",
+  "historyId" : "4cf325c65426f297464b8e68d739018b",
+  "time" : {
+    "start" : 1637518572635,
+    "stop" : 1637518572635,
+    "duration" : 0
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "skipped",
+  "statusMessage" : "This test was ignored",
+  "statusTrace" : "",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "host",
+    "value" : "Chrome Headless 95.0.4638.69 (Linux x86_64)"
+  }, {
+    "name" : "suite",
+    "value" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] ModalComponent"
+  }, {
+    "name" : "testClass",
+    "value" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] ModalComponent"
+  }, {
+    "name" : "testMethod",
+    "value" : "should create"
+  }, {
+    "name" : "package",
+    "value" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] ModalComponent"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "2ec2d1e13ee41e8.json",
+  "parameterValues" : [ ]
+}

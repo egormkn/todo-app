@@ -1,0 +1,51 @@
+{
+  "uid" : "ba0734af5f23131e",
+  "name" : "should render title",
+  "fullName" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] AppComponent.should render title",
+  "historyId" : "b5013b0661995a965004c65b8715c665",
+  "time" : {
+    "start" : 1637518572567,
+    "stop" : 1637518572567,
+    "duration" : 0
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "skipped",
+  "statusMessage" : "This test was ignored",
+  "statusTrace" : "",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "host",
+    "value" : "Chrome Headless 95.0.4638.69 (Linux x86_64)"
+  }, {
+    "name" : "suite",
+    "value" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] AppComponent"
+  }, {
+    "name" : "testClass",
+    "value" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] AppComponent"
+  }, {
+    "name" : "testMethod",
+    "value" : "should render title"
+  }, {
+    "name" : "package",
+    "value" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] AppComponent"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "ba0734af5f23131e.json",
+  "parameterValues" : [ ]
+}

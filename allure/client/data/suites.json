@@ -1,160 +1,191 @@
 {
   "uid" : "98d3104e051c652961429bf95fa0b5d6",
   "children" : [ {
-    "name" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] ModalService",
+    "name" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] LoginFormComponent",
     "children" : [ {
-      "name" : "should open a modal",
-      "uid" : "3444fdc9c2e7c00d",
-      "parentUid" : "a50971c8fe45484ac1f4b3cc96132ea4",
+      "name" : "submits the form successfully",
+      "uid" : "80c116d0fee745d0",
+      "parentUid" : "0069b73e4966e92ef247d7dcaa0acd5d",
       "status" : "passed",
       "time" : {
-        "start" : 1637513309958,
-        "stop" : 1637513309975,
+        "start" : 1637518572307,
+        "stop" : 1637518572414,
+        "duration" : 107
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "is valid with user data",
+      "uid" : "3b639294da18c9d8",
+      "parentUid" : "0069b73e4966e92ef247d7dcaa0acd5d",
+      "status" : "passed",
+      "time" : {
+        "start" : 1637518572420,
+        "stop" : 1637518572457,
+        "duration" : 37
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "shows an error message if something goes wrong",
+      "uid" : "58eebb47045bf0e0",
+      "parentUid" : "0069b73e4966e92ef247d7dcaa0acd5d",
+      "status" : "passed",
+      "time" : {
+        "start" : 1637518572459,
+        "stop" : 1637518572477,
+        "duration" : 18
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "should initialize its properties",
+      "uid" : "225216f9790e94cd",
+      "parentUid" : "0069b73e4966e92ef247d7dcaa0acd5d",
+      "status" : "passed",
+      "time" : {
+        "start" : 1637518572479,
+        "stop" : 1637518572492,
+        "duration" : 13
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "is invalid when empty",
+      "uid" : "1d49ef15cc626fda",
+      "parentUid" : "0069b73e4966e92ef247d7dcaa0acd5d",
+      "status" : "passed",
+      "time" : {
+        "start" : 1637518572493,
+        "stop" : 1637518572508,
+        "duration" : 15
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "should create",
+      "uid" : "d7a271bd36d7fa68",
+      "parentUid" : "0069b73e4966e92ef247d7dcaa0acd5d",
+      "status" : "passed",
+      "time" : {
+        "start" : 1637518572515,
+        "stop" : 1637518572530,
+        "duration" : 15
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "should be empty",
+      "uid" : "917532172642891",
+      "parentUid" : "0069b73e4966e92ef247d7dcaa0acd5d",
+      "status" : "passed",
+      "time" : {
+        "start" : 1637518572532,
+        "stop" : 1637518572549,
         "duration" : 17
       },
       "flaky" : false,
       "newFailed" : false,
       "parameters" : [ ]
-    }, {
-      "name" : "should close all modals",
-      "uid" : "f9b83cf809881f96",
-      "parentUid" : "a50971c8fe45484ac1f4b3cc96132ea4",
-      "status" : "passed",
-      "time" : {
-        "start" : 1637513309976,
-        "stop" : 1637513309981,
-        "duration" : 5
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "parameters" : [ ]
-    }, {
-      "name" : "should be created",
-      "uid" : "5d6c084f23c7e864",
-      "parentUid" : "a50971c8fe45484ac1f4b3cc96132ea4",
-      "status" : "passed",
-      "time" : {
-        "start" : 1637513309980,
-        "stop" : 1637513309984,
-        "duration" : 4
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "parameters" : [ ]
     } ],
-    "uid" : "a50971c8fe45484ac1f4b3cc96132ea4"
+    "uid" : "0069b73e4966e92ef247d7dcaa0acd5d"
   }, {
-    "name" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] UsersService",
-    "children" : [ {
-      "name" : "should be created",
-      "uid" : "1ee375651d9ce974",
-      "parentUid" : "507fea482639caa001de792d49d9ada9",
-      "status" : "skipped",
-      "time" : {
-        "start" : 1637513310001,
-        "stop" : 1637513310001,
-        "duration" : 0
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "parameters" : [ ]
-    } ],
-    "uid" : "507fea482639caa001de792d49d9ada9"
-  }, {
-    "name" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] TasksService",
-    "children" : [ {
-      "name" : "should be created",
-      "uid" : "7599a962018b23ac",
-      "parentUid" : "55061303e4c238461f22d94232dd0074",
-      "status" : "skipped",
-      "time" : {
-        "start" : 1637513310004,
-        "stop" : 1637513310004,
-        "duration" : 0
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "parameters" : [ ]
-    } ],
-    "uid" : "55061303e4c238461f22d94232dd0074"
-  }, {
-    "name" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] TaskListEditorComponent",
+    "name" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] ConnectAccountFormComponent",
     "children" : [ {
       "name" : "should create",
-      "uid" : "b01012273ce09f1b",
-      "parentUid" : "ca9c00caafb0acb0bcb22a6bd306d427",
+      "uid" : "5441157c3a4024b",
+      "parentUid" : "495e66cd96bcc1ef350c9eb632483c67",
       "status" : "skipped",
       "time" : {
-        "start" : 1637513310009,
-        "stop" : 1637513310009,
+        "start" : 1637518572553,
+        "stop" : 1637518572553,
         "duration" : 0
       },
       "flaky" : false,
       "newFailed" : false,
       "parameters" : [ ]
     } ],
-    "uid" : "ca9c00caafb0acb0bcb22a6bd306d427"
+    "uid" : "495e66cd96bcc1ef350c9eb632483c67"
   }, {
-    "name" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] TaskEditorComponent",
+    "name" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] LogoutFormComponent",
     "children" : [ {
       "name" : "should create",
-      "uid" : "7ac12a5f0e2d9b69",
-      "parentUid" : "ba60026b0f6e87101aac6b0d3f9802ec",
+      "uid" : "c2d12600fe900a10",
+      "parentUid" : "6de88b034d8836b4ab21dfa2c95233e8",
       "status" : "skipped",
       "time" : {
-        "start" : 1637513310012,
-        "stop" : 1637513310012,
+        "start" : 1637518572557,
+        "stop" : 1637518572557,
         "duration" : 0
       },
       "flaky" : false,
       "newFailed" : false,
       "parameters" : [ ]
     } ],
-    "uid" : "ba60026b0f6e87101aac6b0d3f9802ec"
+    "uid" : "6de88b034d8836b4ab21dfa2c95233e8"
   }, {
-    "name" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] UsersComponent",
+    "name" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] SignupFormComponent",
     "children" : [ {
       "name" : "should create",
-      "uid" : "aaf524be33f3cfeb",
-      "parentUid" : "fce357eaff182f826415a3756820dc72",
+      "uid" : "72dd5053e7f958f8",
+      "parentUid" : "0832d3f3a602353f8762fa4aa20d4c28",
       "status" : "skipped",
       "time" : {
-        "start" : 1637513310014,
-        "stop" : 1637513310014,
+        "start" : 1637518572559,
+        "stop" : 1637518572559,
         "duration" : 0
       },
       "flaky" : false,
       "newFailed" : false,
       "parameters" : [ ]
     } ],
-    "uid" : "fce357eaff182f826415a3756820dc72"
+    "uid" : "0832d3f3a602353f8762fa4aa20d4c28"
   }, {
-    "name" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] HeaderComponent",
+    "name" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] TaskComponent",
     "children" : [ {
       "name" : "should create",
-      "uid" : "7b2b94b2768c17e4",
-      "parentUid" : "7d742fa6660ef0fc48fa8207d4aa0e39",
+      "uid" : "b3a44b08144181dd",
+      "parentUid" : "c94343e424feaf875d06272943450ecf",
       "status" : "skipped",
       "time" : {
-        "start" : 1637513310017,
-        "stop" : 1637513310017,
+        "start" : 1637518572563,
+        "stop" : 1637518572563,
         "duration" : 0
       },
       "flaky" : false,
       "newFailed" : false,
       "parameters" : [ ]
     } ],
-    "uid" : "7d742fa6660ef0fc48fa8207d4aa0e39"
+    "uid" : "c94343e424feaf875d06272943450ecf"
   }, {
     "name" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] AppComponent",
     "children" : [ {
-      "name" : "should render title",
-      "uid" : "4cd8c15010df5535",
+      "name" : "should create the app",
+      "uid" : "41423bc072ae076b",
       "parentUid" : "1762fe824bc5f82bdc30ad22e9939585",
       "status" : "skipped",
       "time" : {
-        "start" : 1637513310020,
-        "stop" : 1637513310020,
+        "start" : 1637518572567,
+        "stop" : 1637518572567,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "should render title",
+      "uid" : "ba0734af5f23131e",
+      "parentUid" : "1762fe824bc5f82bdc30ad22e9939585",
+      "status" : "skipped",
+      "time" : {
+        "start" : 1637518572567,
+        "stop" : 1637518572567,
         "duration" : 0
       },
       "flaky" : false,
@@ -162,25 +193,12 @@
       "parameters" : [ ]
     }, {
       "name" : "should have as title 'App'",
-      "uid" : "9a7c47b5741a5e19",
+      "uid" : "9576f2f41f68945d",
       "parentUid" : "1762fe824bc5f82bdc30ad22e9939585",
       "status" : "skipped",
       "time" : {
-        "start" : 1637513310021,
-        "stop" : 1637513310021,
-        "duration" : 0
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "parameters" : [ ]
-    }, {
-      "name" : "should create the app",
-      "uid" : "b1e18b6be71237fb",
-      "parentUid" : "1762fe824bc5f82bdc30ad22e9939585",
-      "status" : "skipped",
-      "time" : {
-        "start" : 1637513310023,
-        "stop" : 1637513310023,
+        "start" : 1637518572568,
+        "stop" : 1637518572568,
         "duration" : 0
       },
       "flaky" : false,
@@ -189,32 +207,15 @@
     } ],
     "uid" : "1762fe824bc5f82bdc30ad22e9939585"
   }, {
-    "name" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] HttpStatusService",
-    "children" : [ {
-      "name" : "should be created",
-      "uid" : "ebbebded22b92ee",
-      "parentUid" : "5f3abdf59299f9a777c23820b038d08f",
-      "status" : "passed",
-      "time" : {
-        "start" : 1637513310026,
-        "stop" : 1637513310030,
-        "duration" : 4
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "parameters" : [ ]
-    } ],
-    "uid" : "5f3abdf59299f9a777c23820b038d08f"
-  }, {
     "name" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] TaskListComponent",
     "children" : [ {
       "name" : "should create",
-      "uid" : "2cac1f813ffbbead",
+      "uid" : "1a07e3962bdeb19c",
       "parentUid" : "af887be48ae40c7bb1c56d11a1476e53",
       "status" : "skipped",
       "time" : {
-        "start" : 1637513310032,
-        "stop" : 1637513310032,
+        "start" : 1637518572571,
+        "stop" : 1637518572571,
         "duration" : 0
       },
       "flaky" : false,
@@ -223,66 +224,226 @@
     } ],
     "uid" : "af887be48ae40c7bb1c56d11a1476e53"
   }, {
-    "name" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] HttpStatusComponent",
+    "name" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] AuthService #setToken",
     "children" : [ {
-      "name" : "should create",
-      "uid" : "7d6a04888d537b32",
-      "parentUid" : "70dbf6431907da9ac384c735f70cdd6f",
-      "status" : "skipped",
+      "name" : "saves the token to localStorage and emits the status",
+      "uid" : "61e121379a3c26a1",
+      "parentUid" : "7b362809891668c09bdf9595a36f491b",
+      "status" : "passed",
       "time" : {
-        "start" : 1637513310036,
-        "stop" : 1637513310036,
-        "duration" : 0
+        "start" : 1637518572574,
+        "stop" : 1637518572580,
+        "duration" : 6
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "clears the token from localStorage and emits the status",
+      "uid" : "70a0b89ee65bbd19",
+      "parentUid" : "7b362809891668c09bdf9595a36f491b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1637518572581,
+        "stop" : 1637518572585,
+        "duration" : 4
       },
       "flaky" : false,
       "newFailed" : false,
       "parameters" : [ ]
     } ],
-    "uid" : "70dbf6431907da9ac384c735f70cdd6f"
+    "uid" : "7b362809891668c09bdf9595a36f491b"
   }, {
-    "name" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] LoggerService",
+    "name" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] AuthService",
     "children" : [ {
       "name" : "should be created",
-      "uid" : "d26bd93a105221cc",
-      "parentUid" : "cc23aa993664e358bdf95659f5e785b5",
+      "uid" : "eb665e35c906ed0a",
+      "parentUid" : "c1d4691d3533d4c3f563d1abe04be75f",
       "status" : "passed",
       "time" : {
-        "start" : 1637513310039,
-        "stop" : 1637513310042,
+        "start" : 1637518572585,
+        "stop" : 1637518572588,
+        "duration" : 3
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "#isLoggedIn returns false if token is expired",
+      "uid" : "5ba2e281b0732fa",
+      "parentUid" : "c1d4691d3533d4c3f563d1abe04be75f",
+      "status" : "passed",
+      "time" : {
+        "start" : 1637518572590,
+        "stop" : 1637518572592,
+        "duration" : 2
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "#logIn sends username and password and receives access token",
+      "uid" : "adbf4e89aef986db",
+      "parentUid" : "c1d4691d3533d4c3f563d1abe04be75f",
+      "status" : "passed",
+      "time" : {
+        "start" : 1637518572592,
+        "stop" : 1637518572598,
+        "duration" : 6
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "#isLoggedIn returns true if token is not expired",
+      "uid" : "cddb3e3fbd5e55c3",
+      "parentUid" : "c1d4691d3533d4c3f563d1abe04be75f",
+      "status" : "passed",
+      "time" : {
+        "start" : 1637518572599,
+        "stop" : 1637518572601,
+        "duration" : 2
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "#isLoggedOut returns true if user is not logged in",
+      "uid" : "426be67f51ba2923",
+      "parentUid" : "c1d4691d3533d4c3f563d1abe04be75f",
+      "status" : "passed",
+      "time" : {
+        "start" : 1637518572602,
+        "stop" : 1637518572605,
+        "duration" : 3
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "#isLoggedOut returns false if user is logged in",
+      "uid" : "4d63dc8a104d08f5",
+      "parentUid" : "c1d4691d3533d4c3f563d1abe04be75f",
+      "status" : "passed",
+      "time" : {
+        "start" : 1637518572606,
+        "stop" : 1637518572608,
+        "duration" : 2
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "#getUsername returns username property of a JWT payload",
+      "uid" : "6f40ea84731d6f96",
+      "parentUid" : "c1d4691d3533d4c3f563d1abe04be75f",
+      "status" : "passed",
+      "time" : {
+        "start" : 1637518572609,
+        "stop" : 1637518572611,
+        "duration" : 2
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "#logOut clears the saved token",
+      "uid" : "5c9a16ba6fcbacc2",
+      "parentUid" : "c1d4691d3533d4c3f563d1abe04be75f",
+      "status" : "passed",
+      "time" : {
+        "start" : 1637518572612,
+        "stop" : 1637518572614,
+        "duration" : 2
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "#getName returns name property of a JWT payload",
+      "uid" : "6010c1dcb965fd59",
+      "parentUid" : "c1d4691d3533d4c3f563d1abe04be75f",
+      "status" : "passed",
+      "time" : {
+        "start" : 1637518572615,
+        "stop" : 1637518572617,
+        "duration" : 2
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "#signUp sends user data and receives access token",
+      "uid" : "c604889b365a9208",
+      "parentUid" : "c1d4691d3533d4c3f563d1abe04be75f",
+      "status" : "passed",
+      "time" : {
+        "start" : 1637518572618,
+        "stop" : 1637518572620,
+        "duration" : 2
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "#connect forwards url parameters and receives access token",
+      "uid" : "969e5d5515f81f09",
+      "parentUid" : "c1d4691d3533d4c3f563d1abe04be75f",
+      "status" : "passed",
+      "time" : {
+        "start" : 1637518572624,
+        "stop" : 1637518572627,
         "duration" : 3
       },
       "flaky" : false,
       "newFailed" : false,
       "parameters" : [ ]
     } ],
-    "uid" : "cc23aa993664e358bdf95659f5e785b5"
+    "uid" : "c1d4691d3533d4c3f563d1abe04be75f"
   }, {
-    "name" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] IndexComponent",
+    "name" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] TaskEditorComponent",
     "children" : [ {
       "name" : "should create",
-      "uid" : "e9fefe167fed98a0",
-      "parentUid" : "7b63459789c7163cdac2f8e98da5003a",
+      "uid" : "879c8123e1b1bff1",
+      "parentUid" : "ba60026b0f6e87101aac6b0d3f9802ec",
       "status" : "skipped",
       "time" : {
-        "start" : 1637513310044,
-        "stop" : 1637513310044,
+        "start" : 1637518572630,
+        "stop" : 1637518572630,
         "duration" : 0
       },
       "flaky" : false,
       "newFailed" : false,
       "parameters" : [ ]
     } ],
-    "uid" : "7b63459789c7163cdac2f8e98da5003a"
+    "uid" : "ba60026b0f6e87101aac6b0d3f9802ec"
+  }, {
+    "name" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] TasksService",
+    "children" : [ {
+      "name" : "should be created",
+      "uid" : "a9c44809d5fc3c51",
+      "parentUid" : "55061303e4c238461f22d94232dd0074",
+      "status" : "skipped",
+      "time" : {
+        "start" : 1637518572632,
+        "stop" : 1637518572632,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "55061303e4c238461f22d94232dd0074"
   }, {
     "name" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] TasksComponent",
     "children" : [ {
       "name" : "should create",
-      "uid" : "26ecd3a24e482deb",
+      "uid" : "a43d7172a0786001",
       "parentUid" : "edb4bb6a001a4699397ff95d33d3647b",
       "status" : "skipped",
       "time" : {
-        "start" : 1637513310047,
-        "stop" : 1637513310047,
+        "start" : 1637518572633,
+        "stop" : 1637518572633,
         "duration" : 0
       },
       "flaky" : false,
@@ -294,12 +455,12 @@
     "name" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] ModalComponent",
     "children" : [ {
       "name" : "should create",
-      "uid" : "139103d2711906fe",
+      "uid" : "2ec2d1e13ee41e8",
       "parentUid" : "6046a5ece2d697f41e4afae952ea228f",
       "status" : "skipped",
       "time" : {
-        "start" : 1637513310048,
-        "stop" : 1637513310048,
+        "start" : 1637518572635,
+        "stop" : 1637518572635,
         "duration" : 0
       },
       "flaky" : false,
@@ -308,32 +469,66 @@
     } ],
     "uid" : "6046a5ece2d697f41e4afae952ea228f"
   }, {
-    "name" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] FooterComponent",
+    "name" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] UsersComponent",
     "children" : [ {
       "name" : "should create",
-      "uid" : "795d7b5b641ef4ae",
-      "parentUid" : "1143757e2d002599e013f323c6325aa0",
+      "uid" : "2caca300d25cbd84",
+      "parentUid" : "fce357eaff182f826415a3756820dc72",
       "status" : "skipped",
       "time" : {
-        "start" : 1637513310050,
-        "stop" : 1637513310050,
+        "start" : 1637518572637,
+        "stop" : 1637518572637,
         "duration" : 0
       },
       "flaky" : false,
       "newFailed" : false,
       "parameters" : [ ]
     } ],
-    "uid" : "1143757e2d002599e013f323c6325aa0"
+    "uid" : "fce357eaff182f826415a3756820dc72"
+  }, {
+    "name" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] TaskListEditorComponent",
+    "children" : [ {
+      "name" : "should create",
+      "uid" : "36611c33b4c89635",
+      "parentUid" : "ca9c00caafb0acb0bcb22a6bd306d427",
+      "status" : "skipped",
+      "time" : {
+        "start" : 1637518572639,
+        "stop" : 1637518572639,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "ca9c00caafb0acb0bcb22a6bd306d427"
+  }, {
+    "name" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] LoggerService",
+    "children" : [ {
+      "name" : "should be created",
+      "uid" : "7265e105e65b5d44",
+      "parentUid" : "cc23aa993664e358bdf95659f5e785b5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1637518572641,
+        "stop" : 1637518572645,
+        "duration" : 4
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "cc23aa993664e358bdf95659f5e785b5"
   }, {
     "name" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] ProfileComponent",
     "children" : [ {
       "name" : "should create",
-      "uid" : "a4a0955d280bdc23",
+      "uid" : "a3a90539584d0f7d",
       "parentUid" : "aaf334f6bc15a76364a6347aeaade583",
       "status" : "skipped",
       "time" : {
-        "start" : 1637513310053,
-        "stop" : 1637513310053,
+        "start" : 1637518572648,
+        "stop" : 1637518572648,
         "duration" : 0
       },
       "flaky" : false,
@@ -342,32 +537,15 @@
     } ],
     "uid" : "aaf334f6bc15a76364a6347aeaade583"
   }, {
-    "name" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] FakeTasksService",
-    "children" : [ {
-      "name" : "should be created",
-      "uid" : "86c3f039b21b0e76",
-      "parentUid" : "bf0625f294f5f572b7e2648dbec81fea",
-      "status" : "skipped",
-      "time" : {
-        "start" : 1637513310055,
-        "stop" : 1637513310055,
-        "duration" : 0
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "parameters" : [ ]
-    } ],
-    "uid" : "bf0625f294f5f572b7e2648dbec81fea"
-  }, {
     "name" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] SocialComponent",
     "children" : [ {
       "name" : "should create",
-      "uid" : "7e1817856ae3f651",
+      "uid" : "3859f84be5869ea7",
       "parentUid" : "f2ca5f8fd820c78bdd4595d648256a2c",
       "status" : "skipped",
       "time" : {
-        "start" : 1637513310057,
-        "stop" : 1637513310057,
+        "start" : 1637518572649,
+        "stop" : 1637518572649,
         "duration" : 0
       },
       "flaky" : false,
@@ -376,345 +554,167 @@
     } ],
     "uid" : "f2ca5f8fd820c78bdd4595d648256a2c"
   }, {
-    "name" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] TaskComponent",
+    "name" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] ModalService",
     "children" : [ {
-      "name" : "should create",
-      "uid" : "97738015b8dc9f5c",
-      "parentUid" : "c94343e424feaf875d06272943450ecf",
-      "status" : "skipped",
-      "time" : {
-        "start" : 1637513310059,
-        "stop" : 1637513310059,
-        "duration" : 0
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "parameters" : [ ]
-    } ],
-    "uid" : "c94343e424feaf875d06272943450ecf"
-  }, {
-    "name" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] LogoutFormComponent",
-    "children" : [ {
-      "name" : "should create",
-      "uid" : "5e6b02b8545dbfe4",
-      "parentUid" : "6de88b034d8836b4ab21dfa2c95233e8",
-      "status" : "skipped",
-      "time" : {
-        "start" : 1637513310061,
-        "stop" : 1637513310061,
-        "duration" : 0
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "parameters" : [ ]
-    } ],
-    "uid" : "6de88b034d8836b4ab21dfa2c95233e8"
-  }, {
-    "name" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] ConnectAccountFormComponent",
-    "children" : [ {
-      "name" : "should create",
-      "uid" : "13317e660511a933",
-      "parentUid" : "495e66cd96bcc1ef350c9eb632483c67",
-      "status" : "skipped",
-      "time" : {
-        "start" : 1637513310064,
-        "stop" : 1637513310064,
-        "duration" : 0
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "parameters" : [ ]
-    } ],
-    "uid" : "495e66cd96bcc1ef350c9eb632483c67"
-  }, {
-    "name" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] SignupFormComponent",
-    "children" : [ {
-      "name" : "should create",
-      "uid" : "ba4650d68a7194fc",
-      "parentUid" : "0832d3f3a602353f8762fa4aa20d4c28",
-      "status" : "skipped",
-      "time" : {
-        "start" : 1637513310065,
-        "stop" : 1637513310065,
-        "duration" : 0
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "parameters" : [ ]
-    } ],
-    "uid" : "0832d3f3a602353f8762fa4aa20d4c28"
-  }, {
-    "name" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] AuthService",
-    "children" : [ {
-      "name" : "#signUp sends user data and receives access token",
-      "uid" : "a36e3178cf858b38",
-      "parentUid" : "c1d4691d3533d4c3f563d1abe04be75f",
-      "status" : "passed",
-      "time" : {
-        "start" : 1637513310068,
-        "stop" : 1637513310077,
-        "duration" : 9
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "parameters" : [ ]
-    }, {
-      "name" : "#connect forwards url parameters and receives access token",
-      "uid" : "c87ddfbbe4c05c6c",
-      "parentUid" : "c1d4691d3533d4c3f563d1abe04be75f",
-      "status" : "passed",
-      "time" : {
-        "start" : 1637513310079,
-        "stop" : 1637513310083,
-        "duration" : 4
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "parameters" : [ ]
-    } ],
-    "uid" : "c1d4691d3533d4c3f563d1abe04be75f"
-  }, {
-    "name" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] AuthService #setToken",
-    "children" : [ {
-      "name" : "saves the token to localStorage and emits the status",
-      "uid" : "dc1fdf6fa112ed39",
-      "parentUid" : "7b362809891668c09bdf9595a36f491b",
-      "status" : "passed",
-      "time" : {
-        "start" : 1637513310083,
-        "stop" : 1637513310089,
-        "duration" : 6
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "parameters" : [ ]
-    }, {
-      "name" : "clears the token from localStorage and emits the status",
-      "uid" : "2fc1e1246f994ffb",
-      "parentUid" : "7b362809891668c09bdf9595a36f491b",
-      "status" : "passed",
-      "time" : {
-        "start" : 1637513310091,
-        "stop" : 1637513310094,
-        "duration" : 3
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "parameters" : [ ]
-    }, {
-      "name" : "#logIn sends username and password and receives access token",
-      "uid" : "de0456c36a4eb43c",
-      "parentUid" : "7b362809891668c09bdf9595a36f491b",
-      "status" : "passed",
-      "time" : {
-        "start" : 1637513310095,
-        "stop" : 1637513310098,
-        "duration" : 3
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "parameters" : [ ]
-    }, {
-      "name" : "#isLoggedOut returns false if user is logged in",
-      "uid" : "cf2cd495bf5efc87",
-      "parentUid" : "7b362809891668c09bdf9595a36f491b",
-      "status" : "passed",
-      "time" : {
-        "start" : 1637513310100,
-        "stop" : 1637513310102,
-        "duration" : 2
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "parameters" : [ ]
-    }, {
-      "name" : "#logOut clears the saved token",
-      "uid" : "3f81723759818a7e",
-      "parentUid" : "7b362809891668c09bdf9595a36f491b",
-      "status" : "passed",
-      "time" : {
-        "start" : 1637513310102,
-        "stop" : 1637513310104,
-        "duration" : 2
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "parameters" : [ ]
-    }, {
-      "name" : "#getUsername returns username property of a JWT payload",
-      "uid" : "fc42659979b21148",
-      "parentUid" : "7b362809891668c09bdf9595a36f491b",
-      "status" : "passed",
-      "time" : {
-        "start" : 1637513310107,
-        "stop" : 1637513310108,
-        "duration" : 1
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "parameters" : [ ]
-    }, {
-      "name" : "#isLoggedOut returns true if user is not logged in",
-      "uid" : "2a02479912f6e8ab",
-      "parentUid" : "7b362809891668c09bdf9595a36f491b",
-      "status" : "passed",
-      "time" : {
-        "start" : 1637513310108,
-        "stop" : 1637513310111,
-        "duration" : 3
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "parameters" : [ ]
-    }, {
-      "name" : "#getName returns name property of a JWT payload",
-      "uid" : "21a3638d9322bf70",
-      "parentUid" : "7b362809891668c09bdf9595a36f491b",
-      "status" : "passed",
-      "time" : {
-        "start" : 1637513310113,
-        "stop" : 1637513310114,
-        "duration" : 1
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "parameters" : [ ]
-    }, {
       "name" : "should be created",
-      "uid" : "e8b2c88639932855",
-      "parentUid" : "7b362809891668c09bdf9595a36f491b",
+      "uid" : "4a2d429b07f309eb",
+      "parentUid" : "a50971c8fe45484ac1f4b3cc96132ea4",
       "status" : "passed",
       "time" : {
-        "start" : 1637513310115,
-        "stop" : 1637513310116,
-        "duration" : 1
+        "start" : 1637518572650,
+        "stop" : 1637518572653,
+        "duration" : 3
       },
       "flaky" : false,
       "newFailed" : false,
       "parameters" : [ ]
     }, {
-      "name" : "#isLoggedIn returns false if token is expired",
-      "uid" : "7924e53243b80e3d",
-      "parentUid" : "7b362809891668c09bdf9595a36f491b",
+      "name" : "should close all modals",
+      "uid" : "aa79aad99958e54f",
+      "parentUid" : "a50971c8fe45484ac1f4b3cc96132ea4",
       "status" : "passed",
       "time" : {
-        "start" : 1637513310117,
-        "stop" : 1637513310118,
-        "duration" : 1
+        "start" : 1637518572655,
+        "stop" : 1637518572657,
+        "duration" : 2
       },
       "flaky" : false,
       "newFailed" : false,
       "parameters" : [ ]
     }, {
-      "name" : "#isLoggedIn returns true if token is not expired",
-      "uid" : "3d136c1fe14fd6b1",
-      "parentUid" : "7b362809891668c09bdf9595a36f491b",
+      "name" : "should open a modal",
+      "uid" : "cf998d6cec6a0fca",
+      "parentUid" : "a50971c8fe45484ac1f4b3cc96132ea4",
       "status" : "passed",
       "time" : {
-        "start" : 1637513310120,
-        "stop" : 1637513310121,
-        "duration" : 1
+        "start" : 1637518572658,
+        "stop" : 1637518572660,
+        "duration" : 2
       },
       "flaky" : false,
       "newFailed" : false,
       "parameters" : [ ]
     } ],
-    "uid" : "7b362809891668c09bdf9595a36f491b"
+    "uid" : "a50971c8fe45484ac1f4b3cc96132ea4"
   }, {
-    "name" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] LoginFormComponent",
+    "name" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] FooterComponent",
     "children" : [ {
-      "name" : "should initialize its properties",
-      "uid" : "18fea85c0f01ac04",
-      "parentUid" : "0069b73e4966e92ef247d7dcaa0acd5d",
-      "status" : "passed",
-      "time" : {
-        "start" : 1637513310130,
-        "stop" : 1637513310221,
-        "duration" : 91
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "parameters" : [ ]
-    }, {
       "name" : "should create",
-      "uid" : "f54be85f836c4aa0",
-      "parentUid" : "0069b73e4966e92ef247d7dcaa0acd5d",
-      "status" : "passed",
+      "uid" : "8b4240d93329b9c5",
+      "parentUid" : "1143757e2d002599e013f323c6325aa0",
+      "status" : "skipped",
       "time" : {
-        "start" : 1637513310224,
-        "stop" : 1637513310251,
-        "duration" : 27
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "parameters" : [ ]
-    }, {
-      "name" : "should be empty",
-      "uid" : "dcc77e57439a4a79",
-      "parentUid" : "0069b73e4966e92ef247d7dcaa0acd5d",
-      "status" : "passed",
-      "time" : {
-        "start" : 1637513310253,
-        "stop" : 1637513310273,
-        "duration" : 20
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "parameters" : [ ]
-    }, {
-      "name" : "is invalid when empty",
-      "uid" : "21633dbffdf46b58",
-      "parentUid" : "0069b73e4966e92ef247d7dcaa0acd5d",
-      "status" : "passed",
-      "time" : {
-        "start" : 1637513310275,
-        "stop" : 1637513310287,
-        "duration" : 12
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "parameters" : [ ]
-    }, {
-      "name" : "submits the form successfully",
-      "uid" : "c5dd5933a010b4f6",
-      "parentUid" : "0069b73e4966e92ef247d7dcaa0acd5d",
-      "status" : "passed",
-      "time" : {
-        "start" : 1637513310287,
-        "stop" : 1637513310308,
-        "duration" : 21
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "parameters" : [ ]
-    }, {
-      "name" : "is valid with user data",
-      "uid" : "ee9a403a43676dd4",
-      "parentUid" : "0069b73e4966e92ef247d7dcaa0acd5d",
-      "status" : "passed",
-      "time" : {
-        "start" : 1637513310310,
-        "stop" : 1637513310326,
-        "duration" : 16
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "parameters" : [ ]
-    }, {
-      "name" : "shows an error message if something goes wrong",
-      "uid" : "bf2db9eeeb118326",
-      "parentUid" : "0069b73e4966e92ef247d7dcaa0acd5d",
-      "status" : "passed",
-      "time" : {
-        "start" : 1637513310332,
-        "stop" : 1637513310355,
-        "duration" : 23
+        "start" : 1637518572663,
+        "stop" : 1637518572663,
+        "duration" : 0
       },
       "flaky" : false,
       "newFailed" : false,
       "parameters" : [ ]
     } ],
-    "uid" : "0069b73e4966e92ef247d7dcaa0acd5d"
+    "uid" : "1143757e2d002599e013f323c6325aa0"
+  }, {
+    "name" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] HttpStatusComponent",
+    "children" : [ {
+      "name" : "should create",
+      "uid" : "2a78deab5254e23f",
+      "parentUid" : "70dbf6431907da9ac384c735f70cdd6f",
+      "status" : "skipped",
+      "time" : {
+        "start" : 1637518572664,
+        "stop" : 1637518572664,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "70dbf6431907da9ac384c735f70cdd6f"
+  }, {
+    "name" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] HttpStatusService",
+    "children" : [ {
+      "name" : "should be created",
+      "uid" : "387401f9b5d6a542",
+      "parentUid" : "5f3abdf59299f9a777c23820b038d08f",
+      "status" : "passed",
+      "time" : {
+        "start" : 1637518572666,
+        "stop" : 1637518572669,
+        "duration" : 3
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "5f3abdf59299f9a777c23820b038d08f"
+  }, {
+    "name" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] UsersService",
+    "children" : [ {
+      "name" : "should be created",
+      "uid" : "be845a5270f663fb",
+      "parentUid" : "507fea482639caa001de792d49d9ada9",
+      "status" : "skipped",
+      "time" : {
+        "start" : 1637518572671,
+        "stop" : 1637518572671,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "507fea482639caa001de792d49d9ada9"
+  }, {
+    "name" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] FakeTasksService",
+    "children" : [ {
+      "name" : "should be created",
+      "uid" : "119b0584c7921aef",
+      "parentUid" : "bf0625f294f5f572b7e2648dbec81fea",
+      "status" : "skipped",
+      "time" : {
+        "start" : 1637518572674,
+        "stop" : 1637518572674,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "bf0625f294f5f572b7e2648dbec81fea"
+  }, {
+    "name" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] HeaderComponent",
+    "children" : [ {
+      "name" : "should create",
+      "uid" : "429be9ba7df0b3b3",
+      "parentUid" : "7d742fa6660ef0fc48fa8207d4aa0e39",
+      "status" : "skipped",
+      "time" : {
+        "start" : 1637518572676,
+        "stop" : 1637518572676,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "7d742fa6660ef0fc48fa8207d4aa0e39"
+  }, {
+    "name" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] IndexComponent",
+    "children" : [ {
+      "name" : "should create",
+      "uid" : "bc096459802ae99c",
+      "parentUid" : "7b63459789c7163cdac2f8e98da5003a",
+      "status" : "skipped",
+      "time" : {
+        "start" : 1637518572678,
+        "stop" : 1637518572678,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "7b63459789c7163cdac2f8e98da5003a"
   } ],
   "name" : "suites"
 }
