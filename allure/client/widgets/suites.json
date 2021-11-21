@@ -1,15 +1,15 @@
 {
   "total" : 26,
   "items" : [ {
-    "uid" : "7b362809891668c09bdf9595a36f491b",
-    "name" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] AuthService #setToken",
+    "uid" : "c1d4691d3533d4c3f563d1abe04be75f",
+    "name" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] AuthService",
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 9,
+      "passed" : 11,
       "unknown" : 0,
-      "total" : 9
+      "total" : 11
     }
   }, {
     "uid" : "0069b73e4966e92ef247d7dcaa0acd5d",
@@ -23,17 +23,6 @@
       "total" : 7
     }
   }, {
-    "uid" : "c1d4691d3533d4c3f563d1abe04be75f",
-    "name" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] AuthService",
-    "statistic" : {
-      "failed" : 0,
-      "broken" : 0,
-      "skipped" : 0,
-      "passed" : 4,
-      "unknown" : 0,
-      "total" : 4
-    }
-  }, {
     "uid" : "a50971c8fe45484ac1f4b3cc96132ea4",
     "name" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] ModalService",
     "statistic" : {
@@ -45,8 +34,19 @@
       "total" : 3
     }
   }, {
-    "uid" : "cc23aa993664e358bdf95659f5e785b5",
-    "name" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] LoggerService",
+    "uid" : "7b362809891668c09bdf9595a36f491b",
+    "name" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] AuthService #setToken",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 2,
+      "unknown" : 0,
+      "total" : 2
+    }
+  }, {
+    "uid" : "5f3abdf59299f9a777c23820b038d08f",
+    "name" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] HttpStatusService",
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
@@ -56,8 +56,8 @@
       "total" : 1
     }
   }, {
-    "uid" : "5f3abdf59299f9a777c23820b038d08f",
-    "name" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] HttpStatusService",
+    "uid" : "cc23aa993664e358bdf95659f5e785b5",
+    "name" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] LoggerService",
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
@@ -78,6 +78,17 @@
       "total" : 3
     }
   }, {
+    "uid" : "c94343e424feaf875d06272943450ecf",
+    "name" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] TaskComponent",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 1,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    }
+  }, {
     "uid" : "ba60026b0f6e87101aac6b0d3f9802ec",
     "name" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] TaskEditorComponent",
     "statistic" : {
@@ -89,19 +100,8 @@
       "total" : 1
     }
   }, {
-    "uid" : "7b63459789c7163cdac2f8e98da5003a",
-    "name" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] IndexComponent",
-    "statistic" : {
-      "failed" : 0,
-      "broken" : 0,
-      "skipped" : 1,
-      "passed" : 0,
-      "unknown" : 0,
-      "total" : 1
-    }
-  }, {
-    "uid" : "0832d3f3a602353f8762fa4aa20d4c28",
-    "name" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] SignupFormComponent",
+    "uid" : "bf0625f294f5f572b7e2648dbec81fea",
+    "name" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] FakeTasksService",
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
