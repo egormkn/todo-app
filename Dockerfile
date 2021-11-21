@@ -62,7 +62,7 @@ WORKDIR /app
 COPY --chown=node:node server/package*.json ./
 
 # Install production dependencies and clean cache
-RUN apk add --no-cache --virtual .gyp python3 make g++ \
+RUN apk add --no-cache --virtual .gyp python2 python3 make g++ \
  && npm ci --omit=dev && npm cache clean --force \
  && apk del .gyp
 
