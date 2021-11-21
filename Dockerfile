@@ -23,7 +23,7 @@ FROM build as build-client
 COPY --chown=node:node client/package*.json ./
 
 # Install all dependencies and clean cache
-RUN npm ci --loglevel=http && npm cache clean --force
+RUN npm ci && npm cache clean --force
 
 # Copy client files
 COPY --chown=node:node client ./
@@ -40,7 +40,7 @@ FROM build as build-server
 COPY --chown=node:node server/package*.json ./
 
 # Install all dependencies and clean cache
-RUN npm ci --loglevel=http && npm cache clean --force
+RUN npm ci && npm cache clean --force
 
 # Copy server files
 COPY --chown=node:node server ./
@@ -58,17 +58,19 @@ FROM node:16-alpine as production
 # Set working directory
 WORKDIR /app
 
+# Copy server manifest files
+COPY --chown=node:node server/package*.json ./
+
+# Install production dependencies and clean cache
+RUN apk add --no-cache --virtual .gyp python make g++ \
+    npm ci --omit=dev && npm cache clean --force \
+    apk del .gyp
+
 # Change permissions for working directory
 RUN chown -R node:node .
 
 # Switch to non-root user
 USER node
-
-# Copy server manifest files
-COPY --chown=node:node server/package*.json ./
-
-# Install production dependencies and clean cache
-RUN npm ci --loglevel=http --omit=dev && npm cache clean --force
 
 # Copy client dist files from build-client image
 COPY --chown=node:node --from=build-client /app/dist client/dist/
