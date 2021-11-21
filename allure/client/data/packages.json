@@ -3,296 +3,15 @@
   "children" : [ {
     "name" : "[Chrome Headless 95.0.4638",
     "children" : [ {
-      "name" : "69 (Linux x86_64)] HttpStatusComponent",
-      "children" : [ {
-        "name" : "should create",
-        "uid" : "5627eb28a9ceb702",
-        "parentUid" : "10d1694b98444a1509d13086c94e6a42",
-        "status" : "skipped",
-        "time" : {
-          "start" : 1637452007609,
-          "stop" : 1637452007609,
-          "duration" : 0
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "10d1694b98444a1509d13086c94e6a42"
-    }, {
-      "name" : "69 (Linux x86_64)] HttpStatusService",
-      "children" : [ {
-        "name" : "should be created",
-        "uid" : "7fb3af1c1872dd73",
-        "parentUid" : "b06b067c8550757bc8c54803dd370bba",
-        "status" : "passed",
-        "time" : {
-          "start" : 1637452007612,
-          "stop" : 1637452007628,
-          "duration" : 16
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "b06b067c8550757bc8c54803dd370bba"
-    }, {
-      "name" : "69 (Linux x86_64)] IndexComponent",
-      "children" : [ {
-        "name" : "should create",
-        "uid" : "992507eefade2427",
-        "parentUid" : "bc58528eafc8de35dc60a5addada07fa",
-        "status" : "skipped",
-        "time" : {
-          "start" : 1637452007636,
-          "stop" : 1637452007636,
-          "duration" : 0
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "bc58528eafc8de35dc60a5addada07fa"
-    }, {
-      "name" : "69 (Linux x86_64)] FakeTasksService",
-      "children" : [ {
-        "name" : "should be created",
-        "uid" : "6ac177254f44e3cc",
-        "parentUid" : "c4e07c0d289f0b0be2d55e3b85e2d542",
-        "status" : "skipped",
-        "time" : {
-          "start" : 1637452007639,
-          "stop" : 1637452007639,
-          "duration" : 0
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "c4e07c0d289f0b0be2d55e3b85e2d542"
-    }, {
-      "name" : "69 (Linux x86_64)] LoggerService",
-      "children" : [ {
-        "name" : "should be created",
-        "uid" : "5b31baac5be70f0c",
-        "parentUid" : "85e693f4b516dd9ab35166240a008af7",
-        "status" : "passed",
-        "time" : {
-          "start" : 1637452007640,
-          "stop" : 1637452007644,
-          "duration" : 4
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "85e693f4b516dd9ab35166240a008af7"
-    }, {
-      "name" : "69 (Linux x86_64)] TaskEditorComponent",
-      "children" : [ {
-        "name" : "should create",
-        "uid" : "e782c6f2970e0e07",
-        "parentUid" : "50a398437c0a3b1bd62215aa71bf1e16",
-        "status" : "skipped",
-        "time" : {
-          "start" : 1637452007647,
-          "stop" : 1637452007647,
-          "duration" : 0
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "50a398437c0a3b1bd62215aa71bf1e16"
-    }, {
-      "name" : "69 (Linux x86_64)] ModalComponent",
-      "children" : [ {
-        "name" : "should create",
-        "uid" : "d51b0b156b8bcd92",
-        "parentUid" : "27cbe99efa9d2a1456a64f305e1bec49",
-        "status" : "skipped",
-        "time" : {
-          "start" : 1637452007647,
-          "stop" : 1637452007647,
-          "duration" : 0
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "27cbe99efa9d2a1456a64f305e1bec49"
-    }, {
-      "name" : "69 (Linux x86_64)] LogoutFormComponent",
-      "children" : [ {
-        "name" : "should create",
-        "uid" : "d152c83270b33310",
-        "parentUid" : "95a5f99da02a9757b31f279a14a3c924",
-        "status" : "skipped",
-        "time" : {
-          "start" : 1637452007649,
-          "stop" : 1637452007649,
-          "duration" : 0
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "95a5f99da02a9757b31f279a14a3c924"
-    }, {
-      "name" : "69 (Linux x86_64)] ModalService",
-      "children" : [ {
-        "name" : "should be created",
-        "uid" : "3c0edc9077ad1bf6",
-        "parentUid" : "2ba9d97c8c6b2682a6a7587cab817299",
-        "status" : "passed",
-        "time" : {
-          "start" : 1637452007651,
-          "stop" : 1637452007655,
-          "duration" : 4
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "should close all modals",
-        "uid" : "84a8d8f419eb6a94",
-        "parentUid" : "2ba9d97c8c6b2682a6a7587cab817299",
-        "status" : "passed",
-        "time" : {
-          "start" : 1637452007656,
-          "stop" : 1637452007658,
-          "duration" : 2
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "should open a modal",
-        "uid" : "f1865e24a8639259",
-        "parentUid" : "2ba9d97c8c6b2682a6a7587cab817299",
-        "status" : "passed",
-        "time" : {
-          "start" : 1637452007658,
-          "stop" : 1637452007662,
-          "duration" : 4
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "2ba9d97c8c6b2682a6a7587cab817299"
-    }, {
-      "name" : "69 (Linux x86_64)] TaskListEditorComponent",
-      "children" : [ {
-        "name" : "should create",
-        "uid" : "764147ff1ec97a20",
-        "parentUid" : "f2ca4f1aba0b2e8b0734854092b04fe1",
-        "status" : "skipped",
-        "time" : {
-          "start" : 1637452007665,
-          "stop" : 1637452007665,
-          "duration" : 0
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "f2ca4f1aba0b2e8b0734854092b04fe1"
-    }, {
-      "name" : "69 (Linux x86_64)] TaskListComponent",
-      "children" : [ {
-        "name" : "should create",
-        "uid" : "716cbe26ff651732",
-        "parentUid" : "8394b9b741c9aae3be6890df7fc9f275",
-        "status" : "skipped",
-        "time" : {
-          "start" : 1637452007666,
-          "stop" : 1637452007666,
-          "duration" : 0
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "8394b9b741c9aae3be6890df7fc9f275"
-    }, {
-      "name" : "69 (Linux x86_64)] UsersComponent",
-      "children" : [ {
-        "name" : "should create",
-        "uid" : "83399663398d3548",
-        "parentUid" : "1f84635b609948572c4f2ba12050c251",
-        "status" : "skipped",
-        "time" : {
-          "start" : 1637452007667,
-          "stop" : 1637452007667,
-          "duration" : 0
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "1f84635b609948572c4f2ba12050c251"
-    }, {
-      "name" : "69 (Linux x86_64)] TasksService",
-      "children" : [ {
-        "name" : "should be created",
-        "uid" : "10743f3165ba615",
-        "parentUid" : "3e8720122e29e684bbd66ab0a7818658",
-        "status" : "skipped",
-        "time" : {
-          "start" : 1637452007669,
-          "stop" : 1637452007669,
-          "duration" : 0
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "3e8720122e29e684bbd66ab0a7818658"
-    }, {
-      "name" : "69 (Linux x86_64)] UsersService",
-      "children" : [ {
-        "name" : "should be created",
-        "uid" : "d7f83781dc7e41a8",
-        "parentUid" : "a0448ac2119336498da2eb6d0aa01109",
-        "status" : "skipped",
-        "time" : {
-          "start" : 1637452007670,
-          "stop" : 1637452007670,
-          "duration" : 0
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "a0448ac2119336498da2eb6d0aa01109"
-    }, {
-      "name" : "69 (Linux x86_64)] ConnectAccountFormComponent",
-      "children" : [ {
-        "name" : "should create",
-        "uid" : "e70c605d6f49554",
-        "parentUid" : "7a8364584f0b84ea033ddf640cd56649",
-        "status" : "skipped",
-        "time" : {
-          "start" : 1637452007672,
-          "stop" : 1637452007672,
-          "duration" : 0
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "7a8364584f0b84ea033ddf640cd56649"
-    }, {
       "name" : "69 (Linux x86_64)] ProfileComponent",
       "children" : [ {
         "name" : "should create",
-        "uid" : "fd8f2ed973eeb28e",
+        "uid" : "175ad38bd09d61c9",
         "parentUid" : "531b7c07f93f2e35223acb8a7caecbf1",
         "status" : "skipped",
         "time" : {
-          "start" : 1637452007672,
-          "stop" : 1637452007672,
+          "start" : 1637453105509,
+          "stop" : 1637453105509,
           "duration" : 0
         },
         "flaky" : false,
@@ -301,62 +20,79 @@
       } ],
       "uid" : "531b7c07f93f2e35223acb8a7caecbf1"
     }, {
-      "name" : "69 (Linux x86_64)] TaskComponent",
+      "name" : "69 (Linux x86_64)] SocialComponent",
       "children" : [ {
         "name" : "should create",
-        "uid" : "ccbc51db1e8f46e4",
-        "parentUid" : "29bca5490acd8bba9462d9024bb51838",
+        "uid" : "20adeda054588e15",
+        "parentUid" : "2623c7b0b72e67c38553c28e6d34130a",
         "status" : "skipped",
         "time" : {
-          "start" : 1637452007674,
-          "stop" : 1637452007674,
+          "start" : 1637453105515,
+          "stop" : 1637453105515,
           "duration" : 0
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "29bca5490acd8bba9462d9024bb51838"
+      "uid" : "2623c7b0b72e67c38553c28e6d34130a"
     }, {
-      "name" : "69 (Linux x86_64)] HeaderComponent",
+      "name" : "69 (Linux x86_64)] TasksService",
       "children" : [ {
-        "name" : "should create",
-        "uid" : "141b359186ff4df",
-        "parentUid" : "7275686c81224bf309ae0f5b6c60dfb5",
+        "name" : "should be created",
+        "uid" : "b164fbab5bd60ae1",
+        "parentUid" : "3e8720122e29e684bbd66ab0a7818658",
         "status" : "skipped",
         "time" : {
-          "start" : 1637452007676,
-          "stop" : 1637452007676,
+          "start" : 1637453105529,
+          "stop" : 1637453105529,
           "duration" : 0
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "7275686c81224bf309ae0f5b6c60dfb5"
+      "uid" : "3e8720122e29e684bbd66ab0a7818658"
+    }, {
+      "name" : "69 (Linux x86_64)] TaskEditorComponent",
+      "children" : [ {
+        "name" : "should create",
+        "uid" : "9d1f571061afabd8",
+        "parentUid" : "50a398437c0a3b1bd62215aa71bf1e16",
+        "status" : "skipped",
+        "time" : {
+          "start" : 1637453105531,
+          "stop" : 1637453105531,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "50a398437c0a3b1bd62215aa71bf1e16"
     }, {
       "name" : "69 (Linux x86_64)] AppComponent",
       "children" : [ {
-        "name" : "should render title",
-        "uid" : "8e58c12c890e4017",
+        "name" : "should have as title 'App'",
+        "uid" : "222367ada0c16103",
         "parentUid" : "82965fccfd64ab0345e2caf73db9fab3",
         "status" : "skipped",
         "time" : {
-          "start" : 1637452007677,
-          "stop" : 1637452007677,
+          "start" : 1637453105532,
+          "stop" : 1637453105532,
           "duration" : 0
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       }, {
-        "name" : "should have as title 'App'",
-        "uid" : "c7bccee68d9a7f2a",
+        "name" : "should render title",
+        "uid" : "a167545eb48209c4",
         "parentUid" : "82965fccfd64ab0345e2caf73db9fab3",
         "status" : "skipped",
         "time" : {
-          "start" : 1637452007679,
-          "stop" : 1637452007679,
+          "start" : 1637453105533,
+          "stop" : 1637453105533,
           "duration" : 0
         },
         "flaky" : false,
@@ -364,12 +100,12 @@
         "parameters" : [ ]
       }, {
         "name" : "should create the app",
-        "uid" : "cd42805cbbb3618b",
+        "uid" : "470ed8fbbe2bee0d",
         "parentUid" : "82965fccfd64ab0345e2caf73db9fab3",
         "status" : "skipped",
         "time" : {
-          "start" : 1637452007679,
-          "stop" : 1637452007679,
+          "start" : 1637453105534,
+          "stop" : 1637453105534,
           "duration" : 0
         },
         "flaky" : false,
@@ -378,150 +114,85 @@
       } ],
       "uid" : "82965fccfd64ab0345e2caf73db9fab3"
     }, {
-      "name" : "69 (Linux x86_64)] TasksComponent",
+      "name" : "69 (Linux x86_64)] ModalService",
       "children" : [ {
-        "name" : "should create",
-        "uid" : "441f8db763f5bb59",
-        "parentUid" : "77a3840bf794ef2be764e94a11874267",
-        "status" : "skipped",
-        "time" : {
-          "start" : 1637452007679,
-          "stop" : 1637452007679,
-          "duration" : 0
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "77a3840bf794ef2be764e94a11874267"
-    }, {
-      "name" : "69 (Linux x86_64)] AuthService",
-      "children" : [ {
-        "name" : "#isLoggedIn returns false if token is expired",
-        "uid" : "9871ad6fd00ff8a8",
-        "parentUid" : "1b11eb66f6018858ab8768f581902842",
+        "name" : "should open a modal",
+        "uid" : "c9c4f7493c7a6fc9",
+        "parentUid" : "2ba9d97c8c6b2682a6a7587cab817299",
         "status" : "passed",
         "time" : {
-          "start" : 1637452007683,
-          "stop" : 1637452007688,
-          "duration" : 5
+          "start" : 1637453105539,
+          "stop" : 1637453105561,
+          "duration" : 22
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       }, {
-        "name" : "#logOut clears the saved token",
-        "uid" : "8c72695de72eed1a",
-        "parentUid" : "1b11eb66f6018858ab8768f581902842",
+        "name" : "should be created",
+        "uid" : "37216436d8a2bc80",
+        "parentUid" : "2ba9d97c8c6b2682a6a7587cab817299",
         "status" : "passed",
         "time" : {
-          "start" : 1637452007689,
-          "stop" : 1637452007694,
-          "duration" : 5
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "#isLoggedIn returns true if token is not expired",
-        "uid" : "54efb3a244b15979",
-        "parentUid" : "1b11eb66f6018858ab8768f581902842",
-        "status" : "passed",
-        "time" : {
-          "start" : 1637452007696,
-          "stop" : 1637452007698,
-          "duration" : 2
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "#isLoggedOut returns true if user is not logged in",
-        "uid" : "2b2a8042b6752aad",
-        "parentUid" : "1b11eb66f6018858ab8768f581902842",
-        "status" : "passed",
-        "time" : {
-          "start" : 1637452007698,
-          "stop" : 1637452007701,
-          "duration" : 3
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "#isLoggedOut returns false if user is logged in",
-        "uid" : "dd1c848e64284053",
-        "parentUid" : "1b11eb66f6018858ab8768f581902842",
-        "status" : "passed",
-        "time" : {
-          "start" : 1637452007704,
-          "stop" : 1637452007706,
-          "duration" : 2
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "#logIn sends username and password and receives access token",
-        "uid" : "514d8edc836d937a",
-        "parentUid" : "1b11eb66f6018858ab8768f581902842",
-        "status" : "passed",
-        "time" : {
-          "start" : 1637452007707,
-          "stop" : 1637452007713,
-          "duration" : 6
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "#getUsername returns username property of a JWT payload",
-        "uid" : "c03fb63808cb5ea2",
-        "parentUid" : "1b11eb66f6018858ab8768f581902842",
-        "status" : "passed",
-        "time" : {
-          "start" : 1637452007714,
-          "stop" : 1637452007716,
-          "duration" : 2
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "#connect forwards url parameters and receives access token",
-        "uid" : "66b8e31ba590f6b6",
-        "parentUid" : "1b11eb66f6018858ab8768f581902842",
-        "status" : "passed",
-        "time" : {
-          "start" : 1637452007717,
-          "stop" : 1637452007721,
+          "start" : 1637453105562,
+          "stop" : 1637453105566,
           "duration" : 4
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       }, {
-        "name" : "#getName returns name property of a JWT payload",
-        "uid" : "f3428c4edb9029dc",
+        "name" : "should close all modals",
+        "uid" : "4f9f62f3c1676e87",
+        "parentUid" : "2ba9d97c8c6b2682a6a7587cab817299",
+        "status" : "passed",
+        "time" : {
+          "start" : 1637453105567,
+          "stop" : 1637453105569,
+          "duration" : 2
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "2ba9d97c8c6b2682a6a7587cab817299"
+    }, {
+      "name" : "69 (Linux x86_64)] AuthService",
+      "children" : [ {
+        "name" : "should be created",
+        "uid" : "66d3e1d687a3e219",
         "parentUid" : "1b11eb66f6018858ab8768f581902842",
         "status" : "passed",
         "time" : {
-          "start" : 1637452007722,
-          "stop" : 1637452007725,
-          "duration" : 3
+          "start" : 1637453105572,
+          "stop" : 1637453105577,
+          "duration" : 5
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       }, {
-        "name" : "#signUp sends user data and receives access token",
-        "uid" : "36341a58a5bd54f3",
+        "name" : "#isLoggedOut returns false if user is logged in",
+        "uid" : "c5f4383d15e8ae9f",
         "parentUid" : "1b11eb66f6018858ab8768f581902842",
         "status" : "passed",
         "time" : {
-          "start" : 1637452007726,
-          "stop" : 1637452007729,
-          "duration" : 3
+          "start" : 1637453105577,
+          "stop" : 1637453105582,
+          "duration" : 5
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "#getUsername returns username property of a JWT payload",
+        "uid" : "ad3a45bc91318e9b",
+        "parentUid" : "1b11eb66f6018858ab8768f581902842",
+        "status" : "passed",
+        "time" : {
+          "start" : 1637453105582,
+          "stop" : 1637453105586,
+          "duration" : 4
         },
         "flaky" : false,
         "newFailed" : false,
@@ -532,39 +203,130 @@
       "name" : "69 (Linux x86_64)] AuthService #setToken",
       "children" : [ {
         "name" : "clears the token from localStorage and emits the status",
-        "uid" : "306b8cf62a458851",
+        "uid" : "b9442d54eab1f802",
         "parentUid" : "de8a84ba10c2715da8e2e15547f66aa0",
         "status" : "passed",
         "time" : {
-          "start" : 1637452007731,
-          "stop" : 1637452007734,
-          "duration" : 3
+          "start" : 1637453105588,
+          "stop" : 1637453105594,
+          "duration" : 6
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       }, {
         "name" : "saves the token to localStorage and emits the status",
-        "uid" : "e25b50bc2cb14670",
+        "uid" : "7861d6ee02e0b1da",
         "parentUid" : "de8a84ba10c2715da8e2e15547f66aa0",
         "status" : "passed",
         "time" : {
-          "start" : 1637452007737,
-          "stop" : 1637452007741,
+          "start" : 1637453105594,
+          "stop" : 1637453105598,
           "duration" : 4
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       }, {
-        "name" : "should be created",
-        "uid" : "5c9ecb4e67406e8",
+        "name" : "#isLoggedIn returns false if token is expired",
+        "uid" : "abbfdf5c15e89751",
         "parentUid" : "de8a84ba10c2715da8e2e15547f66aa0",
         "status" : "passed",
         "time" : {
-          "start" : 1637452007742,
-          "stop" : 1637452007744,
+          "start" : 1637453105601,
+          "stop" : 1637453105603,
           "duration" : 2
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "#getName returns name property of a JWT payload",
+        "uid" : "24d0f5747655d939",
+        "parentUid" : "de8a84ba10c2715da8e2e15547f66aa0",
+        "status" : "passed",
+        "time" : {
+          "start" : 1637453105604,
+          "stop" : 1637453105606,
+          "duration" : 2
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "#isLoggedOut returns true if user is not logged in",
+        "uid" : "b8ff7967ec0d15cc",
+        "parentUid" : "de8a84ba10c2715da8e2e15547f66aa0",
+        "status" : "passed",
+        "time" : {
+          "start" : 1637453105607,
+          "stop" : 1637453105609,
+          "duration" : 2
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "#isLoggedIn returns true if token is not expired",
+        "uid" : "55801c7462b05dd7",
+        "parentUid" : "de8a84ba10c2715da8e2e15547f66aa0",
+        "status" : "passed",
+        "time" : {
+          "start" : 1637453105611,
+          "stop" : 1637453105613,
+          "duration" : 2
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "#logOut clears the saved token",
+        "uid" : "d930ffd09a7650d7",
+        "parentUid" : "de8a84ba10c2715da8e2e15547f66aa0",
+        "status" : "passed",
+        "time" : {
+          "start" : 1637453105615,
+          "stop" : 1637453105617,
+          "duration" : 2
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "#connect forwards url parameters and receives access token",
+        "uid" : "b91f7b0e81f982a4",
+        "parentUid" : "de8a84ba10c2715da8e2e15547f66aa0",
+        "status" : "passed",
+        "time" : {
+          "start" : 1637453105617,
+          "stop" : 1637453105625,
+          "duration" : 8
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "#signUp sends user data and receives access token",
+        "uid" : "ed2748aec67e27c8",
+        "parentUid" : "de8a84ba10c2715da8e2e15547f66aa0",
+        "status" : "passed",
+        "time" : {
+          "start" : 1637453105627,
+          "stop" : 1637453105630,
+          "duration" : 3
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "#logIn sends username and password and receives access token",
+        "uid" : "a8ce67c90811e9ba",
+        "parentUid" : "de8a84ba10c2715da8e2e15547f66aa0",
+        "status" : "passed",
+        "time" : {
+          "start" : 1637453105632,
+          "stop" : 1637453105635,
+          "duration" : 3
         },
         "flaky" : false,
         "newFailed" : false,
@@ -572,15 +334,168 @@
       } ],
       "uid" : "de8a84ba10c2715da8e2e15547f66aa0"
     }, {
+      "name" : "69 (Linux x86_64)] TaskListComponent",
+      "children" : [ {
+        "name" : "should create",
+        "uid" : "da8b272306c5e36b",
+        "parentUid" : "8394b9b741c9aae3be6890df7fc9f275",
+        "status" : "skipped",
+        "time" : {
+          "start" : 1637453105636,
+          "stop" : 1637453105636,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "8394b9b741c9aae3be6890df7fc9f275"
+    }, {
+      "name" : "69 (Linux x86_64)] TaskListEditorComponent",
+      "children" : [ {
+        "name" : "should create",
+        "uid" : "447bac57fe85629b",
+        "parentUid" : "f2ca4f1aba0b2e8b0734854092b04fe1",
+        "status" : "skipped",
+        "time" : {
+          "start" : 1637453105638,
+          "stop" : 1637453105638,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "f2ca4f1aba0b2e8b0734854092b04fe1"
+    }, {
+      "name" : "69 (Linux x86_64)] IndexComponent",
+      "children" : [ {
+        "name" : "should create",
+        "uid" : "a6d20c1126cfeea0",
+        "parentUid" : "bc58528eafc8de35dc60a5addada07fa",
+        "status" : "skipped",
+        "time" : {
+          "start" : 1637453105639,
+          "stop" : 1637453105639,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "bc58528eafc8de35dc60a5addada07fa"
+    }, {
+      "name" : "69 (Linux x86_64)] ConnectAccountFormComponent",
+      "children" : [ {
+        "name" : "should create",
+        "uid" : "45a2938e657abf91",
+        "parentUid" : "7a8364584f0b84ea033ddf640cd56649",
+        "status" : "skipped",
+        "time" : {
+          "start" : 1637453105643,
+          "stop" : 1637453105643,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "7a8364584f0b84ea033ddf640cd56649"
+    }, {
+      "name" : "69 (Linux x86_64)] UsersService",
+      "children" : [ {
+        "name" : "should be created",
+        "uid" : "7a7f20093967533a",
+        "parentUid" : "a0448ac2119336498da2eb6d0aa01109",
+        "status" : "skipped",
+        "time" : {
+          "start" : 1637453105645,
+          "stop" : 1637453105645,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "a0448ac2119336498da2eb6d0aa01109"
+    }, {
+      "name" : "69 (Linux x86_64)] FakeTasksService",
+      "children" : [ {
+        "name" : "should be created",
+        "uid" : "ff7aa47a8c699280",
+        "parentUid" : "c4e07c0d289f0b0be2d55e3b85e2d542",
+        "status" : "skipped",
+        "time" : {
+          "start" : 1637453105647,
+          "stop" : 1637453105647,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "c4e07c0d289f0b0be2d55e3b85e2d542"
+    }, {
+      "name" : "69 (Linux x86_64)] UsersComponent",
+      "children" : [ {
+        "name" : "should create",
+        "uid" : "62db977945b69ee9",
+        "parentUid" : "1f84635b609948572c4f2ba12050c251",
+        "status" : "skipped",
+        "time" : {
+          "start" : 1637453105649,
+          "stop" : 1637453105649,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "1f84635b609948572c4f2ba12050c251"
+    }, {
+      "name" : "69 (Linux x86_64)] LoggerService",
+      "children" : [ {
+        "name" : "should be created",
+        "uid" : "1f2c34345062ada1",
+        "parentUid" : "85e693f4b516dd9ab35166240a008af7",
+        "status" : "passed",
+        "time" : {
+          "start" : 1637453105650,
+          "stop" : 1637453105654,
+          "duration" : 4
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "85e693f4b516dd9ab35166240a008af7"
+    }, {
+      "name" : "69 (Linux x86_64)] TaskComponent",
+      "children" : [ {
+        "name" : "should create",
+        "uid" : "d67624ccdeae417d",
+        "parentUid" : "29bca5490acd8bba9462d9024bb51838",
+        "status" : "skipped",
+        "time" : {
+          "start" : 1637453105657,
+          "stop" : 1637453105657,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "29bca5490acd8bba9462d9024bb51838"
+    }, {
       "name" : "69 (Linux x86_64)] FooterComponent",
       "children" : [ {
         "name" : "should create",
-        "uid" : "9e428036a67d02ea",
+        "uid" : "66a4a11c62085038",
         "parentUid" : "5c7b311d6de456b21f2ad027951f26c0",
         "status" : "skipped",
         "time" : {
-          "start" : 1637452007747,
-          "stop" : 1637452007747,
+          "start" : 1637453105659,
+          "stop" : 1637453105659,
           "duration" : 0
         },
         "flaky" : false,
@@ -589,15 +504,212 @@
       } ],
       "uid" : "5c7b311d6de456b21f2ad027951f26c0"
     }, {
+      "name" : "69 (Linux x86_64)] ModalComponent",
+      "children" : [ {
+        "name" : "should create",
+        "uid" : "675824ac02ab197f",
+        "parentUid" : "27cbe99efa9d2a1456a64f305e1bec49",
+        "status" : "skipped",
+        "time" : {
+          "start" : 1637453105660,
+          "stop" : 1637453105660,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "27cbe99efa9d2a1456a64f305e1bec49"
+    }, {
+      "name" : "69 (Linux x86_64)] HttpStatusComponent",
+      "children" : [ {
+        "name" : "should create",
+        "uid" : "f72dc8f2a2d152b3",
+        "parentUid" : "10d1694b98444a1509d13086c94e6a42",
+        "status" : "skipped",
+        "time" : {
+          "start" : 1637453105662,
+          "stop" : 1637453105662,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "10d1694b98444a1509d13086c94e6a42"
+    }, {
+      "name" : "69 (Linux x86_64)] TasksComponent",
+      "children" : [ {
+        "name" : "should create",
+        "uid" : "6ec014774d2c11c0",
+        "parentUid" : "77a3840bf794ef2be764e94a11874267",
+        "status" : "skipped",
+        "time" : {
+          "start" : 1637453105663,
+          "stop" : 1637453105663,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "77a3840bf794ef2be764e94a11874267"
+    }, {
+      "name" : "69 (Linux x86_64)] HeaderComponent",
+      "children" : [ {
+        "name" : "should create",
+        "uid" : "755d2122fd14c110",
+        "parentUid" : "7275686c81224bf309ae0f5b6c60dfb5",
+        "status" : "skipped",
+        "time" : {
+          "start" : 1637453105665,
+          "stop" : 1637453105665,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "7275686c81224bf309ae0f5b6c60dfb5"
+    }, {
+      "name" : "69 (Linux x86_64)] HttpStatusService",
+      "children" : [ {
+        "name" : "should be created",
+        "uid" : "3741771c3b651ecd",
+        "parentUid" : "b06b067c8550757bc8c54803dd370bba",
+        "status" : "passed",
+        "time" : {
+          "start" : 1637453105666,
+          "stop" : 1637453105670,
+          "duration" : 4
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "b06b067c8550757bc8c54803dd370bba"
+    }, {
+      "name" : "69 (Linux x86_64)] LoginFormComponent",
+      "children" : [ {
+        "name" : "should create",
+        "uid" : "f1bffa291b75675c",
+        "parentUid" : "af8fafb08a7b42be12fd054a3715621d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1637453105671,
+          "stop" : 1637453105787,
+          "duration" : 116
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "should be empty",
+        "uid" : "790b0ab464df824a",
+        "parentUid" : "af8fafb08a7b42be12fd054a3715621d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1637453105789,
+          "stop" : 1637453105818,
+          "duration" : 29
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "is invalid when empty",
+        "uid" : "40a978364003a1cf",
+        "parentUid" : "af8fafb08a7b42be12fd054a3715621d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1637453105820,
+          "stop" : 1637453105839,
+          "duration" : 19
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "should initialize its properties",
+        "uid" : "3f21a929a9aa3b23",
+        "parentUid" : "af8fafb08a7b42be12fd054a3715621d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1637453105849,
+          "stop" : 1637453105866,
+          "duration" : 17
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "submits the form successfully",
+        "uid" : "f46419ba169c6026",
+        "parentUid" : "af8fafb08a7b42be12fd054a3715621d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1637453105867,
+          "stop" : 1637453105892,
+          "duration" : 25
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "shows an error message if something goes wrong",
+        "uid" : "1b1de6cd3ffc49d0",
+        "parentUid" : "af8fafb08a7b42be12fd054a3715621d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1637453105895,
+          "stop" : 1637453105917,
+          "duration" : 22
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "is valid with user data",
+        "uid" : "3c21b8bc9c649909",
+        "parentUid" : "af8fafb08a7b42be12fd054a3715621d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1637453105919,
+          "stop" : 1637453105946,
+          "duration" : 27
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "af8fafb08a7b42be12fd054a3715621d"
+    }, {
+      "name" : "69 (Linux x86_64)] LogoutFormComponent",
+      "children" : [ {
+        "name" : "should create",
+        "uid" : "cb6d52b35998cab9",
+        "parentUid" : "95a5f99da02a9757b31f279a14a3c924",
+        "status" : "skipped",
+        "time" : {
+          "start" : 1637453105949,
+          "stop" : 1637453105949,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "95a5f99da02a9757b31f279a14a3c924"
+    }, {
       "name" : "69 (Linux x86_64)] SignupFormComponent",
       "children" : [ {
         "name" : "should create",
-        "uid" : "ef9ccb6d5374b05f",
+        "uid" : "b7ef5d378ef5eada",
         "parentUid" : "15266749117b9ca2097c046fc062632c",
         "status" : "skipped",
         "time" : {
-          "start" : 1637452007748,
-          "stop" : 1637452007748,
+          "start" : 1637453105950,
+          "stop" : 1637453105950,
           "duration" : 0
         },
         "flaky" : false,
@@ -605,118 +717,6 @@
         "parameters" : [ ]
       } ],
       "uid" : "15266749117b9ca2097c046fc062632c"
-    }, {
-      "name" : "69 (Linux x86_64)] SocialComponent",
-      "children" : [ {
-        "name" : "should create",
-        "uid" : "73a1fb90123cd464",
-        "parentUid" : "2623c7b0b72e67c38553c28e6d34130a",
-        "status" : "skipped",
-        "time" : {
-          "start" : 1637452007755,
-          "stop" : 1637452007755,
-          "duration" : 0
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "2623c7b0b72e67c38553c28e6d34130a"
-    }, {
-      "name" : "69 (Linux x86_64)] LoginFormComponent",
-      "children" : [ {
-        "name" : "shows an error message if something goes wrong",
-        "uid" : "6775596b54295d04",
-        "parentUid" : "af8fafb08a7b42be12fd054a3715621d",
-        "status" : "passed",
-        "time" : {
-          "start" : 1637452007756,
-          "stop" : 1637452007852,
-          "duration" : 96
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "is valid with user data",
-        "uid" : "3c9038545db76716",
-        "parentUid" : "af8fafb08a7b42be12fd054a3715621d",
-        "status" : "passed",
-        "time" : {
-          "start" : 1637452007855,
-          "stop" : 1637452007882,
-          "duration" : 27
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "submits the form successfully",
-        "uid" : "e31d3bd125c8fec9",
-        "parentUid" : "af8fafb08a7b42be12fd054a3715621d",
-        "status" : "passed",
-        "time" : {
-          "start" : 1637452007883,
-          "stop" : 1637452007904,
-          "duration" : 21
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "is invalid when empty",
-        "uid" : "7f8d0a99478dfe62",
-        "parentUid" : "af8fafb08a7b42be12fd054a3715621d",
-        "status" : "passed",
-        "time" : {
-          "start" : 1637452007906,
-          "stop" : 1637452007919,
-          "duration" : 13
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "should be empty",
-        "uid" : "5ab96368eee38b34",
-        "parentUid" : "af8fafb08a7b42be12fd054a3715621d",
-        "status" : "passed",
-        "time" : {
-          "start" : 1637452007919,
-          "stop" : 1637452007935,
-          "duration" : 16
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "should initialize its properties",
-        "uid" : "35d9c48085e73bb2",
-        "parentUid" : "af8fafb08a7b42be12fd054a3715621d",
-        "status" : "passed",
-        "time" : {
-          "start" : 1637452007941,
-          "stop" : 1637452007956,
-          "duration" : 15
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "should create",
-        "uid" : "c5ffb536fc02e97f",
-        "parentUid" : "af8fafb08a7b42be12fd054a3715621d",
-        "status" : "passed",
-        "time" : {
-          "start" : 1637452007961,
-          "stop" : 1637452007975,
-          "duration" : 14
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "af8fafb08a7b42be12fd054a3715621d"
     } ],
     "uid" : "[Chrome Headless 95.0.4638"
   } ],
