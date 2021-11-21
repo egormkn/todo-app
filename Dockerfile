@@ -63,8 +63,8 @@ COPY --chown=node:node server/package*.json ./
 
 # Install production dependencies and clean cache
 RUN apk add --no-cache --virtual .gyp python make g++ \
-    npm ci --omit=dev && npm cache clean --force \
-    apk del .gyp
+ && npm ci --omit=dev && npm cache clean --force \
+ && apk del .gyp
 
 # Change permissions for working directory
 RUN chown -R node:node .
