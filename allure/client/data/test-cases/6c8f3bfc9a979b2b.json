@@ -1,0 +1,49 @@
+{
+  "uid" : "6c8f3bfc9a979b2b",
+  "name" : "should open a modal",
+  "fullName" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] ModalService.should open a modal",
+  "historyId" : "8b3318964e025dc14dd17650dbae50c5",
+  "time" : {
+    "start" : 1637622578979,
+    "stop" : 1637622578982,
+    "duration" : 3
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "host",
+    "value" : "Chrome Headless 95.0.4638.69 (Linux x86_64)"
+  }, {
+    "name" : "suite",
+    "value" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] ModalService"
+  }, {
+    "name" : "testClass",
+    "value" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] ModalService"
+  }, {
+    "name" : "testMethod",
+    "value" : "should open a modal"
+  }, {
+    "name" : "package",
+    "value" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] ModalService"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "6c8f3bfc9a979b2b.json",
+  "parameterValues" : [ ]
+}

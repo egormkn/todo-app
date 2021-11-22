@@ -196,7 +196,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="classes/LogInDto.html" data-type="entity-link" >LogInDto</a>
                             </li>
                             <li class="link">
+                                <a href="classes/PostgresqlContainerDatabase.html" data-type="entity-link" >PostgresqlContainerDatabase</a>
+                            </li>
+                            <li class="link">
                                 <a href="classes/SignUpDto.html" data-type="entity-link" >SignUpDto</a>
+                            </li>
+                            <li class="link">
+                                <a href="classes/SqliteInMemoryDatabase.html" data-type="entity-link" >SqliteInMemoryDatabase</a>
                             </li>
                             <li class="link">
                                 <a href="classes/Task.html" data-type="entity-link" >Task</a>
@@ -275,6 +281,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                         <ul class="links collapse " ${ isNormalMode ? ' id="interfaces-links"' : 'id="xs-interfaces-links"' }>
                             <li class="link">
                                 <a href="interfaces/AccountInterface.html" data-type="entity-link" >AccountInterface</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/TestDatabase.html" data-type="entity-link" >TestDatabase</a>
                             </li>
                             <li class="link">
                                 <a href="interfaces/UserInterface.html" data-type="entity-link" >UserInterface</a>
