@@ -141,7 +141,7 @@ jobs:
           working-directory: docs
           bundler-cache: true
       - name: Build documentation
-        run: bundle exec jekyll build
+        run: bundle exec jekyll build --baseurl "/todo-app/docs"
         working-directory: docs
       - name: Upload artifacts (docs)
         uses: actions/upload-artifact@v2
