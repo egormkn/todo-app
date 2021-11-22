@@ -1,21 +1,33 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { HttpCode, HttpStatus, INestApplication } from '@nestjs/common';
+import { HttpStatus, INestApplication } from '@nestjs/common';
 import * as request from 'supertest';
 import { AuthModule } from '../../src/auth/auth.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigService } from '@nestjs/config';
 import { mockedConfigService } from '../config-service.mock';
+import {
+  PostgresqlContainerDatabase,
+  SqliteInMemoryDatabase,
+  TestDatabase,
+} from '../test-database';
 
 describe('Auth [/auth]', () => {
+  let db: TestDatabase;
   let app: INestApplication;
 
+  jest.setTimeout(180000);
+
   beforeAll(async () => {
+    if (process.env.USE_TESTCONTAINERS) {
+      db = await PostgresqlContainerDatabase.start();
+    } else {
+      db = await SqliteInMemoryDatabase.start();
+    }
     const moduleFixture: TestingModule = await Test.createTestingModule({
       imports: [
         AuthModule,
         TypeOrmModule.forRoot({
-          type: 'sqlite',
-          database: ':memory:',
+          ...db.getConnectionOptions(),
           autoLoadEntities: true,
           synchronize: true,
         }),
@@ -37,6 +49,7 @@ describe('Auth [/auth]', () => {
 
   afterAll(async () => {
     await app.close();
+    await db.stop();
   });
 
   it.todo('Log in [POST /login]');
