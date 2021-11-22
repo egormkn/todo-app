@@ -7,20 +7,20 @@
 <meta name="generator" content="Jekyll v4.2.1" />
 <meta property="og:title" content="Сравнение Cypress и Playwright" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Особенности Cypress" />
-<meta property="og:description" content="Особенности Cypress" />
+<meta name="description" content="Cypress и Playwright – одни из наиболее популярных инструментов для автоматизированного end-to-end тестирования." />
+<meta property="og:description" content="Cypress и Playwright – одни из наиболее популярных инструментов для автоматизированного end-to-end тестирования." />
 <meta property="og:site_name" content="Software Testing Course" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2021-11-09T00:00:00+00:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Сравнение Cypress и Playwright" />
 <script type="application/ld+json">
-{"description":"Особенности Cypress","@type":"BlogPosting","url":"/2021/11/09/cypress-playwright-comparison.html","headline":"Сравнение Cypress и Playwright","datePublished":"2021-11-09T00:00:00+00:00","dateModified":"2021-11-09T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/2021/11/09/cypress-playwright-comparison.html"},"@context":"https://schema.org"}</script>
+{"description":"Cypress и Playwright – одни из наиболее популярных инструментов для автоматизированного end-to-end тестирования.","@type":"BlogPosting","url":"/todo-app/docs/2021/11/09/cypress-playwright-comparison.html","headline":"Сравнение Cypress и Playwright","datePublished":"2021-11-09T00:00:00+00:00","dateModified":"2021-11-09T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"/todo-app/docs/2021/11/09/cypress-playwright-comparison.html"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="Software Testing Course" /></head>
+<link rel="stylesheet" href="/todo-app/docs/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/todo-app/docs/feed.xml" title="Software Testing Course" /></head>
 <body><header class="site-header" role="banner">
 
-  <div class="wrapper"><a class="site-title" rel="author" href="/">Software Testing Course</a><nav class="site-nav">
+  <div class="wrapper"><a class="site-title" rel="author" href="/todo-app/docs/">Software Testing Course</a><nav class="site-nav">
         <input type="checkbox" id="nav-trigger" class="nav-trigger" />
         <label for="nav-trigger">
           <span class="menu-icon">
@@ -45,27 +45,73 @@
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    <h1 id="особенности-cypress">Особенности Cypress</h1>
+    <p>Cypress и Playwright – одни из наиболее популярных инструментов для автоматизированного end-to-end тестирования.</p>
+
+<h2 id="особенности-cypress">Особенности Cypress</h2>
 
 <ul>
-  <li>фреймворк для тестирования и отладки веб-приложений, создан в 2015 г. как стартап</li>
-  <li>большое сообщество разработчиков, есть интеграция с веб-фреймворками (<code class="language-plaintext highlighter-rouge">@cypress/schematic</code> для Angular)</li>
-  <li>TODO: Дописать</li>
+  <li>Фреймворк для тестирования и отладки веб-приложений</li>
+  <li>Создан в 2015 г. как стартап, используется большим сообществом разработчиков</li>
+  <li>Хорошая документация, много примеров, есть интеграция с веб-фреймворками (<code class="language-plaintext highlighter-rouge">@cypress/schematic</code> для Angular)</li>
+  <li>Устанавливается как Node.js библиотека и подгружает нативный модуль с GUI, из которого можно запускать тесты в установленных в системе браузерах</li>
+  <li>Есть графический интерфейс, в котором можно просматривать каждый шаг теста, но возможен и запуск в headless-режиме</li>
+  <li>Синхронный API для описания последовательности действий в одной вкладке браузера</li>
+  <li>Можно добавлять свои команды при помощи <code class="language-plaintext highlighter-rouge">Cypress.Commands.add(...)</code>, а также типизацию для них в блоке <code class="language-plaintext highlighter-rouge">declare namespace Cypress {...}</code></li>
+  <li>В качестве test runner’а используется своя реализация, которая даёт возможность взаимодействовать с графическим интерфейсом.</li>
 </ul>
 
-<h1 id="особенности-playwright">Особенности Playwright</h1>
+<h2 id="особенности-playwright">Особенности Playwright</h2>
 
 <ul>
-  <li>фреймворк для автоматизации браузера, создан в Microsoft в 2020 г. на основе инструмента Puppeteer от Google</li>
-  <li>TODO: Дописать</li>
+  <li>Фреймворк для автоматизации браузера</li>
+  <li>Создан в Microsoft в 2020 г. с использованием API инструмента Puppeteer от Google</li>
+  <li>Менее подробная и структурированная документация, меньше примеров, чем для Cypress</li>
+  <li>Устанавливается как Node.js библиотека и требует дополнительной загрузки фиксированных версий браузеров (Chromium, Firefox, Webkit) при помощи <code class="language-plaintext highlighter-rouge">npx playwright install</code>, работает только с этими браузерами</li>
+  <li>Возможен запуск в headless- и headed-режиме, но только для наблюдения за выполнением. Для анализа записанных исполнений есть отдельный инструмент Playwright Trace Viewer.</li>
+  <li>Асинхронный API, позволяющий запускать несколько браузеров и использовать любые сторонние библиотеки в тестах</li>
+  <li>Добавление своих команд реализовано через переопределение функции <code class="language-plaintext highlighter-rouge">test</code> при помощи <code class="language-plaintext highlighter-rouge">test.extend(...)</code> и использование полученной новой функции.</li>
+  <li>В качестве test runner’а используется Playwright Test, основанный на Jest, возможно также настроить Jest, Jasmine, AVA, Mocha.</li>
 </ul>
 
-  </div><a class="u-url" href="/2021/11/09/cypress-playwright-comparison.html" hidden></a>
+<h2 id="примеры">Примеры</h2>
+
+<p>Cypress</p>
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">describe</span><span class="p">(</span><span class="dl">'</span><span class="s1">Login page</span><span class="dl">'</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">it</span><span class="p">(</span><span class="dl">'</span><span class="s1">shows error message when user does not exist</span><span class="dl">'</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">cy</span><span class="p">.</span><span class="nx">visit</span><span class="p">(</span><span class="dl">'</span><span class="s1">/auth/login</span><span class="dl">'</span><span class="p">);</span>
+    <span class="nx">cy</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">form</span><span class="dl">'</span><span class="p">).</span><span class="nx">within</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="kd">const</span> <span class="nx">username</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">doesnotexist</span><span class="dl">'</span><span class="p">;</span>
+      <span class="kd">const</span> <span class="nx">password</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">doesnotexist</span><span class="dl">'</span><span class="p">;</span>
+      <span class="nx">cy</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">input[name=username]</span><span class="dl">'</span><span class="p">).</span><span class="kd">type</span><span class="p">(</span><span class="nx">username</span><span class="p">);</span>
+      <span class="nx">cy</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">input[name=password]</span><span class="dl">'</span><span class="p">).</span><span class="kd">type</span><span class="p">(</span><span class="nx">password</span><span class="p">);</span>
+      <span class="nx">cy</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">'</span><span class="s1">button[type=submit]</span><span class="dl">'</span><span class="p">).</span><span class="nx">click</span><span class="p">();</span>
+      <span class="nx">cy</span><span class="p">.</span><span class="nx">root</span><span class="p">().</span><span class="nx">contains</span><span class="p">(</span><span class="s2">`User "</span><span class="p">${</span><span class="nx">username</span><span class="p">}</span><span class="s2">" was not found`</span><span class="p">);</span>
+    <span class="p">});</span>
+  <span class="p">});</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<p>Playwright</p>
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">test</span><span class="p">.</span><span class="nx">describe</span><span class="p">(</span><span class="dl">'</span><span class="s1">Login page</span><span class="dl">'</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">test</span><span class="p">(</span><span class="dl">'</span><span class="s1">shows error message when user does not exist</span><span class="dl">'</span><span class="p">,</span> <span class="k">async</span> <span class="p">({</span> <span class="nx">page</span> <span class="p">})</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="k">await</span> <span class="nx">page</span><span class="p">.</span><span class="nx">goto</span><span class="p">(</span><span class="dl">'</span><span class="s1">/auth/login</span><span class="dl">'</span><span class="p">);</span>
+    <span class="kd">const</span> <span class="nx">form</span> <span class="o">=</span> <span class="nx">page</span><span class="p">.</span><span class="nx">locator</span><span class="p">(</span><span class="dl">'</span><span class="s1">form</span><span class="dl">'</span><span class="p">);</span>
+    <span class="kd">const</span> <span class="nx">username</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">doesnotexist</span><span class="dl">'</span><span class="p">;</span>
+    <span class="kd">const</span> <span class="nx">password</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">doesnotexist</span><span class="dl">'</span><span class="p">;</span>
+    <span class="k">await</span> <span class="nx">form</span><span class="p">.</span><span class="nx">locator</span><span class="p">(</span><span class="dl">'</span><span class="s1">input[name=username]</span><span class="dl">'</span><span class="p">).</span><span class="kd">type</span><span class="p">(</span><span class="nx">username</span><span class="p">);</span>
+    <span class="k">await</span> <span class="nx">form</span><span class="p">.</span><span class="nx">locator</span><span class="p">(</span><span class="dl">'</span><span class="s1">input[name=password]</span><span class="dl">'</span><span class="p">).</span><span class="kd">type</span><span class="p">(</span><span class="nx">password</span><span class="p">);</span>
+    <span class="k">await</span> <span class="nx">form</span><span class="p">.</span><span class="nx">locator</span><span class="p">(</span><span class="dl">'</span><span class="s1">button[type=submit]</span><span class="dl">'</span><span class="p">).</span><span class="nx">click</span><span class="p">();</span>
+    <span class="k">await</span> <span class="nx">expect</span><span class="p">(</span><span class="nx">form</span><span class="p">).</span><span class="nx">toContainText</span><span class="p">(</span><span class="s2">`User "</span><span class="p">${</span><span class="nx">username</span><span class="p">}</span><span class="s2">" was not found`</span><span class="p">);</span>
+  <span class="p">});</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+  </div><a class="u-url" href="/todo-app/docs/2021/11/09/cypress-playwright-comparison.html" hidden></a>
 </article>
 
       </div>
     </main><footer class="site-footer h-card">
-  <data class="u-url" href="/"></data>
+  <data class="u-url" href="/todo-app/docs/"></data>
 
   <div class="wrapper">
 
@@ -77,7 +123,7 @@
           <li class="p-name">Software Testing Course</li></ul>
       </div>
 
-      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/egormkn"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">egormkn</span></a></li></ul>
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/egormkn"><svg class="svg-icon"><use xlink:href="/todo-app/docs/assets/minima-social-icons.svg#github"></use></svg> <span class="username">egormkn</span></a></li></ul>
 </div>
 
       <div class="footer-col footer-col-3">
