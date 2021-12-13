@@ -1,0 +1,49 @@
+{
+  "uid" : "2ab49fe8f8c29f8c",
+  "name" : "#isLoggedOut returns false if user is logged in",
+  "fullName" : "[Chrome Headless 96.0.4664.93 (Linux x86_64)] AuthService.#isLoggedOut returns false if user is logged in",
+  "historyId" : "c7c0b89605ddd0b5bc3495ad9a00a06f",
+  "time" : {
+    "start" : 1639433535224,
+    "stop" : 1639433535226,
+    "duration" : 2
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "host",
+    "value" : "Chrome Headless 96.0.4664.93 (Linux x86_64)"
+  }, {
+    "name" : "suite",
+    "value" : "[Chrome Headless 96.0.4664.93 (Linux x86_64)] AuthService"
+  }, {
+    "name" : "testClass",
+    "value" : "[Chrome Headless 96.0.4664.93 (Linux x86_64)] AuthService"
+  }, {
+    "name" : "testMethod",
+    "value" : "#isLoggedOut returns false if user is logged in"
+  }, {
+    "name" : "package",
+    "value" : "[Chrome Headless 96.0.4664.93 (Linux x86_64)] AuthService"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "2ab49fe8f8c29f8c.json",
+  "parameterValues" : [ ]
+}
