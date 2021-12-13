@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">67.74% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>21/31</span>
+                <span class='fraction'>31/31</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">16.66% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>1/6</span>
+                <span class='fraction'>6/6</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">65.51% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>19/29</span>
+                <span class='fraction'>29/29</span>
             </div>
         
             
@@ -55,7 +55,7 @@
             Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
         </p>
     </div>
-    <div class='status-line medium'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -129,42 +129,42 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { Body, Controller, Get, Post } from '@nestjs/common';
@@ -189,37 +189,37 @@ export class AuthController {
   @Post('login')
   @NoAuth(LocalAuthGuard)
   @ApiBody({ type: LogInDto })
-<span class="fstat-no" title="function not covered" >  async </span>logIn(@User() user: UserInterface) {
-    const token = <span class="cstat-no" title="statement not covered" >await this.authService.issueJwt(user);</span>
-<span class="cstat-no" title="statement not covered" >    return { access_token: token };</span>
+  async logIn(@User() user: UserInterface) {
+    const token = await this.authService.issueJwt(user);
+    return { access_token: token };
   }
 &nbsp;
   @Post('signup')
   @NoAuth()
-<span class="fstat-no" title="function not covered" >  async </span>signUp(@Body() signUpDto: SignUpDto) {
-    const user = <span class="cstat-no" title="statement not covered" >await this.authService.signUp(signUpDto);</span>
-    const token = <span class="cstat-no" title="statement not covered" >await this.authService.issueJwt(user);</span>
-<span class="cstat-no" title="statement not covered" >    return { access_token: token };</span>
+  async signUp(@Body() signUpDto: SignUpDto) {
+    const user = await this.authService.signUp(signUpDto);
+    const token = await this.authService.issueJwt(user);
+    return { access_token: token };
   }
 &nbsp;
   @Post('logout')
   @Auth()
-<span class="fstat-no" title="function not covered" >  async </span>logOut(@User() user: UserInterface) {
-<span class="cstat-no" title="statement not covered" >    return this.authService.logOut(user);</span>
+  async logOut(@User() user: UserInterface) {
+    return this.authService.logOut(user);
   }
 &nbsp;
   @Get('google')
   @OptionalAuth(GoogleAuthGuard)
-<span class="fstat-no" title="function not covered" >  async </span>logInWithGoogle(@User() user: UserInterface) {
-    const token = <span class="cstat-no" title="statement not covered" >await this.authService.issueJwt(user);</span>
-<span class="cstat-no" title="statement not covered" >    return { access_token: token };</span>
+  async logInWithGoogle(@User() user: UserInterface) {
+    const token = await this.authService.issueJwt(user);
+    return { access_token: token };
   }
 &nbsp;
   @Get('vkontakte')
   @OptionalAuth(VkontakteAuthGuard)
-<span class="fstat-no" title="function not covered" >  async </span>logInWithVkontakte(@User() user: UserInterface) {
-    const token = <span class="cstat-no" title="statement not covered" >await this.authService.issueJwt(user);</span>
-<span class="cstat-no" title="statement not covered" >    return { access_token: token };</span>
+  async logInWithVkontakte(@User() user: UserInterface) {
+    const token = await this.authService.issueJwt(user);
+    return { access_token: token };
   }
 }
 &nbsp;</pre></td></tr></table></pre>
@@ -229,7 +229,7 @@ export class AuthController {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Mon Nov 22 2021 23:08:33 GMT+0000 (Coordinated Universal Time)
+                at Mon Dec 13 2021 21:21:51 GMT+0000 (Coordinated Universal Time)
             </div>
         </div>
         <script src="../../prettify.js"></script>

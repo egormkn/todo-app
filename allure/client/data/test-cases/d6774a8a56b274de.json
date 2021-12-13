@@ -1,0 +1,49 @@
+{
+  "uid" : "d6774a8a56b274de",
+  "name" : "saves the token to localStorage and emits the status",
+  "fullName" : "[Chrome Headless 96.0.4664.93 (Linux x86_64)] AuthService #setToken.saves the token to localStorage and emits the status",
+  "historyId" : "ab7480fff5286570aa41ad4372118f5f",
+  "time" : {
+    "start" : 1639430592064,
+    "stop" : 1639430592068,
+    "duration" : 4
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "host",
+    "value" : "Chrome Headless 96.0.4664.93 (Linux x86_64)"
+  }, {
+    "name" : "suite",
+    "value" : "[Chrome Headless 96.0.4664.93 (Linux x86_64)] AuthService #setToken"
+  }, {
+    "name" : "testClass",
+    "value" : "[Chrome Headless 96.0.4664.93 (Linux x86_64)] AuthService #setToken"
+  }, {
+    "name" : "testMethod",
+    "value" : "saves the token to localStorage and emits the status"
+  }, {
+    "name" : "package",
+    "value" : "[Chrome Headless 96.0.4664.93 (Linux x86_64)] AuthService #setToken"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "d6774a8a56b274de.json",
+  "parameterValues" : [ ]
+}

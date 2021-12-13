@@ -1,19 +1,19 @@
 {
   "total" : 26,
   "items" : [ {
-    "uid" : "c1d4691d3533d4c3f563d1abe04be75f",
-    "name" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] AuthService",
+    "uid" : "4bb746687096ad82a46fff5802004549",
+    "name" : "[Chrome Headless 96.0.4664.93 (Linux x86_64)] AuthService #setToken",
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 10,
+      "passed" : 8,
       "unknown" : 0,
-      "total" : 10
+      "total" : 8
     }
   }, {
-    "uid" : "0069b73e4966e92ef247d7dcaa0acd5d",
-    "name" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] LoginFormComponent",
+    "uid" : "5f3689c380a8a0a376b8729ce8e9ce69",
+    "name" : "[Chrome Headless 96.0.4664.93 (Linux x86_64)] LoginFormComponent",
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
@@ -23,8 +23,19 @@
       "total" : 7
     }
   }, {
-    "uid" : "a50971c8fe45484ac1f4b3cc96132ea4",
-    "name" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] ModalService",
+    "uid" : "cf33487169c9cd8a28136a592f622509",
+    "name" : "[Chrome Headless 96.0.4664.93 (Linux x86_64)] AuthService",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 5,
+      "unknown" : 0,
+      "total" : 5
+    }
+  }, {
+    "uid" : "ae617165399d09777104f3cdd5111f86",
+    "name" : "[Chrome Headless 96.0.4664.93 (Linux x86_64)] ModalService",
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
@@ -34,19 +45,8 @@
       "total" : 3
     }
   }, {
-    "uid" : "7b362809891668c09bdf9595a36f491b",
-    "name" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] AuthService #setToken",
-    "statistic" : {
-      "failed" : 0,
-      "broken" : 0,
-      "skipped" : 0,
-      "passed" : 3,
-      "unknown" : 0,
-      "total" : 3
-    }
-  }, {
-    "uid" : "5f3abdf59299f9a777c23820b038d08f",
-    "name" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] HttpStatusService",
+    "uid" : "d98aec581389bc2a7a7fc5c1f41091ce",
+    "name" : "[Chrome Headless 96.0.4664.93 (Linux x86_64)] HttpStatusService",
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
@@ -56,8 +56,8 @@
       "total" : 1
     }
   }, {
-    "uid" : "cc23aa993664e358bdf95659f5e785b5",
-    "name" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] LoggerService",
+    "uid" : "e2fd52fbebbd6a2a8be810afbf10f0e0",
+    "name" : "[Chrome Headless 96.0.4664.93 (Linux x86_64)] LoggerService",
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
@@ -67,8 +67,8 @@
       "total" : 1
     }
   }, {
-    "uid" : "1762fe824bc5f82bdc30ad22e9939585",
-    "name" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] AppComponent",
+    "uid" : "9771557a766f6ff9db78549b4e461dc7",
+    "name" : "[Chrome Headless 96.0.4664.93 (Linux x86_64)] AppComponent",
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
@@ -78,8 +78,8 @@
       "total" : 3
     }
   }, {
-    "uid" : "7b63459789c7163cdac2f8e98da5003a",
-    "name" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] IndexComponent",
+    "uid" : "2b05ce49eedcfe8f1914452dc2435eb4",
+    "name" : "[Chrome Headless 96.0.4664.93 (Linux x86_64)] TaskListComponent",
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
@@ -89,8 +89,8 @@
       "total" : 1
     }
   }, {
-    "uid" : "70dbf6431907da9ac384c735f70cdd6f",
-    "name" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] HttpStatusComponent",
+    "uid" : "738f28bd27bd13b802dba14a65809e2a",
+    "name" : "[Chrome Headless 96.0.4664.93 (Linux x86_64)] HttpStatusComponent",
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
@@ -100,8 +100,8 @@
       "total" : 1
     }
   }, {
-    "uid" : "7d742fa6660ef0fc48fa8207d4aa0e39",
-    "name" : "[Chrome Headless 95.0.4638.69 (Linux x86_64)] HeaderComponent",
+    "uid" : "71d4e29843675a191c703a5812d0f795",
+    "name" : "[Chrome Headless 96.0.4664.93 (Linux x86_64)] FooterComponent",
     "statistic" : {
       "failed" : 0,
       "broken" : 0,

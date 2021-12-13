@@ -79,21 +79,30 @@
   <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Написать Unit и Component тесты для этого сервиса.</li>
   <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Использовать TestContainers для одного теста с DB.</li>
   <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Использовать Mockito для мокирования тестов с внешним сервисом.</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Написать документацию (README) какие тесты еще необходимо написать, но вы не успели.</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Написать документацию (README) какие тесты еще необходимо написать, но вы не успели:
+    <ul>
+      <li>Тесты на OAuth авторизацию (методы <code class="language-plaintext highlighter-rouge">logInWithAccount</code>, <code class="language-plaintext highlighter-rouge">connectAccount</code> класса <code class="language-plaintext highlighter-rouge">AuthService</code>)</li>
+      <li>Тесты на методы работы с пользователем и OAuth-аккаунтом (<code class="language-plaintext highlighter-rouge">createUser</code>, <code class="language-plaintext highlighter-rouge">updateUser</code>, <code class="language-plaintext highlighter-rouge">removeUser</code>, <code class="language-plaintext highlighter-rouge">createAccount</code>, <code class="language-plaintext highlighter-rouge">updateAccount</code>, <code class="language-plaintext highlighter-rouge">removeAccount</code> класса <code class="language-plaintext highlighter-rouge">UsersService</code>)</li>
+    </ul>
+  </li>
 </ul>
 
 <h3 id="advanced-часть-1">Advanced часть:</h3>
 <ul class="task-list">
   <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Сделать взаимодействие сервиса и вашего Frontend приложения.</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Сделать тесты на авторизацию.</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Создать отдельные Spring Test Configruation, которые можно переключать с помощью флага при запуске тестов.</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Сделать тесты на авторизацию.</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Создать отдельные Spring Test Configruation, которые можно переключать с помощью флага при запуске тестов.</li>
   <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Сделать генерацию тестовой документации через Asci Doctor(Spring Rest Docs).</li>
 </ul>
 
 <h3 id="bonus-часть-1">Bonus часть:</h3>
 <ul class="task-list">
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Придумать функциональность, с которой можно использовать очереди/стримы вида RabbitMQ/Kafka streams.</li>
-  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Написать компонентные тесты на эту функциональность(используя TestContainers).</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Придумать функциональность, с которой можно использовать очереди/стримы вида RabbitMQ/Kafka streams:
+    <ul>
+      <li>Генерация PDF-отчёта со списками дел с помощью отдельного микросервиса.</li>
+    </ul>
+  </li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Написать компонентные тесты на эту функциональность (используя TestContainers).</li>
 </ul>
 
 <h3 id="вопросы-для-проверки-знаний-1">Вопросы для проверки знаний:</h3>

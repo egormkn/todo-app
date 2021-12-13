@@ -1,0 +1,49 @@
+{
+  "uid" : "ce77a08cb1d77",
+  "name" : "#getName returns name property of a JWT payload",
+  "fullName" : "[Chrome Headless 96.0.4664.93 (Linux x86_64)] AuthService #setToken.#getName returns name property of a JWT payload",
+  "historyId" : "b93912d546d085d374b82944e9d4bd7",
+  "time" : {
+    "start" : 1639430592075,
+    "stop" : 1639430592077,
+    "duration" : 2
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "host",
+    "value" : "Chrome Headless 96.0.4664.93 (Linux x86_64)"
+  }, {
+    "name" : "suite",
+    "value" : "[Chrome Headless 96.0.4664.93 (Linux x86_64)] AuthService #setToken"
+  }, {
+    "name" : "testClass",
+    "value" : "[Chrome Headless 96.0.4664.93 (Linux x86_64)] AuthService #setToken"
+  }, {
+    "name" : "testMethod",
+    "value" : "#getName returns name property of a JWT payload"
+  }, {
+    "name" : "package",
+    "value" : "[Chrome Headless 96.0.4664.93 (Linux x86_64)] AuthService #setToken"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "ce77a08cb1d77.json",
+  "parameterValues" : [ ]
+}

@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">20.96% </span>
+                <span class="strong">41.93% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>13/62</span>
+                <span class='fraction'>26/62</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">6.25% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/16</span>
+                <span class='fraction'>1/16</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">11.11% </span>
+                <span class="strong">33.33% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>1/9</span>
+                <span class='fraction'>3/9</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">19.29% </span>
+                <span class="strong">42.1% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>11/57</span>
+                <span class='fraction'>24/57</span>
             </div>
         
             
@@ -171,36 +171,36 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -280,28 +280,28 @@ export class AuthService {
     private readonly usersService: UsersService,
   ) {}
 &nbsp;
-<span class="fstat-no" title="function not covered" >  async </span>logIn(logInDto: LogInDto): Promise&lt;UserInterface&gt; {
-    const { username, password } = <span class="cstat-no" title="statement not covered" >logInDto;</span>
-    const user = <span class="cstat-no" title="statement not covered" >await this.usersService.findUserByUsername(username, true);</span>
-<span class="cstat-no" title="statement not covered" >    <span class="missing-if-branch" title="if path not taken" >I</span>if (!user) {</span>
+  async logIn(logInDto: LogInDto): Promise&lt;UserInterface&gt; {
+    const { username, password } = logInDto;
+    const user = await this.usersService.findUserByUsername(username, true);
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (!user) {
 <span class="cstat-no" title="statement not covered" >      throw new UnauthorizedException('The user does not exist');</span>
     }
-    const match = <span class="cstat-no" title="statement not covered" >await bcrypt.compare(password, user.password);</span>
-<span class="cstat-no" title="statement not covered" >    <span class="missing-if-branch" title="if path not taken" >I</span>if (!match) {</span>
-<span class="cstat-no" title="statement not covered" >      throw new UnauthorizedException('Wrong username or password');</span>
+    const match = await bcrypt.compare(password, user.password);
+    if (!match) {
+      throw new UnauthorizedException('Wrong username or password');
     }
-<span class="cstat-no" title="statement not covered" >    return omit(user, 'password') as UserInterface;</span>
+    return omit(user, 'password') as UserInterface;
   }
 &nbsp;
-<span class="fstat-no" title="function not covered" >  async </span>signUp(signUpDto: SignUpDto): Promise&lt;UserInterface&gt; {
-    const { username, password, name, email } = <span class="cstat-no" title="statement not covered" >signUpDto;</span>
-    const saltRounds = <span class="cstat-no" title="statement not covered" >+this.configService.get&lt;number&gt;('PASSWORD_SALT_ROUNDS', 10);</span>
-    const hash = <span class="cstat-no" title="statement not covered" >await bcrypt.hash(password, saltRounds);</span>
-    const user = <span class="cstat-no" title="statement not covered" >await this.usersService.createUser({ username, password: hash, name, email });</span>
-<span class="cstat-no" title="statement not covered" >    <span class="missing-if-branch" title="if path not taken" >I</span>if (!user) {</span>
+  async signUp(signUpDto: SignUpDto): Promise&lt;UserInterface&gt; {
+    const { username, password, name, email } = signUpDto;
+    const saltRounds = +this.configService.get&lt;number&gt;('PASSWORD_SALT_ROUNDS', 10);
+    const hash = await bcrypt.hash(password, saltRounds);
+    const user = await this.usersService.createUser({ username, password: hash, name, email });
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (!user) {
 <span class="cstat-no" title="statement not covered" >      throw new BadRequestException('Failed to sign up');</span>
     }
-<span class="cstat-no" title="statement not covered" >    return omit(user, 'password') as UserInterface;</span>
+    return omit(user, 'password') as UserInterface;
   }
 &nbsp;
 <span class="fstat-no" title="function not covered" >  async </span>logInWithAccount(connectAccountDto: ConnectAccountDto): Promise&lt;UserInterface&gt; {
@@ -367,7 +367,7 @@ export class AuthService {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Mon Nov 22 2021 23:08:33 GMT+0000 (Coordinated Universal Time)
+                at Mon Dec 13 2021 21:21:51 GMT+0000 (Coordinated Universal Time)
             </div>
         </div>
         <script src="../../prettify.js"></script>

@@ -1,0 +1,49 @@
+{
+  "uid" : "63743285f16e3685",
+  "name" : "#logIn sends username and password and receives access token",
+  "fullName" : "[Chrome Headless 96.0.4664.93 (Linux x86_64)] AuthService #setToken.#logIn sends username and password and receives access token",
+  "historyId" : "be97fa78604cd08f1dc7cd5046d8017",
+  "time" : {
+    "start" : 1639430592070,
+    "stop" : 1639430592074,
+    "duration" : 4
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "host",
+    "value" : "Chrome Headless 96.0.4664.93 (Linux x86_64)"
+  }, {
+    "name" : "suite",
+    "value" : "[Chrome Headless 96.0.4664.93 (Linux x86_64)] AuthService #setToken"
+  }, {
+    "name" : "testClass",
+    "value" : "[Chrome Headless 96.0.4664.93 (Linux x86_64)] AuthService #setToken"
+  }, {
+    "name" : "testMethod",
+    "value" : "#logIn sends username and password and receives access token"
+  }, {
+    "name" : "package",
+    "value" : "[Chrome Headless 96.0.4664.93 (Linux x86_64)] AuthService #setToken"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "63743285f16e3685.json",
+  "parameterValues" : [ ]
+}

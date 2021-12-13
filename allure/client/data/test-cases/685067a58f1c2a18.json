@@ -1,0 +1,49 @@
+{
+  "uid" : "685067a58f1c2a18",
+  "name" : "#isLoggedIn returns false if token is expired",
+  "fullName" : "[Chrome Headless 96.0.4664.93 (Linux x86_64)] AuthService.#isLoggedIn returns false if token is expired",
+  "historyId" : "92469924f7fe701ca5d8cac7a8a4ed40",
+  "time" : {
+    "start" : 1639430592038,
+    "stop" : 1639430592041,
+    "duration" : 3
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "host",
+    "value" : "Chrome Headless 96.0.4664.93 (Linux x86_64)"
+  }, {
+    "name" : "suite",
+    "value" : "[Chrome Headless 96.0.4664.93 (Linux x86_64)] AuthService"
+  }, {
+    "name" : "testClass",
+    "value" : "[Chrome Headless 96.0.4664.93 (Linux x86_64)] AuthService"
+  }, {
+    "name" : "testMethod",
+    "value" : "#isLoggedIn returns false if token is expired"
+  }, {
+    "name" : "package",
+    "value" : "[Chrome Headless 96.0.4664.93 (Linux x86_64)] AuthService"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "685067a58f1c2a18.json",
+  "parameterValues" : [ ]
+}
