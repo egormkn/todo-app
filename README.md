@@ -4,7 +4,7 @@
 
 A fullstack (Angular + NestJS) web application for software testing course at ITMO University
 
-##### :mortar_board: [Homework][homework]
+#### :mortar_board: [Homework][homework]
 ##### :globe_with_meridians: [Live Example][live]
 ##### :blue_book: Documentation: [Client][docs-client] / [Server][docs-server]
 ##### :bar_chart: Test Coverage: [Client][coverage-client] / [Server][coverage-server]
