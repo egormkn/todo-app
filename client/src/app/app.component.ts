@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-root',
@@ -10,4 +11,14 @@ import { Component } from '@angular/core';
     <app-footer class="mt-auto"></app-footer>
   `,
 })
-export class AppComponent {}
+export class AppComponent implements OnInit {
+  constructor(private meta: Meta) {}
+
+  ngOnInit() {
+    this.meta.addTags([
+      { charset: 'utf-8' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { name: 'description', content: 'ToDo Application' },
+    ]);
+  }
+}
