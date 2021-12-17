@@ -1,3 +1,5 @@
+import axe from 'axe-core';
+
 describe('Index page', () => {
   it('opens', () => {
     cy.visit('/');
@@ -79,5 +81,30 @@ describe('Index page', () => {
         cy.contains('a', 'Launch');
       });
     });
+  });
+
+  it('passes a11y test', () => {
+    cy.visit('/');
+    cy.injectAxe();
+
+    const violationCallback = (violations: axe.Result[]) => {
+      cy.task(
+        'log',
+        `${violations.length} accessibility violation${violations.length === 1 ? '' : 's'} ${
+          violations.length === 1 ? 'was' : 'were'
+        } detected`,
+      );
+      // pluck specific keys to keep the table readable
+      const violationData = violations.map(({ id, impact, description, nodes }) => ({
+        id,
+        impact,
+        description,
+        nodes: nodes.length,
+      }));
+
+      cy.task('table', violationData);
+    };
+
+    cy.checkA11y(undefined, undefined, violationCallback, true);
   });
 });

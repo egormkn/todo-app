@@ -25,5 +25,17 @@ export default (on: Cypress.PluginEvents, config: Cypress.PluginConfigOptions) =
   config.env.auth_password = process.env.AUTH_PASSWORD;
   config.env.auth_name = process.env.AUTH_NAME;
   config.env.auth_email = process.env.AUTH_EMAIL;
+
+  on('task', {
+    log(message) {
+      console.log(message);
+      return null;
+    },
+    table(message) {
+      console.table(message);
+      return null;
+    },
+  });
+
   return config;
 };
