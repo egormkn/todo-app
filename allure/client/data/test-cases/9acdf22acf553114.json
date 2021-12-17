@@ -1,0 +1,55 @@
+{
+  "uid" : "9acdf22acf553114",
+  "name" : "should create",
+  "fullName" : "[Chrome Headless 96.0.4664.110 (Linux x86_64)] HttpStatusComponent.should create",
+  "historyId" : "3eb0a362600db53c12362dabb17c2534",
+  "time" : {
+    "start" : 1639777065408,
+    "stop" : 1639777065408,
+    "duration" : 0
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "skipped",
+  "statusMessage" : "This test was ignored",
+  "statusTrace" : "",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "host",
+    "value" : "Chrome Headless 96.0.4664.110 (Linux x86_64)"
+  }, {
+    "name" : "suite",
+    "value" : "[Chrome Headless 96.0.4664.110 (Linux x86_64)] HttpStatusComponent"
+  }, {
+    "name" : "testClass",
+    "value" : "[Chrome Headless 96.0.4664.110 (Linux x86_64)] HttpStatusComponent"
+  }, {
+    "name" : "testMethod",
+    "value" : "should create"
+  }, {
+    "name" : "package",
+    "value" : "[Chrome Headless 96.0.4664.110 (Linux x86_64)] HttpStatusComponent"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "9acdf22acf553114.json",
+  "parameterValues" : [ ]
+}

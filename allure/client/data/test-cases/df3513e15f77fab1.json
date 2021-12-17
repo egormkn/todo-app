@@ -1,0 +1,55 @@
+{
+  "uid" : "df3513e15f77fab1",
+  "name" : "should be created",
+  "fullName" : "[Chrome Headless 96.0.4664.110 (Linux x86_64)] TasksService.should be created",
+  "historyId" : "cf4cd7a92a37569210cb9d261040c50e",
+  "time" : {
+    "start" : 1639777065389,
+    "stop" : 1639777065389,
+    "duration" : 0
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "skipped",
+  "statusMessage" : "This test was ignored",
+  "statusTrace" : "",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "host",
+    "value" : "Chrome Headless 96.0.4664.110 (Linux x86_64)"
+  }, {
+    "name" : "suite",
+    "value" : "[Chrome Headless 96.0.4664.110 (Linux x86_64)] TasksService"
+  }, {
+    "name" : "testClass",
+    "value" : "[Chrome Headless 96.0.4664.110 (Linux x86_64)] TasksService"
+  }, {
+    "name" : "testMethod",
+    "value" : "should be created"
+  }, {
+    "name" : "package",
+    "value" : "[Chrome Headless 96.0.4664.110 (Linux x86_64)] TasksService"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "df3513e15f77fab1.json",
+  "parameterValues" : [ ]
+}

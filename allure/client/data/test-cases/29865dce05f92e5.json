@@ -1,0 +1,53 @@
+{
+  "uid" : "29865dce05f92e5",
+  "name" : "should be created",
+  "fullName" : "[Chrome Headless 96.0.4664.110 (Linux x86_64)] AuthService.should be created",
+  "historyId" : "c691057ee6d81b04ebd4ab3725ab71b2",
+  "time" : {
+    "start" : 1639777065432,
+    "stop" : 1639777065434,
+    "duration" : 2
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "host",
+    "value" : "Chrome Headless 96.0.4664.110 (Linux x86_64)"
+  }, {
+    "name" : "suite",
+    "value" : "[Chrome Headless 96.0.4664.110 (Linux x86_64)] AuthService"
+  }, {
+    "name" : "testClass",
+    "value" : "[Chrome Headless 96.0.4664.110 (Linux x86_64)] AuthService"
+  }, {
+    "name" : "testMethod",
+    "value" : "should be created"
+  }, {
+    "name" : "package",
+    "value" : "[Chrome Headless 96.0.4664.110 (Linux x86_64)] AuthService"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "29865dce05f92e5.json",
+  "parameterValues" : [ ]
+}

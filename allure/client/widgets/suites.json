@@ -1,8 +1,19 @@
 {
   "total" : 26,
   "items" : [ {
-    "uid" : "5f3689c380a8a0a376b8729ce8e9ce69",
-    "name" : "[Chrome Headless 96.0.4664.93 (Linux x86_64)] LoginFormComponent",
+    "uid" : "3d3ed2d0ae9613bc42b3431edab243ab",
+    "name" : "[Chrome Headless 96.0.4664.110 (Linux x86_64)] AuthService",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 11,
+      "unknown" : 0,
+      "total" : 11
+    }
+  }, {
+    "uid" : "616f9d10ddaccc92c16cbaa890b0cb8c",
+    "name" : "[Chrome Headless 96.0.4664.110 (Linux x86_64)] LoginFormComponent",
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
@@ -12,30 +23,8 @@
       "total" : 7
     }
   }, {
-    "uid" : "cf33487169c9cd8a28136a592f622509",
-    "name" : "[Chrome Headless 96.0.4664.93 (Linux x86_64)] AuthService",
-    "statistic" : {
-      "failed" : 0,
-      "broken" : 0,
-      "skipped" : 0,
-      "passed" : 7,
-      "unknown" : 0,
-      "total" : 7
-    }
-  }, {
-    "uid" : "4bb746687096ad82a46fff5802004549",
-    "name" : "[Chrome Headless 96.0.4664.93 (Linux x86_64)] AuthService #setToken",
-    "statistic" : {
-      "failed" : 0,
-      "broken" : 0,
-      "skipped" : 0,
-      "passed" : 6,
-      "unknown" : 0,
-      "total" : 6
-    }
-  }, {
-    "uid" : "ae617165399d09777104f3cdd5111f86",
-    "name" : "[Chrome Headless 96.0.4664.93 (Linux x86_64)] ModalService",
+    "uid" : "7a3593d47ea40b906d06ada5599954f6",
+    "name" : "[Chrome Headless 96.0.4664.110 (Linux x86_64)] ModalService",
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
@@ -45,8 +34,19 @@
       "total" : 3
     }
   }, {
-    "uid" : "e2fd52fbebbd6a2a8be810afbf10f0e0",
-    "name" : "[Chrome Headless 96.0.4664.93 (Linux x86_64)] LoggerService",
+    "uid" : "550b2605a667741585d77fe34c3ceb0f",
+    "name" : "[Chrome Headless 96.0.4664.110 (Linux x86_64)] AuthService #setToken",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 2,
+      "unknown" : 0,
+      "total" : 2
+    }
+  }, {
+    "uid" : "d932c28e62b78ad2bf79ab1a0c7ac9c4",
+    "name" : "[Chrome Headless 96.0.4664.110 (Linux x86_64)] LoggerService",
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
@@ -56,8 +56,8 @@
       "total" : 1
     }
   }, {
-    "uid" : "d98aec581389bc2a7a7fc5c1f41091ce",
-    "name" : "[Chrome Headless 96.0.4664.93 (Linux x86_64)] HttpStatusService",
+    "uid" : "2b6f30fb867f190c31ef7bdfcb08065b",
+    "name" : "[Chrome Headless 96.0.4664.110 (Linux x86_64)] HttpStatusService",
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
@@ -67,8 +67,8 @@
       "total" : 1
     }
   }, {
-    "uid" : "9771557a766f6ff9db78549b4e461dc7",
-    "name" : "[Chrome Headless 96.0.4664.93 (Linux x86_64)] AppComponent",
+    "uid" : "e825be183b87383723ba9dc8206831b5",
+    "name" : "[Chrome Headless 96.0.4664.110 (Linux x86_64)] AppComponent",
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
@@ -78,8 +78,8 @@
       "total" : 3
     }
   }, {
-    "uid" : "71d4e29843675a191c703a5812d0f795",
-    "name" : "[Chrome Headless 96.0.4664.93 (Linux x86_64)] FooterComponent",
+    "uid" : "ef4ef3553a77b25b9bfd90b91f2ee4be",
+    "name" : "[Chrome Headless 96.0.4664.110 (Linux x86_64)] SignupFormComponent",
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
@@ -89,8 +89,8 @@
       "total" : 1
     }
   }, {
-    "uid" : "1fef1a1c52a0ab965212690a8528a777",
-    "name" : "[Chrome Headless 96.0.4664.93 (Linux x86_64)] SocialComponent",
+    "uid" : "8516bc55a2024d113567fe171280eaf4",
+    "name" : "[Chrome Headless 96.0.4664.110 (Linux x86_64)] SocialComponent",
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
@@ -100,8 +100,8 @@
       "total" : 1
     }
   }, {
-    "uid" : "2b05ce49eedcfe8f1914452dc2435eb4",
-    "name" : "[Chrome Headless 96.0.4664.93 (Linux x86_64)] TaskListComponent",
+    "uid" : "1c832353bd6f19ffaf3e4a67f6a3baeb",
+    "name" : "[Chrome Headless 96.0.4664.110 (Linux x86_64)] IndexComponent",
     "statistic" : {
       "failed" : 0,
       "broken" : 0,

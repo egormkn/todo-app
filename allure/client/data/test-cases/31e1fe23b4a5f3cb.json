@@ -1,0 +1,53 @@
+{
+  "uid" : "31e1fe23b4a5f3cb",
+  "name" : "should be created",
+  "fullName" : "[Chrome Headless 96.0.4664.110 (Linux x86_64)] HttpStatusService.should be created",
+  "historyId" : "2a05f402faef3802d185875ca6806fa1",
+  "time" : {
+    "start" : 1639777065461,
+    "stop" : 1639777065463,
+    "duration" : 2
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "host",
+    "value" : "Chrome Headless 96.0.4664.110 (Linux x86_64)"
+  }, {
+    "name" : "suite",
+    "value" : "[Chrome Headless 96.0.4664.110 (Linux x86_64)] HttpStatusService"
+  }, {
+    "name" : "testClass",
+    "value" : "[Chrome Headless 96.0.4664.110 (Linux x86_64)] HttpStatusService"
+  }, {
+    "name" : "testMethod",
+    "value" : "should be created"
+  }, {
+    "name" : "package",
+    "value" : "[Chrome Headless 96.0.4664.110 (Linux x86_64)] HttpStatusService"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "31e1fe23b4a5f3cb.json",
+  "parameterValues" : [ ]
+}
