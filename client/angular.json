@@ -96,7 +96,9 @@
               "browserTarget": "app:build:production"
             },
             "development": {
-              "browserTarget": "app:build:development"
+              "browserTarget": "app:build:development",
+              "host": "0.0.0.0",
+              "disableHostCheck": true
             }
           },
           "defaultConfiguration": "development"
