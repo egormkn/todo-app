@@ -1,0 +1,115 @@
+{
+  "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "children" : [ {
+    "name" : "Login page",
+    "children" : [ {
+      "name" : "opens",
+      "uid" : "276683ce9e975e42",
+      "parentUid" : "eb3b0b8c2d2d588c1f596940912f379a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1640566625909,
+        "stop" : 1640566626753,
+        "duration" : 844
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "newPassed" : false,
+      "newBroken" : false,
+      "retriesCount" : 0,
+      "retriesStatusChange" : false,
+      "parameters" : [ "chrome-96.0.4664.45" ]
+    }, {
+      "name" : "shows error message when user does not exist",
+      "uid" : "c62f3f540171e19",
+      "parentUid" : "eb3b0b8c2d2d588c1f596940912f379a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1640566626753,
+        "stop" : 1640566627795,
+        "duration" : 1042
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "newPassed" : false,
+      "newBroken" : false,
+      "retriesCount" : 0,
+      "retriesStatusChange" : false,
+      "parameters" : [ "chrome-96.0.4664.45" ]
+    }, {
+      "name" : "opens",
+      "uid" : "19dbac8357d51b48",
+      "parentUid" : "eb3b0b8c2d2d588c1f596940912f379a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1640566627980,
+        "stop" : 1640566629038,
+        "duration" : 1058
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "newPassed" : false,
+      "newBroken" : false,
+      "retriesCount" : 0,
+      "retriesStatusChange" : false,
+      "parameters" : [ "firefox-95.0" ]
+    }, {
+      "name" : "shows error message when user does not exist",
+      "uid" : "48cbb1e28534ddc6",
+      "parentUid" : "eb3b0b8c2d2d588c1f596940912f379a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1640566629039,
+        "stop" : 1640566630229,
+        "duration" : 1190
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "newPassed" : false,
+      "newBroken" : false,
+      "retriesCount" : 0,
+      "retriesStatusChange" : false,
+      "parameters" : [ "firefox-95.0" ]
+    } ],
+    "uid" : "eb3b0b8c2d2d588c1f596940912f379a"
+  }, {
+    "name" : "Login page: when user exists",
+    "children" : [ {
+      "name" : "allows user to log in",
+      "uid" : "4e7e4ec44818cc29",
+      "parentUid" : "8761a9fdf1043ec071f435d798ea3ffe",
+      "status" : "passed",
+      "time" : {
+        "start" : 1640566627796,
+        "stop" : 1640566628435,
+        "duration" : 639
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "newPassed" : false,
+      "newBroken" : false,
+      "retriesCount" : 0,
+      "retriesStatusChange" : false,
+      "parameters" : [ "chrome-96.0.4664.45" ]
+    }, {
+      "name" : "allows user to log in",
+      "uid" : "1914d832a50ad4cb",
+      "parentUid" : "8761a9fdf1043ec071f435d798ea3ffe",
+      "status" : "passed",
+      "time" : {
+        "start" : 1640566630229,
+        "stop" : 1640566631189,
+        "duration" : 960
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "newPassed" : false,
+      "newBroken" : false,
+      "retriesCount" : 0,
+      "retriesStatusChange" : false,
+      "parameters" : [ "firefox-95.0" ]
+    } ],
+    "uid" : "8761a9fdf1043ec071f435d798ea3ffe"
+  } ],
+  "name" : "packages"
+}

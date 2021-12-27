@@ -1,0 +1,53 @@
+{
+  "uid" : "d14859100f30465",
+  "name" : "submits the form successfully",
+  "fullName" : "[Chrome Headless 96.0.4664.110 (Linux x86_64)] LoginFormComponent.submits the form successfully",
+  "historyId" : "8bd420d1ed7a82e59301c47a3f5225a7",
+  "time" : {
+    "start" : 1640566496587,
+    "stop" : 1640566496603,
+    "duration" : 16
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "host",
+    "value" : "Chrome Headless 96.0.4664.110 (Linux x86_64)"
+  }, {
+    "name" : "suite",
+    "value" : "[Chrome Headless 96.0.4664.110 (Linux x86_64)] LoginFormComponent"
+  }, {
+    "name" : "testClass",
+    "value" : "[Chrome Headless 96.0.4664.110 (Linux x86_64)] LoginFormComponent"
+  }, {
+    "name" : "testMethod",
+    "value" : "submits the form successfully"
+  }, {
+    "name" : "package",
+    "value" : "[Chrome Headless 96.0.4664.110 (Linux x86_64)] LoginFormComponent"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "d14859100f30465.json",
+  "parameterValues" : [ ]
+}

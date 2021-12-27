@@ -1,0 +1,61 @@
+[ {
+  "uid" : "276683ce9e975e42",
+  "name" : "opens",
+  "time" : {
+    "start" : 1640566625909,
+    "stop" : 1640566626753,
+    "duration" : 844
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "48cbb1e28534ddc6",
+  "name" : "shows error message when user does not exist",
+  "time" : {
+    "start" : 1640566629039,
+    "stop" : 1640566630229,
+    "duration" : 1190
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "19dbac8357d51b48",
+  "name" : "opens",
+  "time" : {
+    "start" : 1640566627980,
+    "stop" : 1640566629038,
+    "duration" : 1058
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "c62f3f540171e19",
+  "name" : "shows error message when user does not exist",
+  "time" : {
+    "start" : 1640566626753,
+    "stop" : 1640566627795,
+    "duration" : 1042
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "1914d832a50ad4cb",
+  "name" : "allows user to log in",
+  "time" : {
+    "start" : 1640566630229,
+    "stop" : 1640566631189,
+    "duration" : 960
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "4e7e4ec44818cc29",
+  "name" : "allows user to log in",
+  "time" : {
+    "start" : 1640566627796,
+    "stop" : 1640566628435,
+    "duration" : 639
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

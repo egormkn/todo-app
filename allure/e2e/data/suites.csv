@@ -1,0 +1,7 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Mon Dec 27 00:57:10 UTC 2021","Mon Dec 27 00:57:11 UTC 2021","960","","Login page: when user exists","","Login page: when user exists","allows user to log in","allows user to log in",""
+"passed","Mon Dec 27 00:57:05 UTC 2021","Mon Dec 27 00:57:06 UTC 2021","844","","Login page","","Login page","opens","opens",""
+"passed","Mon Dec 27 00:57:09 UTC 2021","Mon Dec 27 00:57:10 UTC 2021","1190","","Login page","","Login page","shows error message when user does not exist","shows error message when user does not exist",""
+"passed","Mon Dec 27 00:57:07 UTC 2021","Mon Dec 27 00:57:08 UTC 2021","639","","Login page: when user exists","","Login page: when user exists","allows user to log in","allows user to log in",""
+"passed","Mon Dec 27 00:57:07 UTC 2021","Mon Dec 27 00:57:09 UTC 2021","1058","","Login page","","Login page","opens","opens",""
+"passed","Mon Dec 27 00:57:06 UTC 2021","Mon Dec 27 00:57:07 UTC 2021","1042","","Login page","","Login page","shows error message when user does not exist","shows error message when user does not exist",""

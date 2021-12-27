@@ -1,15 +1,15 @@
 {
   "total" : 26,
   "items" : [ {
-    "uid" : "3d3ed2d0ae9613bc42b3431edab243ab",
-    "name" : "[Chrome Headless 96.0.4664.110 (Linux x86_64)] AuthService",
+    "uid" : "550b2605a667741585d77fe34c3ceb0f",
+    "name" : "[Chrome Headless 96.0.4664.110 (Linux x86_64)] AuthService #setToken",
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 11,
+      "passed" : 10,
       "unknown" : 0,
-      "total" : 11
+      "total" : 10
     }
   }, {
     "uid" : "616f9d10ddaccc92c16cbaa890b0cb8c",
@@ -23,8 +23,8 @@
       "total" : 7
     }
   }, {
-    "uid" : "7a3593d47ea40b906d06ada5599954f6",
-    "name" : "[Chrome Headless 96.0.4664.110 (Linux x86_64)] ModalService",
+    "uid" : "3d3ed2d0ae9613bc42b3431edab243ab",
+    "name" : "[Chrome Headless 96.0.4664.110 (Linux x86_64)] AuthService",
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
@@ -34,15 +34,15 @@
       "total" : 3
     }
   }, {
-    "uid" : "550b2605a667741585d77fe34c3ceb0f",
-    "name" : "[Chrome Headless 96.0.4664.110 (Linux x86_64)] AuthService #setToken",
+    "uid" : "7a3593d47ea40b906d06ada5599954f6",
+    "name" : "[Chrome Headless 96.0.4664.110 (Linux x86_64)] ModalService",
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 2,
+      "passed" : 3,
       "unknown" : 0,
-      "total" : 2
+      "total" : 3
     }
   }, {
     "uid" : "d932c28e62b78ad2bf79ab1a0c7ac9c4",
@@ -78,8 +78,8 @@
       "total" : 3
     }
   }, {
-    "uid" : "ef4ef3553a77b25b9bfd90b91f2ee4be",
-    "name" : "[Chrome Headless 96.0.4664.110 (Linux x86_64)] SignupFormComponent",
+    "uid" : "cce6673a43751eb4b36d847de2be2971",
+    "name" : "[Chrome Headless 96.0.4664.110 (Linux x86_64)] FakeTasksService",
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
@@ -89,8 +89,8 @@
       "total" : 1
     }
   }, {
-    "uid" : "8516bc55a2024d113567fe171280eaf4",
-    "name" : "[Chrome Headless 96.0.4664.110 (Linux x86_64)] SocialComponent",
+    "uid" : "2bffb3eba910c572bf30c9b724bd7d70",
+    "name" : "[Chrome Headless 96.0.4664.110 (Linux x86_64)] ProfileComponent",
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
@@ -100,8 +100,8 @@
       "total" : 1
     }
   }, {
-    "uid" : "1c832353bd6f19ffaf3e4a67f6a3baeb",
-    "name" : "[Chrome Headless 96.0.4664.110 (Linux x86_64)] IndexComponent",
+    "uid" : "01b7fed2824ff1e001f878405f6abdcd",
+    "name" : "[Chrome Headless 96.0.4664.110 (Linux x86_64)] ModalComponent",
     "statistic" : {
       "failed" : 0,
       "broken" : 0,

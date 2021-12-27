@@ -1,0 +1,53 @@
+{
+  "uid" : "f51444a8413a9125",
+  "name" : "should open a modal",
+  "fullName" : "[Chrome Headless 96.0.4664.110 (Linux x86_64)] ModalService.should open a modal",
+  "historyId" : "21462ff3e8a5fc4bef85dfbdae48a3e4",
+  "time" : {
+    "start" : 1640566496656,
+    "stop" : 1640566496658,
+    "duration" : 2
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "host",
+    "value" : "Chrome Headless 96.0.4664.110 (Linux x86_64)"
+  }, {
+    "name" : "suite",
+    "value" : "[Chrome Headless 96.0.4664.110 (Linux x86_64)] ModalService"
+  }, {
+    "name" : "testClass",
+    "value" : "[Chrome Headless 96.0.4664.110 (Linux x86_64)] ModalService"
+  }, {
+    "name" : "testMethod",
+    "value" : "should open a modal"
+  }, {
+    "name" : "package",
+    "value" : "[Chrome Headless 96.0.4664.110 (Linux x86_64)] ModalService"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "f51444a8413a9125.json",
+  "parameterValues" : [ ]
+}
