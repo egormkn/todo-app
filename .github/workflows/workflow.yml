@@ -111,6 +111,11 @@ jobs:
             command: test:cypress
           - name: Playwright
             command: test:playwright
+            before-command: npx playwright install-deps && npx playwright install
+          - name: WebdriverIO + Selenoid
+            command: test:selenoid
+            before-command: ./webdriverio/selenoid/start.sh
+            after-command: ./webdriverio/selenoid/stop.sh
     steps:
       - name: Checkout ${{ github.repository }}
         uses: actions/checkout@v2
@@ -122,11 +127,20 @@ jobs:
           cache-dependency-path: e2e/package-lock.json
       - name: Install dependencies
         run: npm ci
-      - name: Install Playwright browsers
-        if: ${{ matrix.tool.name == 'Playwright' }}
-        run: npx playwright install-deps && npx playwright install
+      - name: Initialize ${{ matrix.tool.name }}
+        if: matrix.tool.before-command
+        run: ${{ matrix.tool.before-command }}
       - name: Run end-to-end tests with ${{ matrix.tool.name }}
         run: npm run ${{ matrix.tool.command }}
+      - name: Cleanup ${{ matrix.tool.name }}
+        if: matrix.tool.after-command
+        run: ${{ matrix.tool.after-command }}
+      - name: Upload artifacts (e2e-allure-xml)
+        uses: actions/upload-artifact@v2
+        if: matrix.tool.name == 'WebdriverIO + Selenoid' && matrix.node-version == '16.x'
+        with:
+          name: e2e-allure-xml
+          path: e2e/webdriverio/allure/
 
   docs:
     name: Build documentation
@@ -174,7 +188,7 @@ jobs:
   allure:
     name: Generate Allure report
     runs-on: ubuntu-latest
-    needs: [client, server]
+    needs: [client, server, e2e]
     steps:
       - name: Setup Java
         uses: actions/setup-java@v2
@@ -194,6 +208,13 @@ jobs:
           path: client/allure/xml
       - name: Generate Allure report
         run: allure generate -o allure/client client/allure/xml
+      - name: Download artifacts (e2e-allure-xml)
+        uses: actions/download-artifact@v2
+        with:
+          name: e2e-allure-xml
+          path: e2e/allure/xml
+      - name: Generate Allure report
+        run: allure generate -o allure/e2e e2e/allure/xml
       - name: Upload artifacts (allure)
         uses: actions/upload-artifact@v2
         with:
