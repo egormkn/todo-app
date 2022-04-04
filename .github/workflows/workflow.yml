@@ -22,7 +22,7 @@ jobs:
       - name: Checkout ${{ github.repository }}
         uses: actions/checkout@v2
       - name: Setup Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3.1.0
         with:
           node-version: ${{ matrix.node-version }}
           cache: "npm"
@@ -71,7 +71,7 @@ jobs:
       - name: Checkout ${{ github.repository }}
         uses: actions/checkout@v2
       - name: Setup Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3.1.0
         with:
           node-version: ${{ matrix.node-version }}
           cache: "npm"
@@ -120,7 +120,7 @@ jobs:
       - name: Checkout ${{ github.repository }}
         uses: actions/checkout@v2
       - name: Setup Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3.1.0
         with:
           node-version: ${{ matrix.node-version }}
           cache: "npm"
@@ -163,7 +163,7 @@ jobs:
           name: docs
           path: docs/_site/
       - name: Setup Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3.1.0
         with:
           node-version: 16
       - name: Install compodoc
@@ -196,7 +196,7 @@ jobs:
           distribution: zulu
           java-version: 11
       - name: Setup Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3.1.0
         with:
           node-version: 16
       - name: Install Allure
