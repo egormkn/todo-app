@@ -202,14 +202,14 @@ jobs:
       - name: Install Allure
         run: npm install -g allure-commandline
       - name: Download artifacts (client-allure-xml)
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: client-allure-xml
           path: client/allure/xml
       - name: Generate Allure report
         run: allure generate -o allure/client client/allure/xml
       - name: Download artifacts (e2e-allure-xml)
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: e2e-allure-xml
           path: e2e/allure/xml
@@ -228,37 +228,37 @@ jobs:
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     steps:
       - name: Download artifacts (client-dist-browser)
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: client-dist-browser
           path: ./
       - name: Download artifacts (allure)
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: allure
           path: allure/
       - name: Download artifacts (client-coverage)
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: client-coverage
           path: coverage/client
       - name: Download artifacts (server-coverage)
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: server-coverage
           path: coverage/server
       - name: Download artifacts (docs)
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: docs
           path: docs/
       - name: Download artifacts (client-docs)
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: client-docs
           path: docs/client/
       - name: Download artifacts (server-docs)
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: server-docs
           path: docs/server/
