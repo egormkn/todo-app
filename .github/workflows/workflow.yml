@@ -34,25 +34,25 @@ jobs:
       - name: Run tests
         run: npm run test:coverage
       - name: Upload artifacts (client-allure-xml)
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         if: ${{ matrix.node-version == '16.x' }}
         with:
           name: client-allure-xml
           path: client/allure/xml/
       - name: Upload artifacts (client-dist-browser)
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         if: ${{ matrix.node-version == '16.x' }}
         with:
           name: client-dist-browser
           path: client/dist/browser/
       - name: Upload artifacts (client-dist-server)
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         if: ${{ matrix.node-version == '16.x' }}
         with:
           name: client-dist-server
           path: client/dist/server/
       - name: Upload artifacts (client-coverage)
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         if: ${{ matrix.node-version == '16.x' }}
         with:
           name: client-coverage
@@ -85,13 +85,13 @@ jobs:
       - name: Run end-to-end tests
         run: npm run test:e2e
       - name: Upload artifacts (server-dist)
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         if: ${{ matrix.node-version == '16.x' }}
         with:
           name: server-dist
           path: server/dist/
       - name: Upload artifacts (server-coverage)
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         if: ${{ matrix.node-version == '16.x' }}
         with:
           name: server-coverage
@@ -136,7 +136,7 @@ jobs:
         if: matrix.tool.after-command
         run: ${{ matrix.tool.after-command }}
       - name: Upload artifacts (e2e-allure-xml)
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         if: matrix.tool.name == 'WebdriverIO + Selenoid' && matrix.node-version == '16.x'
         with:
           name: e2e-allure-xml
@@ -158,7 +158,7 @@ jobs:
         run: bundle exec jekyll build --baseurl "/todo-app/docs"
         working-directory: docs
       - name: Upload artifacts (docs)
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: docs
           path: docs/_site/
@@ -175,12 +175,12 @@ jobs:
         working-directory: server
         run: npm run docs
       - name: Upload artifacts (client-docs)
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: client-docs
           path: client/docs/
       - name: Upload artifacts (server-docs)
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: server-docs
           path: server/docs/
@@ -216,7 +216,7 @@ jobs:
       - name: Generate Allure report
         run: allure generate -o allure/e2e e2e/allure/xml
       - name: Upload artifacts (allure)
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: allure
           path: allure/
