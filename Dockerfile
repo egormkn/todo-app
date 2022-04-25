@@ -3,7 +3,7 @@
 ########################################
 
 # Initialize from NodeJS v14 (Debian)
-FROM node:16 as build
+FROM node:18 as build
 
 # Set working directory
 WORKDIR /app
@@ -53,7 +53,7 @@ RUN npm run docs && npm run build
 ########################################
 
 # Initialize from NodeJS v14 (Alpine)
-FROM node:16-alpine as production
+FROM node:18 as production
 
 # Set working directory
 WORKDIR /app
