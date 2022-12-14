@@ -39,7 +39,7 @@
     "@ng-web-apis/universal": "^1.12.0",
     "@nguniversal/express-engine": "^12.1.1",
     "bootstrap": "^5.1.3",
-    "express": "^4.15.2",
+    "express": "^4.17.3",
     "rxjs": "^6.6.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
